@@ -87,6 +87,10 @@ function navHtml() {
       </nav>
       <a class="btn btn-primary btn-header" href="${APP_LINKS.clientStart}">${esc(copy.headerCta)}</a>
     </div>
+    <nav class="site-nav-mobile container" aria-label="ניווט מהיר">
+      ${items}
+      <a href="/contact.html">צור קשר</a>
+    </nav>
   </header>`;
 }
 
