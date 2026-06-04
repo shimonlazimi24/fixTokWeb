@@ -72,14 +72,54 @@
         <p class="hero-note">ללא התחייבות לבחור קבלן · תיק עבודה אחיד לכל המציעים</p>
       </div>
       <figure class="hero-visual">
-        <img
-          src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=900&q=80&auto=format&fit=crop"
-          alt="חדר מגורים מודרני אחרי שיפוץ — אווירה חמה ונקייה"
-          width="900"
-          height="675"
-          loading="eager"
-          fetchpriority="high"
-        />
+        <div class="hero-carousel" data-hero-carousel role="region" aria-label="גלריית שיפוצים">
+          
+          <img
+            class="hero-slide is-active"
+            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1400&amp;q=85&amp;auto=format&amp;fit=crop"
+            alt="מטבח מעוצב אחרי שיפוץ — תאורה טבעית וגימור נקי"
+            width="1400"
+            height="1050"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+            aria-hidden="false"
+          />
+          <img
+            class="hero-slide"
+            src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=1400&amp;q=85&amp;auto=format&amp;fit=crop"
+            alt="חדר רחצה מודרני אחרי שיפוץ"
+            width="1400"
+            height="1050"
+            loading="lazy"
+            
+            decoding="async"
+            aria-hidden="true"
+          />
+          <img
+            class="hero-slide"
+            src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1400&amp;q=85&amp;auto=format&amp;fit=crop"
+            alt="סלון מואר אחרי שיפוץ — אווירה חמה"
+            width="1400"
+            height="1050"
+            loading="lazy"
+            
+            decoding="async"
+            aria-hidden="true"
+          />
+          <img
+            class="hero-slide"
+            src="https://images.unsplash.com/photo-1600566753190-17f926baa964?w=1400&amp;q=85&amp;auto=format&amp;fit=crop"
+            alt="פרטי גימור וריצוף באיכות גבוהה"
+            width="1400"
+            height="1050"
+            loading="lazy"
+            
+            decoding="async"
+            aria-hidden="true"
+          />
+          <div class="hero-carousel-dots" aria-hidden="true"><button type="button" class="hero-carousel-dot is-active" aria-label="תמונה 1" aria-selected="true"></button><button type="button" class="hero-carousel-dot" aria-label="תמונה 2" aria-selected="false"></button><button type="button" class="hero-carousel-dot" aria-label="תמונה 3" aria-selected="false"></button><button type="button" class="hero-carousel-dot" aria-label="תמונה 4" aria-selected="false"></button></div>
+        </div>
       </figure>
     </div>
   </section>
@@ -234,6 +274,7 @@
     </div>
   </section>
 </main>
+<script src="/scripts/hero-carousel.js" defer></script>
 <footer class="site-footer">
     <div class="container footer-grid">
       <div>

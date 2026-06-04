@@ -144,6 +144,28 @@ function indexBody() {
   const withLi = copy.compare.with.map((b) => `<li>${esc(b)}</li>`).join("");
   const contractorLong = copy.contractor.long.map((p) => `<li>${esc(p)}</li>`).join("");
   const originParas = copy.origin.body.map((p) => `<p>${esc(p)}</p>`).join("");
+  const heroSlides = copy.hero.slides
+    .map(
+      (s, i) => `
+          <img
+            class="hero-slide${i === 0 ? " is-active" : ""}"
+            src="${esc(s.src)}"
+            alt="${esc(s.alt)}"
+            width="1400"
+            height="1050"
+            loading="${i === 0 ? "eager" : "lazy"}"
+            ${i === 0 ? 'fetchpriority="high"' : ""}
+            decoding="async"
+            aria-hidden="${i === 0 ? "false" : "true"}"
+          />`,
+    )
+    .join("");
+  const heroDots = copy.hero.slides
+    .map(
+      (_, i) =>
+        `<button type="button" class="hero-carousel-dot${i === 0 ? " is-active" : ""}" aria-label="תמונה ${i + 1}" aria-selected="${i === 0 ? "true" : "false"}"></button>`,
+    )
+    .join("");
 
   return `${navHtml()}
 <main>
@@ -163,14 +185,10 @@ function indexBody() {
         <p class="hero-note">${esc(copy.hero.note)}</p>
       </div>
       <figure class="hero-visual">
-        <img
-          src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=900&q=80&auto=format&fit=crop"
-          alt="חדר מגורים מודרני אחרי שיפוץ — אווירה חמה ונקייה"
-          width="900"
-          height="675"
-          loading="eager"
-          fetchpriority="high"
-        />
+        <div class="hero-carousel" data-hero-carousel role="region" aria-label="גלריית שיפוצים">
+          ${heroSlides}
+          <div class="hero-carousel-dots" aria-hidden="true">${heroDots}</div>
+        </div>
       </figure>
     </div>
   </section>
@@ -286,6 +304,7 @@ function indexBody() {
     </div>
   </section>
 </main>
+<script src="/scripts/hero-carousel.js" defer></script>
 ${footerHtml()}`;
 }
 
@@ -345,7 +364,7 @@ const staticCopies = [
   ["public/llms.txt", "llms.txt"],
   ["public/llms-full.txt", "llms-full.txt"],
   ["public/assets/images/logo-mark.svg", "assets/images/logo-mark.svg"],
-  ["public/assets/images/logo-wordmark.svg", "assets/images/logo-wordmark.svg"],
+  ["public/scripts/hero-carousel.js", "scripts/hero-carousel.js"],
   ["marketing/og-default.svg", "marketing/og-default.svg"],
 ];
 

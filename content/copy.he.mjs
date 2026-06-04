@@ -23,6 +23,25 @@ export const copy = {
     primaryCta: "התחילו פרויקט — צלמו סרטון",
     secondaryCta: "איך זה עובד",
     note: "ללא התחייבות לבחור קבלן · תיק עבודה אחיד לכל המציעים",
+    /** תמונות Hero — החלפה אוטומטית; אפשר להחליף ב-/public/assets/images/ */
+    slides: [
+      {
+        src: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1400&q=85&auto=format&fit=crop",
+        alt: "מטבח מעוצב אחרי שיפוץ — תאורה טבעית וגימור נקי",
+      },
+      {
+        src: "https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=1400&q=85&auto=format&fit=crop",
+        alt: "חדר רחצה מודרני אחרי שיפוץ",
+      },
+      {
+        src: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1400&q=85&auto=format&fit=crop",
+        alt: "סלון מואר אחרי שיפוץ — אווירה חמה",
+      },
+      {
+        src: "https://images.unsplash.com/photo-1600566753190-17f926baa964?w=1400&q=85&auto=format&fit=crop",
+        alt: "פרטי גימור וריצוף באיכות גבוהה",
+      },
+    ],
   },
   audience: {
     homeowner: {
