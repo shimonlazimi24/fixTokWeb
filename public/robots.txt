@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fix-tok.com/sitemap.xml

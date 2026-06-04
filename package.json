@@ -1,0 +1,18 @@
+{
+  "name": "fixtokweb",
+  "version": "1.0.0",
+  "private": true,
+  "description": "FixTok marketing site — fix-tok.com",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "prestart": "npm run build",
+    "start": "serve -s . -l ${PORT:-3000}",
+    "dev": "npm run build && serve -s . -l 3000"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "serve": "^14.2.4"
+  }
+}
