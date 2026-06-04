@@ -325,12 +325,16 @@ a:hover {
   object-fit: cover;
   object-position: center;
   opacity: 0;
-  transition: opacity 1.1s ease-in-out;
+  z-index: 0;
+  visibility: hidden;
+  transition: opacity 0.85s ease-in-out, visibility 0.85s;
   pointer-events: none;
 }
 
 .hero-slide.is-active {
   opacity: 1;
+  z-index: 1;
+  visibility: visible;
   pointer-events: auto;
 }
 
@@ -753,6 +757,14 @@ a:hover {
 }
 
 @media (max-width: 768px) {
+  .btn-header {
+    display: none;
+  }
+
+  .header-inner {
+    justify-content: center;
+  }
+
   body {
     font-size: 1rem;
   }
@@ -769,6 +781,12 @@ a:hover {
     order: -1;
     min-height: clamp(260px, 42vh, 400px);
   }
+
+  /* החלפת תמונה מיידית במובייל — בלי «שכבה כפולה» באמצע fade */
+  .hero-slide {
+    transition: none;
+  }
+}
 
   .hero h1 {
     display: block;
@@ -828,13 +846,3 @@ a:hover {
   }
 }
 
-@media (max-width: 400px) {
-  /* כפתור הדר מכפיל את ה-Hero — משאירים רק CTA בגוף העמוד */
-  .btn-header {
-    display: none;
-  }
-
-  .header-inner {
-    justify-content: center;
-  }
-}
