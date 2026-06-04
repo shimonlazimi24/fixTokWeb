@@ -29,7 +29,7 @@ export function organizationJsonLd() {
     "@type": "Organization",
     name: "FixTok",
     url: SITE_ORIGIN,
-    logo: `${SITE_ORIGIN}/assets/images/logo-mark.svg`,
+    logo: `${SITE_ORIGIN}/assets/images/logo-wordmark.svg`,
     email: SUPPORT_EMAIL,
     sameAs: [APP_ORIGIN],
   };

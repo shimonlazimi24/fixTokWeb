@@ -63,7 +63,7 @@ function headBlock({ title, description, canonical }) {
   <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;800;900&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
   <link rel="stylesheet" href="/styles/landing.css" />
-  <link rel="icon" href="/assets/images/logo-mark.svg" type="image/svg+xml" />
+  <link rel="icon" href="/assets/images/logo-mark.svg" type="image/svg+xml" sizes="any" />
     ${ld}
 </head>`;
 }
@@ -79,8 +79,7 @@ function navHtml() {
   return `<header class="site-header" id="top">
     <div class="container header-inner">
       <a class="brand" href="/" aria-label="FixTok דף הבית">
-        <img src="/assets/images/logo-mark.svg" width="40" height="40" alt="" />
-        <span class="brand-name">FixTok</span>
+        <span class="brand-wordmark" dir="ltr" lang="en">Fix<span class="brand-tok">Tok</span></span>
       </a>
       <nav class="site-nav" aria-label="ניווט ראשי">
         ${items}
@@ -95,7 +94,7 @@ function footerHtml() {
   return `<footer class="site-footer">
     <div class="container footer-grid">
       <div>
-        <p class="footer-brand">FixTok</p>
+        <p class="footer-brand"><span class="brand-wordmark brand-wordmark--footer" dir="ltr" lang="en">Fix<span class="brand-tok">Tok</span></span></p>
         <p class="footer-tagline">${esc(copy.footer.tagline)}</p>
       </div>
       <nav aria-label="קישורים משפטיים">
@@ -342,6 +341,7 @@ const staticCopies = [
   ["public/llms.txt", "llms.txt"],
   ["public/llms-full.txt", "llms-full.txt"],
   ["public/assets/images/logo-mark.svg", "assets/images/logo-mark.svg"],
+  ["public/assets/images/logo-wordmark.svg", "assets/images/logo-wordmark.svg"],
   ["marketing/og-default.svg", "marketing/og-default.svg"],
 ];
 

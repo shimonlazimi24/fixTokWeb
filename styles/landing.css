@@ -94,11 +94,36 @@ a:hover {
 .brand {
   display: flex;
   align-items: center;
-  gap: calc(var(--space) * 1.5);
   text-decoration: none;
+  flex-shrink: 0;
+}
+
+/* מילולית המותג — כמו באפליקציה: Fix כהה, Tok כתום */
+.brand-wordmark {
+  font-family: var(--font);
+  font-weight: 900;
+  font-size: clamp(1.5rem, 3.5vw, 2.125rem);
+  letter-spacing: -0.05em;
+  line-height: 1;
   color: var(--navy);
-  font-weight: 800;
+  white-space: nowrap;
+}
+
+.brand-tok {
+  color: var(--orange-deep);
+}
+
+.brand:hover .brand-wordmark {
+  color: var(--navy);
+}
+
+.brand-wordmark--footer {
   font-size: 1.35rem;
+  color: var(--white);
+}
+
+.brand-wordmark--footer .brand-tok {
+  color: var(--orange);
 }
 
 .site-nav {
@@ -536,10 +561,7 @@ a:hover {
 }
 
 .footer-brand {
-  font-weight: 900;
-  font-size: 1.35rem;
   margin: 0;
-  color: var(--white);
 }
 
 .footer-tagline {
