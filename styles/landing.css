@@ -547,6 +547,19 @@ a:hover {
   padding-inline-start: 1.1rem;
 }
 
+.compare-panel--standalone {
+  margin-top: calc(var(--space) * 3);
+}
+
+.section-aside {
+  margin-top: calc(var(--space) * 3);
+  font-weight: 600;
+}
+
+.section-closing {
+  margin-top: calc(var(--space) * 2);
+}
+
 /* Video */
 .video-section {
   padding: calc(var(--space) * 10) 0;

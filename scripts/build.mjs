@@ -139,7 +139,9 @@ function indexBody() {
     .join("");
 
   const problemBullets = copy.problem.bullets.map((b) => `<li>${esc(b)}</li>`).join("");
-  const powerBullets = copy.power.bullets.map((b) => `<li>${icon("check_circle")}<span>${esc(b)}</span></li>`).join("");
+  const supervisorBullets = copy.supervisor.bullets
+    .map((b) => `<li>${icon("check_circle")}<span>${esc(b)}</span></li>`)
+    .join("");
   const withoutLi = copy.compare.without.map((b) => `<li>${esc(b)}</li>`).join("");
   const withLi = copy.compare.with.map((b) => `<li>${esc(b)}</li>`).join("");
   const contractorLong = copy.contractor.long.map((p) => `<li>${esc(p)}</li>`).join("");
@@ -211,28 +213,35 @@ function indexBody() {
   <section class="section" id="problem">
     <div class="container narrow">
       <h2>${esc(copy.problem.title)}</h2>
-      <p class="section-lead">${esc(copy.problem.lead)}</p>
+      <p class="section-lead">${esc(copy.problem.intro)}</p>
       <ul class="bullet-list">${problemBullets}</ul>
+      <p class="section-aside">${esc(copy.problem.aside)}</p>
+      <p class="section-closing">${esc(copy.problem.closing)}</p>
     </div>
   </section>
 
   <section class="section section-soft" id="how">
     <div class="container">
       <h2>${esc(copy.how.title)}</h2>
-      <p class="section-lead">${esc(copy.how.lead)}</p>
+      ${copy.how.lead ? `<p class="section-lead">${esc(copy.how.lead)}</p>` : ""}
       <div class="steps-grid">${howSteps}</div>
     </div>
   </section>
 
-  <section class="section" id="power">
-    <div class="container split">
-      <div>
-        <h2>${esc(copy.power.title)}</h2>
-        <p class="section-lead">${esc(copy.power.lead)}</p>
-        <ul class="icon-list">${powerBullets}</ul>
-      </div>
-      <div class="compare-panel">
-        <h3 class="sr-only">${esc(copy.compare.title)}</h3>
+  <section class="section" id="supervisor">
+    <div class="container narrow">
+      <p class="eyebrow">${esc(copy.supervisor.eyebrow)}</p>
+      <h2>${esc(copy.supervisor.title)}</h2>
+      <p class="section-lead">${esc(copy.supervisor.lead)}</p>
+      <ul class="icon-list">${supervisorBullets}</ul>
+      <p class="section-closing">${esc(copy.supervisor.closing)}</p>
+    </div>
+  </section>
+
+  <section class="section section-soft" id="compare">
+    <div class="container">
+      <h2>${esc(copy.compare.title)}</h2>
+      <div class="compare-panel compare-panel--standalone">
         <div class="compare-col compare-col--before">
           <p class="compare-label">בלי FixTok</p>
           <ul>${withoutLi}</ul>
@@ -279,6 +288,7 @@ function indexBody() {
       <div>
         <h2>${esc(copy.contractor.title)}</h2>
         <p class="section-lead">${esc(copy.contractor.short)}</p>
+        <p>${esc(copy.contractor.body)}</p>
         <ul class="bullet-list">${contractorLong}</ul>
         <a class="btn btn-light btn-lg" href="${APP_LINKS.contractorLanding}">${esc(copy.contractor.cta)}</a>
       </div>
@@ -296,7 +306,7 @@ function indexBody() {
   <section class="cta-band" aria-labelledby="cta-title">
     <div class="container cta-band-inner">
       <h2 id="cta-title">${esc(copy.cta.title)}</h2>
-      <p>${esc(copy.cta.lead)}</p>
+      ${copy.cta.lead ? `<p>${esc(copy.cta.lead)}</p>` : ""}
       <div class="hero-actions">
         <a class="btn btn-primary btn-lg" href="${APP_LINKS.clientStart}">${esc(copy.cta.client)}</a>
         <a class="btn btn-ghost btn-lg" href="${APP_LINKS.contractorLanding}">${esc(copy.cta.contractor)}</a>
