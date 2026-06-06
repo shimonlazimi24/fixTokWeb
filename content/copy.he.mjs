@@ -39,7 +39,7 @@ export const copy = {
         alt: "סלון מואר אחרי שיפוץ — אווירה חמה",
       },
       {
-        src: "https://images.unsplash.com/photo-1600566753190-17f926baa964?w=1400&q=85&auto=format&fit=crop",
+        src: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1400&q=85&auto=format&fit=crop",
         alt: "פרטי גימור וריצוף באיכות גבוהה",
       },
     ],
