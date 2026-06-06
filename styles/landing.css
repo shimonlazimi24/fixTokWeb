@@ -722,23 +722,106 @@ a:hover {
 }
 
 /* Contact page */
-.page-hero {
-  padding-top: calc(var(--space) * 10);
+.contact-page {
+  background: linear-gradient(165deg, var(--white) 0%, var(--cream) 42%, #ebe9e7 100%);
 }
 
-.contact-list {
-  list-style: none;
-  padding: 0;
-  margin: calc(var(--space) * 4) 0;
+.contact-hero {
+  padding-top: calc(var(--space) * 8);
+  padding-bottom: calc(var(--space) * 10);
 }
 
-.contact-list li {
-  margin-bottom: calc(var(--space) * 3);
+.contact-wrap {
+  max-width: 480px;
+  text-align: center;
 }
 
-.contact-list strong {
-  display: block;
-  margin-bottom: calc(var(--space) * 0.5);
+.contact-eyebrow {
+  margin-bottom: calc(var(--space) * 2);
+}
+
+.contact-lead {
+  margin-bottom: 0;
+}
+
+.contact-channels {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--space) * 1.5);
+  margin-top: calc(var(--space) * 4);
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--space) * 2);
+  padding: calc(var(--space) * 2.5) calc(var(--space) * 3);
+  border: 1px solid rgba(249, 115, 22, 0.2);
+  border-radius: var(--radius-sm);
+  background: linear-gradient(165deg, var(--white) 0%, var(--cream) 100%);
+  box-shadow: 0 12px 32px -18px rgba(249, 115, 22, 0.35);
+  text-decoration: none;
+  color: var(--navy);
+  transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.contact-card:hover {
+  border-color: var(--orange);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-warm);
+  color: var(--navy);
+  text-decoration: none;
+}
+
+.contact-card__emoji {
+  font-size: 1.85rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.contact-card__body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: right;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+}
+
+.contact-card__body strong {
+  font-size: 0.82rem;
+  color: var(--muted);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.contact-card__value {
+  font-weight: 800;
+  font-size: 1.05rem;
+  color: var(--orange-deep);
+}
+
+.contact-card__hint {
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.contact-back {
+  margin: calc(var(--space) * 4) 0 0;
+}
+
+.contact-back a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.contact-back a:hover {
+  color: var(--orange-deep);
+  text-decoration: none;
 }
 
 /* ——— מובייל ——— */

@@ -320,26 +320,31 @@ ${footerHtml()}`;
 
 function contactBody() {
   return `${navHtml()}
-<main>
-  <section class="section page-hero">
-    <div class="container narrow">
+<main class="contact-page">
+  <section class="section page-hero contact-hero">
+    <div class="container contact-wrap">
+      <p class="eyebrow contact-eyebrow">${esc(copy.contact.eyebrow)}</p>
       <h1>${esc(copy.contact.title)}</h1>
-      <p class="section-lead">${esc(copy.contact.lead)}</p>
-      <ul class="contact-list">
-        <li>
-          <strong>${esc(copy.contact.emailLabel)}</strong>
-          <a href="mailto:${SUPPORT_EMAIL}">${SUPPORT_EMAIL}</a>
-        </li>
-        <li>
-          <strong>${esc(copy.contact.whatsappLabel)}</strong>
-          <a href="${SUPPORT_WHATSAPP_HREF}" rel="noopener noreferrer">שלחו הודעה בוואטסאפ</a>
-        </li>
-        <li>
-          <strong>אפליקציה</strong>
-          <a href="${APP_LINKS.contact}">עמוד צור קשר באפליקציה</a>
-        </li>
-      </ul>
-      <p class="hero-note">אתר שיווקי: <a href="${SITE_ORIGIN}">${SITE_ORIGIN}</a> · אפליקציה: <a href="${APP_LINKS.login}">app.fix-tok.com</a></p>
+      <p class="section-lead contact-lead">${esc(copy.contact.lead)}</p>
+      <div class="contact-channels">
+        <a class="contact-card" href="mailto:${SUPPORT_EMAIL}">
+          <span class="contact-card__emoji" aria-hidden="true">${copy.contact.email.emoji}</span>
+          <span class="contact-card__body">
+            <strong>${esc(copy.contact.email.label)}</strong>
+            <span class="contact-card__value" dir="ltr">${SUPPORT_EMAIL}</span>
+            <span class="contact-card__hint">${esc(copy.contact.email.hint)}</span>
+          </span>
+        </a>
+        <a class="contact-card" href="${SUPPORT_WHATSAPP_HREF}" target="_blank" rel="noopener noreferrer">
+          <span class="contact-card__emoji" aria-hidden="true">${copy.contact.whatsapp.emoji}</span>
+          <span class="contact-card__body">
+            <strong>${esc(copy.contact.whatsapp.label)}</strong>
+            <span class="contact-card__value" dir="ltr">+972 52-743-4777</span>
+            <span class="contact-card__hint">${esc(copy.contact.whatsapp.hint)}</span>
+          </span>
+        </a>
+      </div>
+      <p class="contact-back"><a href="/">${esc(copy.contact.back)}</a></p>
     </div>
   </section>
 </main>
