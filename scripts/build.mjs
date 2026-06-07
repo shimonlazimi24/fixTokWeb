@@ -107,10 +107,6 @@ function footerHtml() {
         <a href="${APP_LINKS.privacy}">מדיניות פרטיות</a>
         <a href="/contact.html">צור קשר</a>
       </nav>
-      <div class="footer-cta">
-        <a class="btn btn-primary" href="${APP_LINKS.clientStart}">${esc(copy.cta.client)}</a>
-        <a class="btn btn-ghost" href="${APP_LINKS.contractorLanding}">${esc(copy.cta.contractor)}</a>
-      </div>
     </div>
     <p class="footer-copy container">© ${new Date().getFullYear()} FixTok. ${esc(copy.footer.rights)}.</p>
   </footer>`;
