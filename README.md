@@ -6,13 +6,15 @@
 
 | נתיב | תפקיד |
 |------|--------|
-| `content/copy.he.mjs` | כל הטקסטים בעברית |
-| `content/links.mjs` | קישורי אפליקציה + UTM |
-| `content/seo.mjs` | מטא, Schema.org |
-| `scripts/build.mjs` | בניית `index.html`, `contact.html` |
-| `styles/landing.css` | עיצוב יוקרתי (Heebo, כתום מותג) |
-| `public/` | מקור ל-robots, sitemap, llms |
-| `marketing/` | ערכת שיווק + OG |
+| `index.html` | דף הנחיתה |
+| `fixtok.css` | עיצוב (Rubik, Heebo, כתום מותג) |
+| `app.js` | ניווט, FAQ, reveal |
+| `img/` | תמונות לדף |
+| `shots/` | צילומי מסך להמחשה |
+| `uploads/` | קבצי PDF ותמונות נוספות |
+| `assets/` | לוגו ו-favicon |
+| `marketing/` | OG וערכת שיווק |
+| `robots.txt`, `sitemap.xml`, `llms.txt` | SEO ו-GEO |
 
 ## פיתוח מקומי
 
@@ -25,41 +27,29 @@ npm run dev
 
 ## עריכת תוכן
 
-1. ערכו `content/copy.he.mjs` (או `links.mjs` / `seo.mjs`).
-2. הריצו `npm run build`.
-3. פרסמו מחדש.
-
-פסקאות מוכנות לרשתות: `marketing/snippets.md`.
+ערכו ישירות את `index.html`, `fixtok.css` או `app.js` — אין שלב build.
 
 ## פריסה ב-Railway
 
 1. **New Project** → Deploy from GitHub → `shimonlazimi24/fixTokWeb`.
 2. שירות נפרד מהאפליקציה (fixTok).
-3. משתני סביבה: אין חובה; `PORT` מוגדר אוטומטית.
-4. Build: Nixpacks מריץ `npm install` + `npm start` (כולל `prestart` → build).
+3. `PORT` מוגדר אוטומטית; `npm start` מגיש את הקבצים הסטטיים.
 
 ### דומיין מותאם
 
 1. ב-Railway: **Settings → Networking → Custom Domain** → `fix-tok.com` ו-`www.fix-tok.com`.
-2. ב-DNS (רשם הדומיין):
-   - `fix-tok.com` → CNAME ליעד Railway (או ALIAS/ANAME אם נתמך)
-   - `www` → CNAME לאותו שירות
+2. ב-DNS: CNAME ליעד Railway.
 3. המתינו ל-HTTPS (Let's Encrypt אוטומטי).
 
 ### Google Search Console
 
-1. הוסיפו נכס `https://fix-tok.com` (אימות DNS או HTML).
+1. הוסיפו נכס `https://fix-tok.com`.
 2. שלחו sitemap: `https://fix-tok.com/sitemap.xml`
-3. בדקו: [PageSpeed Insights](https://pagespeed.web.dev/), Mobile-Friendly Test.
 
 ### GEO (מנועי AI)
 
 - `https://fix-tok.com/llms.txt` — תקציר
 - `https://fix-tok.com/llms-full.txt` — גרסה מפורטת
-
-## סרטון Hero (אופציונלי)
-
-שימו `hero.mp4` / `hero.webm` ב-`public/video/` — ראו `public/video/README.md`.
 
 ## רישיון
 
