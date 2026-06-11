@@ -1,4 +1,4 @@
-// FixTok landing — interactions
+// FixTok landing - interactions
 (function () {
   'use strict';
 

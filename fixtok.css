@@ -1,5 +1,5 @@
 /* ============================================================
-   FixTok — Landing Page styles
+   FixTok - Landing Page styles
    RTL · mobile-first · warm B2C (Lemonade) + engineered (Linear/Stripe)
    ============================================================ */
 
@@ -51,7 +51,7 @@
   --r-xl: 30px;
   --r-pill: 999px;
 
-  /* Shadow — soft, warm */
+  /* Shadow - soft, warm */
   --sh-sm: 0 1px 2px rgba(40,30,20,.05), 0 2px 6px rgba(40,30,20,.04);
   --sh:    0 2px 6px rgba(40,30,20,.05), 0 14px 34px rgba(40,30,20,.08);
   --sh-lg: 0 6px 18px rgba(40,30,20,.07), 0 34px 70px rgba(40,30,20,.13);
@@ -205,7 +205,7 @@ ul { list-style: none; }
 .hero__micro { margin-top: 22px; }
 .hero__note { margin-top: 18px; color: var(--text-3); font-size: .96rem; font-weight: 500; }
 
-/* hero promise strip — bold graphic */
+/* hero promise strip - bold graphic */
 .hero__promise {
   display: flex; align-items: stretch; flex-wrap: wrap; gap: 10px;
   margin-top: 30px;
@@ -562,7 +562,7 @@ ul { list-style: none; }
 .cmp-cols { display: grid; grid-template-columns: 1fr; }
 .cmp-col { padding: 22px; border-top: 1px solid var(--line); }
 .cmp-col.pick { background: linear-gradient(180deg, var(--green-soft), #fff); }
-/* traffic-light columns — soft tinted backgrounds + top accent */
+/* traffic-light columns - soft tinted backgrounds + top accent */
 .cmp-col--red   { background: linear-gradient(180deg, var(--red-soft), #fff); }
 .cmp-col--orange{ background: linear-gradient(180deg, var(--orange-soft), #fff); }
 .cmp-col--green { background: linear-gradient(180deg, var(--green-soft), #fff); }

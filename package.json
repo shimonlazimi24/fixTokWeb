@@ -2,7 +2,7 @@
   "name": "fixtokweb",
   "version": "2.0.0",
   "private": true,
-  "description": "FixTok marketing site — fix-tok.com",
+  "description": "FixTok marketing site - fix-tok.com",
   "scripts": {
     "start": "serve . -l ${PORT:-3000}",
     "dev": "serve . -l 3000"

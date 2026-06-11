@@ -27,7 +27,7 @@ npm run dev
 
 ## עריכת תוכן
 
-ערכו ישירות את `index.html`, `fixtok.css` או `app.js` — אין שלב build.
+ערכו ישירות את `index.html`, `fixtok.css` או `app.js` - אין שלב build.
 
 ## פריסה ב-Railway
 
@@ -48,9 +48,9 @@ npm run dev
 
 ### GEO (מנועי AI)
 
-- `https://fix-tok.com/llms.txt` — תקציר
-- `https://fix-tok.com/llms-full.txt` — גרסה מפורטת
+- `https://fix-tok.com/llms.txt` - תקציר
+- `https://fix-tok.com/llms-full.txt` - גרסה מפורטת
 
 ## רישיון
 
-פרטי — FixTok.
+פרטי - FixTok.
