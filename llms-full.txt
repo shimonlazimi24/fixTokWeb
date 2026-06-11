@@ -19,7 +19,7 @@ FixTok (fix-tok.com) היא פלטפורמה ישראלית בתחום הנדל"
 ## קישורים
 | תפקיד | URL |
 |--------|-----|
-| דף בית שיווקי | https://fix-tok.com/ |
+| דף בית שיווקי | https://www.fix-tok.com/ |
 | אפליקציה | https://app.fix-tok.com/ |
 | התחלת פרויקט (לקוח) | https://app.fix-tok.com/login?role=client&next=%2Fclient%2Fnew |
 | דף קבלנים | https://app.fix-tok.com/contractor |

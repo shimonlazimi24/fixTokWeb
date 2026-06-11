@@ -1,6 +1,6 @@
 # fixTokWeb
 
-אתר שיווקי סטטי ל-**[fix-tok.com](https://fix-tok.com)**. האפליקציה נמצאת ב-[fixTok](https://github.com/shimonlazimi24/fixTok) על **app.fix-tok.com**.
+אתר שיווקי סטטי ל-**[www.fix-tok.com](https://www.fix-tok.com)** (`fix-tok.com` מפנה אוטומטית). האפליקציה ב-**app.fix-tok.com**.
 
 ## מבנה
 
@@ -37,19 +37,19 @@ npm run dev
 
 ### דומיין מותאם
 
-1. ב-Railway: **Settings → Networking → Custom Domain** → `fix-tok.com` ו-`www.fix-tok.com`.
-2. ב-DNS: CNAME ליעד Railway.
-3. המתינו ל-HTTPS (Let's Encrypt אוטומטי).
+1. ב-Railway: **Settings → Networking → Custom Domain** → הוסיפו **שניהם**: `fix-tok.com` ו-`www.fix-tok.com`.
+2. ב-DNS: CNAME ליעד Railway (גם apex וגם www לפי הוראות Railway).
+3. המתינו ל-HTTPS. `fix-tok.com` מפנה 301 ל-`www.fix-tok.com`.
 
 ### Google Search Console
 
-1. הוסיפו נכס `https://fix-tok.com`.
-2. שלחו sitemap: `https://fix-tok.com/sitemap.xml`
+1. הוסיפו נכס `https://www.fix-tok.com` (מומלץ כ-primary).
+2. שלחו sitemap: `https://www.fix-tok.com/sitemap.xml`
 
 ### GEO (מנועי AI)
 
-- `https://fix-tok.com/llms.txt` - תקציר
-- `https://fix-tok.com/llms-full.txt` - גרסה מפורטת
+- `https://www.fix-tok.com/llms.txt` - תקציר
+- `https://www.fix-tok.com/llms-full.txt` - גרסה מפורטת
 
 ## רישיון
 

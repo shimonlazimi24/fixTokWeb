@@ -12,7 +12,7 @@
 3. קבלנים מתאימים מגישים הצעות על אותו תיק עבודה - לנייד.
 
 ## קישורים רשמיים
-- אתר שיווקי: https://fix-tok.com/
+- אתר שיווקי: https://www.fix-tok.com/
 - אפליקציה (לקוחות וקבלנים): https://app.fix-tok.com/
 - התחלת פרויקט ללקוח: https://app.fix-tok.com/login?role=client&next=%2Fclient%2Fnew
 - קבלנים: https://app.fix-tok.com/contractor

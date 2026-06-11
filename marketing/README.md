@@ -2,7 +2,7 @@
 
 ## משפט אחד
 
-יש לכם תיקון שתקוע? צלמו סרטון קצר, קבלו תיק עבודה והשוו הצעות מקבלנים - בלי לרדוף אחרי אף אחד. [fix-tok.com](https://fix-tok.com)
+יש לכם תיקון שתקוע? צלמו סרטון קצר, קבלו תיק עבודה והשוו הצעות מקבלנים - בלי לרדוף אחרי אף אחד. [fix-tok.com](https://www.fix-tok.com)
 
 ## מעקב קמפיינים (אתר בלבד)
 
@@ -36,19 +36,19 @@ window.FIXTOK_TRACKING = {
 
 | ערוץ | לינק |
 |------|------|
-| וואטסאפ | `https://fix-tok.com/?dlm-wa` |
-| סטטוס וואטסאפ | `https://fix-tok.com/?dlm-wa-status` |
-| קבוצת וואטסאפ | `https://fix-tok.com/?dlm-wa-group` |
-| פייסבוק | `https://fix-tok.com/?dlm-fb` |
-| אינסטגרם | `https://fix-tok.com/?dlm-ig` |
-| מייל | `https://fix-tok.com/?dlm-em` |
+| וואטסאפ | `https://www.fix-tok.com/?dlm-wa` |
+| סטטוס וואטסאפ | `https://www.fix-tok.com/?dlm-wa-status` |
+| קבוצת וואטסאפ | `https://www.fix-tok.com/?dlm-wa-group` |
+| פייסבוק | `https://www.fix-tok.com/?dlm-fb` |
+| אינסטגרם | `https://www.fix-tok.com/?dlm-ig` |
+| מייל | `https://www.fix-tok.com/?dlm-em` |
 
 ### פורמט UTM (GA4 / מודעות)
 
 ```
-https://fix-tok.com/?utm_source=whatsapp&utm_medium=status&utm_campaign=renovation-june-2026
-https://fix-tok.com/?utm_source=facebook&utm_medium=paid&utm_campaign=lookalike-homeowners
-https://fix-tok.com/?utm_source=google&utm_medium=cpc&utm_campaign=brand-he
+https://www.fix-tok.com/?utm_source=whatsapp&utm_medium=status&utm_campaign=renovation-june-2026
+https://www.fix-tok.com/?utm_source=facebook&utm_medium=paid&utm_campaign=lookalike-homeowners
+https://www.fix-tok.com/?utm_source=google&utm_medium=cpc&utm_campaign=brand-he
 ```
 
 ### Google / Meta click IDs
@@ -72,8 +72,8 @@ https://fix-tok.com/?utm_source=google&utm_medium=cpc&utm_campaign=brand-he
 
 | קהל | קישור (בלי תגיות) |
 |-----|-------------------|
-| לקוח - מהאתר | `https://fix-tok.com` (CTA מוסיף תגיות לבד) |
-| קבלן | `https://fix-tok.com/#pros` |
+| לקוח - מהאתר | `https://www.fix-tok.com` (CTA מוסיף תגיות לבד) |
+| קבלן | `https://www.fix-tok.com/#pros` |
 
 ## תמונת שיתוף
 

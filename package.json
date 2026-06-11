@@ -2,15 +2,16 @@
   "name": "fixtokweb",
   "version": "2.0.0",
   "private": true,
-  "description": "FixTok marketing site - fix-tok.com",
+  "description": "FixTok marketing site - www.fix-tok.com",
   "scripts": {
-    "start": "serve . -l ${PORT:-3000}",
-    "dev": "serve . -l 3000"
+    "start": "node server.js",
+    "dev": "node server.js"
   },
   "engines": {
     "node": ">=20"
   },
   "dependencies": {
-    "serve": "^14.2.4"
+    "serve": "^14.2.4",
+    "serve-handler": "^6.1.7"
   }
 }
