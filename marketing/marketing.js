@@ -16,7 +16,13 @@
   function readStore() {
     try {
       var raw = localStorage.getItem(STORAGE_KEY);
-      return raw ? JSON.parse(raw) : null;
+      if (!raw) return null;
+      var data = JSON.parse(raw);
+      if (data.dlm && !data.fx) {
+        data.fx = data.dlm;
+        delete data.dlm;
+      }
+      return data;
     } catch (e) {
       return null;
     }
@@ -34,7 +40,7 @@
     var params = new URLSearchParams(search || "");
     var utm = {};
     var clickIds = {};
-    var dlm = [];
+    var fx = [];
     var ref = null;
     var hasAny = false;
 
@@ -60,8 +66,11 @@
     }
 
     params.forEach(function (_val, key) {
-      if (key === "dlm-wa" || key.indexOf("dlm-") === 0) {
-        dlm.push(key === "dlm-wa" ? "wa" : key.slice(4));
+      if (key === "fx-wa" || key.indexOf("fx-") === 0) {
+        fx.push(key === "fx-wa" ? "wa" : key.slice(3));
+        hasAny = true;
+      } else if (key === "dlm-wa" || key.indexOf("dlm-") === 0) {
+        fx.push(key === "dlm-wa" ? "wa" : key.slice(4));
         hasAny = true;
       }
     });
@@ -73,7 +82,7 @@
       landingPage: location.pathname + location.search,
       utm: utm,
       clickIds: clickIds,
-      dlm: dlm,
+      fx: fx,
       ref: ref,
     };
   }
@@ -85,8 +94,8 @@
       landingPage: existing.landingPage,
       utm: Object.assign({}, existing.utm, incoming.utm),
       clickIds: Object.assign({}, existing.clickIds, incoming.clickIds),
-      dlm: existing.dlm.concat(incoming.dlm.filter(function (c) {
-        return existing.dlm.indexOf(c) === -1;
+      fx: (existing.fx || []).concat((incoming.fx || []).filter(function (c) {
+        return (existing.fx || []).indexOf(c) === -1;
       })),
       ref: incoming.ref || existing.ref,
     };
@@ -122,10 +131,10 @@
     return store;
   }
 
-  function dlmToUtmMedium(dlm) {
-    if (!dlm || !dlm.length) return null;
+  function fxToUtmMedium(fx) {
+    if (!fx || !fx.length) return null;
     var map = { wa: "whatsapp", fb: "facebook", ig: "instagram", li: "linkedin", em: "email" };
-    return map[dlm[0]] || "dlm-" + dlm[0];
+    return map[fx[0]] || "fx-" + fx[0];
   }
 
   function buildQueryFromAttribution(att) {
@@ -142,12 +151,12 @@
 
     if (att.ref) q.set("ref", att.ref);
 
-    if (att.dlm && att.dlm.length) {
-      att.dlm.forEach(function (channel) {
-        q.set("dlm-" + channel, "1");
+    if (att.fx && att.fx.length) {
+      att.fx.forEach(function (channel) {
+        q.set("fx-" + channel, "1");
       });
       if (!q.get("utm_medium")) {
-        var medium = dlmToUtmMedium(att.dlm);
+        var medium = fxToUtmMedium(att.fx);
         if (medium) q.set("utm_medium", medium);
       }
       if (!q.get("utm_source")) q.set("utm_source", "fix-tok-landing");
@@ -177,7 +186,7 @@
     if (!att) return {};
     var out = {
       landing_page: att.landingPage || "",
-      dlm_channels: (att.dlm || []).join(","),
+      fx_channels: (att.fx || []).join(","),
     };
     Object.keys(att.utm || {}).forEach(function (k) {
       out["utm_" + k] = att.utm[k];

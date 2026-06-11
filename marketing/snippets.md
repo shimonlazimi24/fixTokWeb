@@ -1,11 +1,11 @@
 # פסקאות מוכנות לשיווק (עם מעקב)
 
-השתמשו בלינקים עם `?dlm-*` או UTM כדי לדעת מאיזה ערוץ הגיעו.
+השתמשו בלינקים עם `?fx-*` או UTM כדי לדעת מאיזה ערוץ הגיעו.
 
 ## משפט אחד (סטטוס / ביו)
 
 FixTok - פותחים שיפוץ מסרטון קצר ומקבלים הצעות מסודרות מקבלנים.
-https://www.fix-tok.com/?dlm-wa
+https://www.fix-tok.com/?fx-wa
 
 ## פייסבוק / אינסטגרם
 
@@ -13,17 +13,17 @@ https://www.fix-tok.com/?dlm-wa
 
 ב-FixTok מצלמים סרטון קצר, עונים על כמה שאלות - ומקבלים הצעות על **אותו** תיק עבודה. בלי ניחושים, בלי ניירות שונות.
 
-אתר (פייסבוק): https://www.fix-tok.com/?dlm-fb
-אתר (אינסטגרם): https://www.fix-tok.com/?dlm-ig
+אתר (פייסבוק): https://www.fix-tok.com/?fx-fb
+אתר (אינסטגרם): https://www.fix-tok.com/?fx-ig
 
 ## וואטסאפ
 
 היי - ראיתי את FixTok: מצלמים סרטון של האזור לשיפוץ, עונים על שאלות קצרות, וקבלנים שולחים הצעות על אותו תיק עבודה. נראה לי שווה לנסות לפני שמזמינים עוד קבלן לבית.
 
-https://www.fix-tok.com/?dlm-wa
+https://www.fix-tok.com/?fx-wa
 
-סטטוס וואטסאפ: https://www.fix-tok.com/?dlm-wa-status
-קבוצה: https://www.fix-tok.com/?dlm-wa-group
+סטטוס וואטסאפ: https://www.fix-tok.com/?fx-wa-status
+קבוצה: https://www.fix-tok.com/?fx-wa-group
 
 ## מייל
 
@@ -33,10 +33,10 @@ https://www.fix-tok.com/?dlm-wa
 
 אם פרויקט שיפוץ תקוע רק בגלל התיאום - FixTok עוזרת לפתוח פרויקט מסרטון קצר ותשובות פשוטות, ולקבל הצעות מחיר מסודרות מאותו מידע.
 
-אתר: https://www.fix-tok.com/?dlm-em&utm_source=newsletter&utm_medium=email&utm_campaign=YOUR_CAMPAIGN
+אתר: https://www.fix-tok.com/?fx-em&utm_source=newsletter&utm_medium=email&utm_campaign=YOUR_CAMPAIGN
 
 בברכה,
 
 ## קבלנים (מהאתר)
 
-https://www.fix-tok.com/?dlm-wa#pros
+https://www.fix-tok.com/?fx-wa#pros
