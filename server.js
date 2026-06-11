@@ -1,5 +1,6 @@
 const http = require("http");
 const handler = require("serve-handler");
+const { SECURITY_HEADERS } = require("./security-headers");
 
 const CANONICAL_HOST = "www.fix-tok.com";
 
@@ -7,6 +8,7 @@ const serveOptions = {
   public: ".",
   cleanUrls: false,
   directoryListing: false,
+  headers: [{ source: "**", headers: SECURITY_HEADERS }],
   rewrites: [
     { source: "/", destination: "/index.html" },
     { source: "/contact", destination: "/contact.html" },
@@ -18,7 +20,11 @@ const server = http.createServer((req, res) => {
 
   if (host === "fix-tok.com") {
     const target = `https://${CANONICAL_HOST}${req.url || "/"}`;
-    res.writeHead(301, { Location: target, "Cache-Control": "public, max-age=3600" });
+    res.writeHead(301, {
+      Location: target,
+      "Cache-Control": "public, max-age=3600",
+      ...Object.fromEntries(SECURITY_HEADERS.map(({ key, value }) => [key, value])),
+    });
     res.end();
     return;
   }
