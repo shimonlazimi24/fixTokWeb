@@ -1,34 +1,86 @@
-# ערכת שיווק FixTok
-
-מקור התוכן: `content/copy.he.mjs` - עריכה אחת, ואז `npm run build`.
+# ערכת שיווק FixTok (fix-tok.com)
 
 ## משפט אחד
 
 יש לכם תיקון שתקוע? צלמו סרטון קצר, קבלו תיק עבודה והשוו הצעות מקבלנים - בלי לרדוף אחרי אף אחד. [fix-tok.com](https://fix-tok.com)
 
-## UTM לקמפיינים
+## מעקב קמפיינים (אתר בלבד)
 
-תבניות ב-`content/links.mjs` (`UTM_TEMPLATES`). דוגמה:
+האתר `fix-tok.com` שומר מקור הגעה בדפדפן ושולח אירועים ל-GA4 (אם מוגדר).
+
+### הגדרת GA4
+
+1. צרו נכס ב-[Google Analytics](https://analytics.google.com/) ל-`fix-tok.com`.
+2. העתיקו את ה-Measurement ID (מתחיל ב-`G-`).
+3. הדביקו ב-`marketing/tracking-config.js`:
+
+```javascript
+window.FIXTOK_TRACKING = {
+  ga4Id: "G-XXXXXXXXXX",
+  attributionDays: 90,
+};
+```
+
+4. דחפו ל-production. ב-GA4 תראו: כניסות, `campaign_landing`, לחיצות על CTA, וואטסאפ ומייל.
+
+### בדיקה מקומית
+
+פתחו: `http://localhost:3000/?dlm-wa&debug_mkt=1`  
+בקונסול (F12) יופיעו הנתונים שנשמרו.
+
+---
+
+## לינקים ייעודיים לקמפיינים
+
+### פורמט קצר (`dlm-*`) - מומלץ לוואטסאפ
+
+| ערוץ | לינק |
+|------|------|
+| וואטסאפ | `https://fix-tok.com/?dlm-wa` |
+| סטטוס וואטסאפ | `https://fix-tok.com/?dlm-wa-status` |
+| קבוצת וואטסאפ | `https://fix-tok.com/?dlm-wa-group` |
+| פייסבוק | `https://fix-tok.com/?dlm-fb` |
+| אינסטגרם | `https://fix-tok.com/?dlm-ig` |
+| מייל | `https://fix-tok.com/?dlm-em` |
+
+### פורמט UTM (GA4 / מודעות)
 
 ```
-https://app.fix-tok.com/login?role=client&next=%2Fclient%2Fnew&utm_source=facebook&utm_medium=social&utm_campaign=renovation_q2
+https://fix-tok.com/?utm_source=whatsapp&utm_medium=status&utm_campaign=renovation-june-2026
+https://fix-tok.com/?utm_source=facebook&utm_medium=paid&utm_campaign=lookalike-homeowners
+https://fix-tok.com/?utm_source=google&utm_medium=cpc&utm_campaign=brand-he
 ```
 
-בקוד: `withUtm(APP_LINKS.clientStart, UTM_TEMPLATES.facebookRenovation)`.
+### Google / Meta click IDs
 
-## קישורי CTA מוכנים
+נשמרים אוטומטית אם מגיעים ב-URL: `gclid`, `fbclid`, `gbraid`, `wbraid`.
 
-| קהל | קישור |
-|-----|--------|
-| לקוח - התחלה | https://app.fix-tok.com/login?role=client&next=%2Fclient%2Fnew |
-| קבלן | https://app.fix-tok.com/contractor |
-| התחברות | https://app.fix-tok.com/login |
+---
+
+## מה קורה אחרי הכניסה
+
+1. המשתמש נכנס עם לינק מסומן (למשל `?dlm-wa`).
+2. האתר שומר את המקור ב-localStorage (90 יום, first-touch).
+3. כל כפתור ל-`app.fix-tok.com` מקבל את התגיות אוטומטית בלחיצה.
+4. GA4 מקבל אירוע `campaign_landing` + `click_app_cta` / `click_whatsapp` / `click_email`.
+
+**חשוב:** המעקב הוא על **fix-tok.com** בלבד. האפליקציה לא מנטרת את זה (אלא אם תוסיפו שם בנפרד).
+
+---
+
+## קישורי CTA
+
+| קהל | קישור (בלי תגיות) |
+|-----|-------------------|
+| לקוח - מהאתר | `https://fix-tok.com` (CTA מוסיף תגיות לבד) |
+| קבלן | `https://fix-tok.com/#pros` |
 
 ## תמונת שיתוף
 
 - ברירת מחדל: `marketing/og-default.svg` (1200×630)
-- להחלפה לקמפיין: עדכנו SVG/PNG ושימו גם ב-`SEO.ogImage` ב-`content/seo.mjs`, ואז `npm run build`.
 
-## קבצים להעתקה
+## קבצים
 
-פסקאות מוכנות: `marketing/snippets.md`.
+- `marketing/tracking-config.js` - GA4 ID
+- `marketing/marketing.js` - לוגיקת מעקב
+- `marketing/snippets.md` - פסקאות מוכנות עם לינקים
