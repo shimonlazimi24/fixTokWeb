@@ -192,7 +192,10 @@
   var gaReady = false;
 
   function loadGa4(id) {
-    if (!id || gaReady) return;
+    if (!id || gaReady || window.__FIXTOK_GA4_LOADED) {
+      gaReady = true;
+      return;
+    }
     gaReady = true;
     window.dataLayer = window.dataLayer || [];
     window.gtag = window.gtag || function () {
