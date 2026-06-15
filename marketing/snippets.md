@@ -25,6 +25,15 @@ https://www.fix-tok.com/?fx-wa
 סטטוס וואטסאפ: https://www.fix-tok.com/?fx-wa-status
 קבוצה: https://www.fix-tok.com/?fx-wa-group
 
+## טלגרם
+
+היי - ראיתי את FixTok: מצלמים סרטון של האזור לשיפוץ, עונים על שאלות קצרות, וקבלנים שולחים הצעות על אותו תיק עבודה. נראה לי שווה לנסות לפני שמזמינים עוד קבלן לבית.
+
+https://www.fix-tok.com/?fx-tg
+
+סטטוס טלגרם: https://www.fix-tok.com/?fx-tg-status
+קבוצה: https://www.fix-tok.com/?fx-tg-group
+
 ## מייל
 
 נושא: שיפוץ בלי לרדוף אחרי קבלנים - FixTok

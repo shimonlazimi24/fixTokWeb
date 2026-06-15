@@ -65,12 +65,20 @@
       hasAny = true;
     }
 
+    function fxParamToChannel(key) {
+      if (key === "fx-wa") return "wa";
+      if (key === "fx-tg") return "tg";
+      if (key.indexOf("fx-") === 0) return key.slice(3);
+      if (key === "dlm-wa") return "wa";
+      if (key === "dlm-tg") return "tg";
+      if (key.indexOf("dlm-") === 0) return key.slice(4);
+      return null;
+    }
+
     params.forEach(function (_val, key) {
-      if (key === "fx-wa" || key.indexOf("fx-") === 0) {
-        fx.push(key === "fx-wa" ? "wa" : key.slice(3));
-        hasAny = true;
-      } else if (key === "dlm-wa" || key.indexOf("dlm-") === 0) {
-        fx.push(key === "dlm-wa" ? "wa" : key.slice(4));
+      var channel = fxParamToChannel(key);
+      if (channel) {
+        fx.push(channel);
         hasAny = true;
       }
     });
@@ -133,7 +141,14 @@
 
   function fxToUtmMedium(fx) {
     if (!fx || !fx.length) return null;
-    var map = { wa: "whatsapp", fb: "facebook", ig: "instagram", li: "linkedin", em: "email" };
+    var map = {
+      wa: "whatsapp",
+      tg: "telegram",
+      fb: "facebook",
+      ig: "instagram",
+      li: "linkedin",
+      em: "email",
+    };
     return map[fx[0]] || "fx-" + fx[0];
   }
 
@@ -238,6 +253,12 @@
     document.querySelectorAll('a[href*="wa.me"]').forEach(function (a) {
       a.addEventListener("click", function () {
         trackEvent("click_whatsapp", Object.assign({ link_url: a.href }, flatAttributionParams(getAttribution())));
+      });
+    });
+
+    document.querySelectorAll('a[href*="t.me"], a[href*="telegram.me"]').forEach(function (a) {
+      a.addEventListener("click", function () {
+        trackEvent("click_telegram", Object.assign({ link_url: a.href }, flatAttributionParams(getAttribution())));
       });
     });
 

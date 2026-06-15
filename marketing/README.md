@@ -32,13 +32,16 @@ window.FIXTOK_TRACKING = {
 
 ## לינקים ייעודיים לקמפיינים
 
-### פורמט קצר (`fx-*`) - מומלץ לוואטסאפ
+### פורמט קצר (`fx-*`) - מומלץ לוואטסאפ / טלגרם
 
 | ערוץ | לינק |
 |------|------|
 | וואטסאפ | `https://www.fix-tok.com/?fx-wa` |
 | סטטוס וואטסאפ | `https://www.fix-tok.com/?fx-wa-status` |
 | קבוצת וואטסאפ | `https://www.fix-tok.com/?fx-wa-group` |
+| טלגרם | `https://www.fix-tok.com/?fx-tg` |
+| סטטוס טלגרם | `https://www.fix-tok.com/?fx-tg-status` |
+| קבוצת טלגרם | `https://www.fix-tok.com/?fx-tg-group` |
 | פייסבוק | `https://www.fix-tok.com/?fx-fb` |
 | אינסטגרם | `https://www.fix-tok.com/?fx-ig` |
 | מייל | `https://www.fix-tok.com/?fx-em` |
@@ -64,7 +67,7 @@ https://www.fix-tok.com/?utm_source=google&utm_medium=cpc&utm_campaign=brand-he
 1. המשתמש נכנס עם לינק מסומן (למשל `?fx-wa`).
 2. האתר שומר את המקור ב-localStorage (90 יום, first-touch).
 3. כל כפתור ל-`app.fix-tok.com` מקבל את התגיות אוטומטית בלחיצה.
-4. GA4 מקבל אירוע `campaign_landing` + `click_app_cta` / `click_whatsapp` / `click_email`.
+4. GA4 מקבל אירוע `campaign_landing` + `click_app_cta` / `click_whatsapp` / `click_telegram` / `click_email`.
 
 **חשוב:** המעקב הוא על **fix-tok.com** בלבד. האפליקציה לא מנטרת את זה (אלא אם תוסיפו שם בנפרד).
 
