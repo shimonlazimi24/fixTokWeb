@@ -34,6 +34,18 @@
 <link rel="stylesheet" href="/fixtok.css">
 <link rel="icon" href="/assets/images/logo-mark.svg" type="image/svg+xml" sizes="any">
 <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+<script>
+(function () {
+  try {
+    var m = document.cookie.match(/(?:^|; )fixtok_locale=([^;]+)/);
+    var loc = m ? decodeURIComponent(m[1]) : localStorage.getItem('fixtok_locale');
+    if (loc === 'en') {
+      document.documentElement.lang = 'en';
+      document.documentElement.dir = 'ltr';
+    }
+  } catch (e) { /* ignore */ }
+})();
+</script>
 <script src="/marketing/tracking-config.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"FixTok","url":"https://www.fix-tok.com","logo":"https://www.fix-tok.com/assets/images/logo-wordmark.svg","email":"info@fix-tok.com","sameAs":["https://app.fix-tok.com"]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"FixTok","url":"https://www.fix-tok.com","inLanguage":"he","description":"צלמו סרטון קצר - אנחנו בונים את המפרט, מביאים קבלנים מאומתים שמתחרים על העבודה, ואתם בוחרים הצעה בראש שקט."}</script>
@@ -46,22 +58,22 @@
   <div class="wrap nav__inner">
     <a class="logo" href="#top">Fix<b>Tok</b></a>
     <nav class="nav__links">
-      <a href="#how">איך זה עובד</a>
-      <a href="#expert">המומחה שלכם</a>
-      <a href="#faq">שאלות</a>
+      <a href="#how" data-i18n="nav.how">איך זה עובד</a>
+      <a href="#expert" data-i18n="nav.expert">המומחה שלכם</a>
+      <a href="#faq" data-i18n="nav.faq">שאלות</a>
     </nav>
     <div class="nav__right">
-      <a class="nav__pros" href="#pros">לקבלנים</a>
-      <a class="btn btn--primary" href="https://app.fix-tok.com">התחילו לצלם פרויקט</a>
-      <button class="nav__burger" aria-label="תפריט"><span></span><span></span><span></span></button>
+      <a class="nav__pros" href="#pros" data-i18n="nav.pros">לקבלנים</a>
+      <a class="btn btn--primary" href="https://app.fix-tok.com" data-i18n="nav.cta">התחילו לצלם פרויקט</a>
+      <button class="nav__burger" data-i18n-attr="aria-label:nav.menuAria" aria-label="תפריט"><span></span><span></span><span></span></button>
     </div>
   </div>
   <div class="nav__mobile">
     <div class="wrap nav__mobile-inner">
-      <a href="#how">איך זה עובד</a>
-      <a href="#expert">המומחה שלכם</a>
-      <a href="#faq">שאלות</a>
-      <a class="pros" href="#pros">לקבלנים</a>
+      <a href="#how" data-i18n="nav.how">איך זה עובד</a>
+      <a href="#expert" data-i18n="nav.expert">המומחה שלכם</a>
+      <a href="#faq" data-i18n="nav.faq">שאלות</a>
+      <a class="pros" href="#pros" data-i18n="nav.pros">לקבלנים</a>
     </div>
   </div>
 </header>
@@ -70,12 +82,12 @@
 <section class="hero">
   <div class="wrap hero__grid">
     <div class="hero__copy">
-      <span class="eyebrow"><span class="dot"></span>FixTok · שיפוץ בראש שקט</span>
-      <h1>למה שיפוץ צריך<br>להרגיש כמו <span class="accent">עונש?</span></h1>
-      <p class="hero__sub">עם Fixtok זה אחרת - אתם מצלמים סרטון קצר - וזהו.<br>משם, אנחנו דואגים להכל.</p>
+      <span class="eyebrow"><span class="dot"></span><span data-i18n="hero.eyebrow">FixTok · שיפוץ בראש שקט</span></span>
+      <h1 data-i18n-html="hero.title">למה שיפוץ צריך<br>להרגיש כמו <span class="accent">עונש?</span></h1>
+      <p class="hero__sub" data-i18n-html="hero.sub">עם Fixtok זה אחרת - אתם מצלמים סרטון קצר - וזהו.<br>משם, אנחנו דואגים להכל.</p>
       <div class="hero__cta">
-        <a class="btn btn--primary btn--lg" href="https://app.fix-tok.com">התחילו לצלם פרויקט</a>
-        <a class="btn btn--ghost btn--lg" href="#how">איך זה עובד</a>
+        <a class="btn btn--primary btn--lg" href="https://app.fix-tok.com" data-i18n="hero.cta.start">התחילו לצלם פרויקט</a>
+        <a class="btn btn--ghost btn--lg" href="#how" data-i18n="hero.cta.how">איך זה עובד</a>
       </div>
     </div>
     <div class="hero__visual">
@@ -85,20 +97,20 @@
         <div class="phone__screen">
           <div class="phone__top">
             <div class="statusbar"><span>9:41</span><span class="dots"><span>●●●</span><span class="bar"></span></span></div>
-            <div class="appbar"><span class="alogo" dir="ltr" lang="en">Fix<span class="alogo__tok">Tok</span></span><span class="astep">העלאת סרטון</span></div>
+            <div class="appbar"><span class="alogo" dir="ltr" lang="en">Fix<span class="alogo__tok">Tok</span></span><span class="astep" data-i18n="hero.phone.step">העלאת סרטון</span></div>
           </div>
           <div class="app-body">
-            <div class="scr-title">העלאת סרטון</div>
-            <div class="scr-sub">צלמו סרטון של הבעיה והסבירו במילים שלכם מה תרצו שיקרה.</div>
+            <div class="scr-title" data-i18n="hero.phone.title">העלאת סרטון</div>
+            <div class="scr-sub" data-i18n="hero.phone.sub">צלמו סרטון של הבעיה והסבירו במילים שלכם מה תרצו שיקרה.</div>
             <div class="video-feed">
               <img src="/img/before-after.jpg" alt="חדר רחצה - לפני ואחרי שיפוץ">
               <div class="vf-rec"><span class="d"></span>REC <em>00:12</em></div>
               <span class="vf-corner tl"></span><span class="vf-corner tr"></span><span class="vf-corner bl"></span><span class="vf-corner br"></span>
-              <div class="vf-tag">מצלמים את הבעיה</div>
+              <div class="vf-tag" data-i18n="hero.phone.recTag">מצלמים את הבעיה</div>
               <div class="vf-shutter"><i></i></div>
             </div>
           </div>
-          <div class="app-foot"><div class="app-cta">המשך עם הסרטון</div></div>
+          <div class="app-foot"><div class="app-cta" data-i18n="hero.phone.cta">המשך עם הסרטון</div></div>
         </div>
       </div>
     </div>
@@ -108,7 +120,7 @@
 <!-- ============ TRUST BAR ============ -->
 <div class="trust">
   <div class="wrap trust__row">
-    <span>הסרטון הראשון עליכם · כל השאר עלינו · ללא עלות</span>
+    <span data-i18n="trust.bar">הסרטון הראשון עליכם · כל השאר עלינו · ללא עלות</span>
   </div>
 </div>
 
@@ -116,17 +128,17 @@
 <section class="section">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="eyebrow"><span class="dot"></span>הבעיה</span>
-      <h2 class="h2" style="margin-top:18px">כולנו מכירים את זה.</h2>
+      <span class="eyebrow"><span class="dot"></span><span data-i18n="problem.eyebrow">הבעיה</span></span>
+      <h2 class="h2" style="margin-top:18px" data-i18n="problem.title">כולנו מכירים את זה.</h2>
     </div>
     <div class="prob-grid">
-      <div class="prob-card reveal"><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16" y2="16"></line></svg></span><p>לחפש קבלנים בפייסבוק, בגוגל, ו<b>בהמלצות של דוד יוסף</b></p></div>
-      <div class="prob-card reveal"><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.2 7.7L3 21l1.8-5.8A8.5 8.5 0 1 1 21 11.5Z"></path></svg></span><p>להסביר לכל אחד <b>מאפס</b> - שוב ושוב, מהתחלה</p></div>
-      <div class="prob-card reveal"><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"></path><path d="M14 3v5h5"></path><line x1="9" y1="13" x2="15" y2="13"></line><line x1="9" y1="17" x2="13" y2="17"></line></svg></span><p>לקבל מכל קבלן <b>הצעה אחרת</b> בלי שום אפשרות להשוואה</p></div>
-      <div class="prob-card reveal"><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12" y2="17"></line></svg></span><p>ולהתפלל <b>שלא נפלתם בפח</b></p></div>
+      <div class="prob-card reveal"><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16" y2="16"></line></svg></span><p data-i18n-html="problem.c1">לחפש קבלנים בפייסבוק, בגוגל, ו<b>בהמלצות של דוד יוסף</b></p></div>
+      <div class="prob-card reveal"><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.2 7.7L3 21l1.8-5.8A8.5 8.5 0 1 1 21 11.5Z"></path></svg></span><p data-i18n-html="problem.c2">להסביר לכל אחד <b>מאפס</b> - שוב ושוב, מהתחלה</p></div>
+      <div class="prob-card reveal"><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"></path><path d="M14 3v5h5"></path><line x1="9" y1="13" x2="15" y2="13"></line><line x1="9" y1="17" x2="13" y2="17"></line></svg></span><p data-i18n-html="problem.c3">לקבל מכל קבלן <b>הצעה אחרת</b> בלי שום אפשרות להשוואה</p></div>
+      <div class="prob-card reveal"><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12" y2="17"></line></svg></span><p data-i18n-html="problem.c4">ולהתפלל <b>שלא נפלתם בפח</b></p></div>
     </div>
     <div class="prob-band reveal">
-      <p>בינתיים? השיפוץ מחכה. חודש, חודשיים, שנה. <span class="hl">אנחנו פה כדי לקחת את כל הבלגן הזה עלינו.</span></p>
+      <p data-i18n-html="problem.band">בינתיים? השיפוץ מחכה. חודש, חודשיים, שנה. <span class="hl">אנחנו פה כדי לקחת את כל הבלגן הזה עלינו.</span></p>
     </div>
   </div>
 </section>
@@ -135,26 +147,26 @@
 <section class="section cream" id="how">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="eyebrow"><span class="dot"></span>איך זה עובד</span>
-      <h2 class="h2" style="margin-top:18px">שלושה צעדים. בלי כאב ראש.</h2>
+      <span class="eyebrow"><span class="dot"></span><span data-i18n="how.eyebrow">איך זה עובד</span></span>
+      <h2 class="h2" style="margin-top:18px" data-i18n="how.title">שלושה צעדים. בלי כאב ראש.</h2>
     </div>
     <div class="steps">
       <!-- step 1 -->
       <article class="step reveal">
         <span class="step__n">1</span>
-        <h3>צלמו סרטון קצר</h3>
-        <p>של מה שרוצים לשפץ. תסבירו במילים שלכם, כמו שהייתם מסבירים לחבר.</p>
+        <h3 data-i18n="how.s1.title">צלמו סרטון קצר</h3>
+        <p data-i18n="how.s1.text">של מה שרוצים לשפץ. תסבירו במילים שלכם, כמו שהייתם מסבירים לחבר.</p>
         <div class="step__shot">
           <div class="shot shot--photo">
-            <img src="/img/filming.png" alt="אדם מצלם סרטון של הבעיה בקיר">
+            <img src="/img/filming.png" data-i18n-attr="alt:how.s1.alt" alt="אדם מצלם סרטון של הבעיה בקיר">
           </div>
         </div>
       </article>
       <!-- step 2 -->
       <article class="step reveal">
         <span class="step__n">2</span>
-        <h3>FixTok מסדרת הכל</h3>
-        <p>המערכת בוחנת את הסרטון, בונה תיק עבודה מקצועי, ודואגת שהכל ברור לקבלנים.</p>
+        <h3 data-i18n="how.s2.title">FixTok מסדרת הכל</h3>
+        <p data-i18n="how.s2.text">המערכת בוחנת את הסרטון, בונה תיק עבודה מקצועי, ודואגת שהכל ברור לקבלנים.</p>
         <div class="step__shot">
           <div class="shot" style="background:var(--ink)">
             <div class="term" style="border-radius:0;padding:2px 0">
@@ -170,18 +182,18 @@
       <!-- step 3 -->
       <article class="step reveal">
         <span class="step__n">3</span>
-        <h3>מקבלים תיק עבודה סגור</h3>
-        <p>בוחרים הצעה - והכל ננעל לתיק עבודה אחד: קבלן, מסמכים ומחיר. מוכן להתחלה, בראש שקט.</p>
+        <h3 data-i18n="how.s3.title">מקבלים תיק עבודה סגור</h3>
+        <p data-i18n="how.s3.text">בוחרים הצעה - והכל ננעל לתיק עבודה אחד: קבלן, מסמכים ומחיר. מוכן להתחלה, בראש שקט.</p>
         <div class="step__shot">
           <div class="shot">
             <div class="shot__bar"><b>Fix<i>Tok</i></b><span>WORK PACKAGE</span></div>
             <div class="wp-status">
-              <span class="ck">✓</span><b>התיק נסגר בהצלחה</b><span class="sig">חוזה דיגיטלי נחתם</span>
+              <span class="ck">✓</span><b data-i18n="how.s3.status">התיק נסגר בהצלחה</b><span class="sig" data-i18n="how.s3.signed">חוזה דיגיטלי נחתם</span>
             </div>
             <div class="wp-sel" style="margin-bottom:0">
               <span class="offer__av">י</span>
               <div><div class="wp-name">יונתן השיפוצניק</div><div class="wp-rate">4.6 · 148 עבודות</div></div>
-              <div class="wp-price"><b>₪18,800</b><span>מחיר סגור</span></div>
+              <div class="wp-price"><b>₪18,800</b><span data-i18n="how.s3.priceLabel">מחיר סגור</span></div>
             </div>
           </div>
         </div>
@@ -194,21 +206,21 @@
 <section class="section" id="expert">
   <div class="wrap insp">
     <div class="insp__copy reveal">
-      <span class="eyebrow"><span class="dot"></span>הפיצ׳ר הכי חזק</span>
-      <h2 class="h2" style="margin-top:18px">מפקח בנייה<br>שהוא רק עבורכם.</h2>
-      <p class="lede" style="margin-top:18px">תחשבו על מומחה שעובד רק בשבילכם ומייצג את האינטרס שלכם בלבד.</p>
+      <span class="eyebrow"><span class="dot"></span><span data-i18n="expert.eyebrow">הפיצ׳ר הכי חזק</span></span>
+      <h2 class="h2" style="margin-top:18px" data-i18n-html="expert.title">מפקח בנייה<br>שהוא רק עבורכם.</h2>
+      <p class="lede" style="margin-top:18px" data-i18n="expert.lede">תחשבו על מומחה שעובד רק בשבילכם ומייצג את האינטרס שלכם בלבד.</p>
       <ul class="insp__check">
-        <li><span class="tick">✓</span> בונה לכם מפרט עבודה מקצועי ומפורט</li>
-        <li><span class="tick">✓</span> דואג שכולם מתמחרים על בסיס אותו מפרט בדיוק</li>
-        <li><span class="tick">✓</span> מזהה מראש מלכודות לפני שהן הופכות להוצאה</li>
-        <li><span class="tick">✓</span> 100% בצד שלכם</li>
+        <li><span class="tick">✓</span> <span data-i18n="expert.c1">בונה לכם מפרט עבודה מקצועי ומפורט</span></li>
+        <li><span class="tick">✓</span> <span data-i18n="expert.c2">דואג שכולם מתמחרים על בסיס אותו מפרט בדיוק</span></li>
+        <li><span class="tick">✓</span> <span data-i18n="expert.c3">מזהה מראש מלכודות לפני שהן הופכות להוצאה</span></li>
+        <li><span class="tick">✓</span> <span data-i18n="expert.c4">100% בצד שלכם</span></li>
       </ul>
-      <div class="insp__anchor">ליווי כזה בדרך כלל עולה אלפי שקלים.<br><b>ב-FixTok הוא מובנה, וללא עלות עבורכם.</b></div>
+      <div class="insp__anchor" data-i18n-html="expert.anchor">ליווי כזה בדרך כלל עולה אלפי שקלים.<br><b>ב-FixTok הוא מובנה, וללא עלות עבורכם.</b></div>
     </div>
     <div class="insp__visual reveal">
       <!-- real photo: FixTok app held in hand -->
       <figure class="insp__photo">
-        <img src="/img/phone-in-hand.jpg" alt="אפליקציית FixTok על מסך טלפון שמוחזק ביד">
+        <img src="/img/phone-in-hand.jpg" data-i18n-attr="alt:expert.alt" alt="אפליקציית FixTok על מסך טלפון שמוחזק ביד">
       </figure>
     </div>
   </div>
@@ -218,15 +230,15 @@
 <section class="section cream">
   <div class="wrap">
     <div class="section-head center reveal">
-      <span class="eyebrow"><span class="dot"></span>ההשוואה היא המוצר</span>
-      <h2 class="h2" style="margin-top:18px">העבודה, אותה עבודה בדיוק.<br>אתם רק בוחרים את התנאים שמתאימים לכם.</h2>
-      <p class="lede">כל הקבלנים מתמחרים בדיוק על אותו מפרט עבודה. אתם לא צריכים לנחש למה אחד יקר יותר מהשני או מה כלול במחיר. אתם רק משווים בין ההצעות שקיבלתם - ההבדל היחידי הוא המחיר והתנאים.</p>
+      <span class="eyebrow"><span class="dot"></span><span data-i18n="cmp.eyebrow">ההשוואה היא המוצר</span></span>
+      <h2 class="h2" style="margin-top:18px" data-i18n-html="cmp.title">העבודה, אותה עבודה בדיוק.<br>אתם רק בוחרים את התנאים שמתאימים לכם.</h2>
+      <p class="lede" data-i18n="cmp.lede">כל הקבלנים מתמחרים בדיוק על אותו מפרט עבודה. אתם לא צריכים לנחש למה אחד יקר יותר מהשני או מה כלול במחיר. אתם רק משווים בין ההצעות שקיבלתם - ההבדל היחידי הוא המחיר והתנאים.</p>
     </div>
     <div class="cmp-board reveal">
       <div class="cmp-board__bar">
-        <span class="t">חדר רחצה · רמת השרון</span>
-        <span class="cmp-pill same">זהה: סעיפים · חומרים · כמויות · היקף</span>
-        <span class="cmp-pill diff">משתנה: מחיר · אחריות · תשלום · זמינות</span>
+        <span class="t" data-i18n="cmp.project">חדר רחצה · רמת השרון</span>
+        <span class="cmp-pill same" data-i18n="cmp.same">זהה: סעיפים · חומרים · כמויות · היקף</span>
+        <span class="cmp-pill diff" data-i18n="cmp.diff">משתנה: מחיר · אחריות · תשלום · זמינות</span>
       </div>
       <div class="cmp-cols">
         <!-- col 1 - most expensive (rightmost in RTL) · RED -->
@@ -234,54 +246,54 @@
           <div class="cmp-col__head">
             <div class="cmp-col__who"><span class="cmp-col__av">ק</span><div><div class="cmp-col__name">קובי פרויקטים</div><div class="cmp-col__rate">4.7 · 89 עבודות</div></div></div>
           </div>
-          <div class="cmp-price">₪29,700<small>מחיר כולל</small></div>
+          <div class="cmp-price">₪29,700<small data-i18n="cmp.priceTotal">מחיר כולל</small></div>
           <div class="cmp-same">
-            <div class="row"><span>סעיפי עבודה</span><b>17</b></div>
-            <div class="row"><span>היקף</span><b>3.84 מ״ר</b></div>
+            <div class="row"><span data-i18n="cmp.items">סעיפי עבודה</span><b>17</b></div>
+            <div class="row"><span data-i18n="cmp.scope">היקף</span><b>3.84 מ״ר</b></div>
           </div>
           <div class="cmp-diff">
-            <div class="row"><span>אחריות</span><b>6 חודשים</b></div>
-            <div class="row"><span>תשלום</span><b>50% / 50%</b></div>
-            <div class="row"><span>זמינות</span><b>12 ימים</b></div>
+            <div class="row"><span data-i18n="cmp.warranty">אחריות</span><b>6 חודשים</b></div>
+            <div class="row"><span data-i18n="cmp.payment">תשלום</span><b>50% / 50%</b></div>
+            <div class="row"><span data-i18n="cmp.availability">זמינות</span><b>12 ימים</b></div>
           </div>
         </div>
         <!-- col 2 - available early · ORANGE -->
         <div class="cmp-col cmp-col--orange">
           <div class="cmp-col__head">
             <div class="cmp-col__who"><span class="cmp-col__av">א</span><div><div class="cmp-col__name">אחמד שיפוצים</div><div class="cmp-col__rate">4.1 · 124 עבודות</div></div></div>
-            <span class="cmp-early-tag">זמין מוקדם</span>
+            <span class="cmp-early-tag" data-i18n="cmp.early">זמין מוקדם</span>
           </div>
-          <div class="cmp-price">₪25,300<small>מחיר כולל</small></div>
+          <div class="cmp-price">₪25,300<small data-i18n="cmp.priceTotal">מחיר כולל</small></div>
           <div class="cmp-same">
-            <div class="row"><span>סעיפי עבודה</span><b>17</b></div>
-            <div class="row"><span>היקף</span><b>3.84 מ״ר</b></div>
+            <div class="row"><span data-i18n="cmp.items">סעיפי עבודה</span><b>17</b></div>
+            <div class="row"><span data-i18n="cmp.scope">היקף</span><b>3.84 מ״ר</b></div>
           </div>
           <div class="cmp-diff">
-            <div class="row"><span>אחריות</span><b>12 חודשים</b></div>
-            <div class="row"><span>תשלום</span><b>100% בגמר</b></div>
-            <div class="row"><span>זמינות</span><b>7 ימים</b></div>
+            <div class="row"><span data-i18n="cmp.warranty">אחריות</span><b>12 חודשים</b></div>
+            <div class="row"><span data-i18n="cmp.payment">תשלום</span><b>100% בגמר</b></div>
+            <div class="row"><span data-i18n="cmp.availability">זמינות</span><b>7 ימים</b></div>
           </div>
         </div>
         <!-- col 3 - recommended (cheapest, leftmost) · GREEN -->
         <div class="cmp-col cmp-col--green pick">
           <div class="cmp-col__head">
             <div class="cmp-col__who"><span class="cmp-col__av">י</span><div><div class="cmp-col__name">יונתן השיפוצניק</div><div class="cmp-col__rate">4.6 · 148 עבודות</div></div></div>
-            <span class="cmp-best-tag">בחירה מומלצת</span>
+            <span class="cmp-best-tag" data-i18n="cmp.best">בחירה מומלצת</span>
           </div>
-          <div class="cmp-price">₪18,800<small>מחיר כולל</small></div>
+          <div class="cmp-price">₪18,800<small data-i18n="cmp.priceTotal">מחיר כולל</small></div>
           <div class="cmp-same">
-            <div class="row"><span>סעיפי עבודה</span><b>17</b></div>
-            <div class="row"><span>היקף</span><b>3.84 מ״ר</b></div>
+            <div class="row"><span data-i18n="cmp.items">סעיפי עבודה</span><b>17</b></div>
+            <div class="row"><span data-i18n="cmp.scope">היקף</span><b>3.84 מ״ר</b></div>
           </div>
           <div class="cmp-diff">
-            <div class="row"><span>אחריות</span><b>12 חודשים</b></div>
-            <div class="row"><span>תשלום</span><b>100% בגמר</b></div>
-            <div class="row"><span>זמינות</span><b>14 ימים</b></div>
+            <div class="row"><span data-i18n="cmp.warranty">אחריות</span><b>12 חודשים</b></div>
+            <div class="row"><span data-i18n="cmp.payment">תשלום</span><b>100% בגמר</b></div>
+            <div class="row"><span data-i18n="cmp.availability">זמינות</span><b>14 ימים</b></div>
           </div>
         </div>
       </div>
     </div>
-    <p class="cmp-note">תצוגה להמחשה - אתם רואים את התוצאה הסופית, מסודרת להשוואה.</p>
+    <p class="cmp-note" data-i18n="cmp.note">תצוגה להמחשה - אתם רואים את התוצאה הסופית, מסודרת להשוואה.</p>
   </div>
 </section>
 
@@ -289,26 +301,26 @@
 <section class="section">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="eyebrow"><span class="dot"></span>לפני / אחרי</span>
-      <h2 class="h2" style="margin-top:18px">לשפץ לא חייב להיות סיוט.<br>תראו את ההבדל:</h2>
+      <span class="eyebrow"><span class="dot"></span><span data-i18n="ba.eyebrow">לפני / אחרי</span></span>
+      <h2 class="h2" style="margin-top:18px" data-i18n-html="ba.title">לשפץ לא חייב להיות סיוט.<br>תראו את ההבדל:</h2>
     </div>
     <div class="ba">
       <div class="ba-card bad reveal">
-        <h3><span class="badge">בלי FixTok</span></h3>
+        <h3><span class="badge" data-i18n="ba.without">בלי FixTok</span></h3>
         <ul class="ba-list">
-          <li><span class="ba-ic">✕</span><span class="ba-txt"><b>רודפים אחרי קבלנים:</b> שיחות, הודעות ופגישות סרק עם אנשי מקצוע שנעלמים.</span></li>
-          <li><span class="ba-ic">✕</span><span class="ba-txt"><b>חוסר אמון:</b> חושדים בכל קבלן שנכנס הביתה ובכל סעיף מנופח בהצעת המחיר.</span></li>
-          <li><span class="ba-ic">✕</span><span class="ba-txt"><b>כאב ראש של השוואות:</b> כל קבלן מתמחר אחרת, אי אפשר להשוות תפוחים לתפוחים.</span></li>
-          <li><span class="ba-ic">✕</span><span class="ba-txt">״אני חושב שזה יעלה ככה...״ - בלי מפרט, בלי ודאות, בדרך לחריגה בתקציב.</span></li>
+          <li><span class="ba-ic">✕</span><span class="ba-txt" data-i18n-html="ba.bad1"><b>רודפים אחרי קבלנים:</b> שיחות, הודעות ופגישות סרק עם אנשי מקצוע שנעלמים.</span></li>
+          <li><span class="ba-ic">✕</span><span class="ba-txt" data-i18n-html="ba.bad2"><b>חוסר אמון:</b> חושדים בכל קבלן שנכנס הביתה ובכל סעיף מנופח בהצעת המחיר.</span></li>
+          <li><span class="ba-ic">✕</span><span class="ba-txt" data-i18n-html="ba.bad3"><b>כאב ראש של השוואות:</b> כל קבלן מתמחר אחרת, אי אפשר להשוות תפוחים לתפוחים.</span></li>
+          <li><span class="ba-ic">✕</span><span class="ba-txt" data-i18n="ba.bad4">״אני חושב שזה יעלה ככה...״ - בלי מפרט, בלי ודאות, בדרך לחריגה בתקציב.</span></li>
         </ul>
       </div>
       <div class="ba-card good reveal">
-        <h3><span class="badge">עם FixTok</span></h3>
+        <h3><span class="badge" data-i18n="ba.with">עם FixTok</span></h3>
         <ul class="ba-list">
-          <li><span class="ba-ic">✓</span><span class="ba-txt"><b>מתקדמים בקצב:</b> סרטון אחד שלכם הופך למפרט מקצועי שמאושר ע״י מפקח בנייה.</span></li>
-          <li><span class="ba-ic">✓</span><span class="ba-txt"><b>שקיפות מוחלטת:</b> כל הקבלנים מתמחרים בדיוק את אותו מפרט, סעיף מול סעיף.</span></li>
-          <li><span class="ba-ic">✓</span><span class="ba-txt"><b>100% בצד שלכם:</b> פיקוח נטול אינטרסים שדואג אך ורק לאיכות שתקבלו.</span></li>
-          <li><span class="ba-ic">✓</span><span class="ba-txt">בוחרים כשמוכנים, לא כשמותשים.</span></li>
+          <li><span class="ba-ic">✓</span><span class="ba-txt" data-i18n-html="ba.good1"><b>מתקדמים בקצב:</b> סרטון אחד שלכם הופך למפרט מקצועי שמאושר ע״י מפקח בנייה.</span></li>
+          <li><span class="ba-ic">✓</span><span class="ba-txt" data-i18n-html="ba.good2"><b>שקיפות מוחלטת:</b> כל הקבלנים מתמחרים בדיוק את אותו מפרט, סעיף מול סעיף.</span></li>
+          <li><span class="ba-ic">✓</span><span class="ba-txt" data-i18n-html="ba.good3"><b>100% בצד שלכם:</b> פיקוח נטול אינטרסים שדואג אך ורק לאיכות שתקבלו.</span></li>
+          <li><span class="ba-ic">✓</span><span class="ba-txt" data-i18n="ba.good4">בוחרים כשמוכנים, לא כשמותשים.</span></li>
         </ul>
       </div>
     </div>
@@ -319,28 +331,28 @@
 <section class="section cream">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="eyebrow"><span class="dot"></span>עדויות</span>
-      <h2 class="h2" style="margin-top:18px">אנשים אמיתיים. שיפוצים אמיתיים.</h2>
+      <span class="eyebrow"><span class="dot"></span><span data-i18n="tst.eyebrow">עדויות</span></span>
+      <h2 class="h2" style="margin-top:18px" data-i18n="tst.title">אנשים אמיתיים. שיפוצים אמיתיים.</h2>
     </div>
     <div class="tst">
       <figure class="tst-card reveal">
         <div class="stars">★★★★★</div>
-        <blockquote>״דחיתי את תיקון המקלחת שנה שלמה כי לא היה לי כוח לכאב הראש. זרקתי להם את הבעיה, ותוך כמה ימים היה לי קבלן חתום על מפרט מלא, מוכן להתחיל.״</blockquote>
+        <blockquote data-i18n="tst.q1">״דחיתי את תיקון המקלחת שנה שלמה כי לא היה לי כוח לכאב הראש. זרקתי להם את הבעיה, ותוך כמה ימים היה לי קבלן חתום על מפרט מלא, מוכן להתחיל.״</blockquote>
         <figcaption class="who"><span class="av">ר</span><div><b>רון</b><span>תל מונד</span></div></figcaption>
       </figure>
       <figure class="tst-card reveal">
         <div class="stars">★★★★★</div>
-        <blockquote>״פעם ראשונה בחיים שהבנתי בדיוק על מה אני משלם. קיבלתי הצעות על אותו מפרט בדיוק, השוויתי בצורה קרה והגיונית ובחרתי.״</blockquote>
+        <blockquote data-i18n="tst.q2">״פעם ראשונה בחיים שהבנתי בדיוק על מה אני משלם. קיבלתי הצעות על אותו מפרט בדיוק, השוויתי בצורה קרה והגיונית ובחרתי.״</blockquote>
         <figcaption class="who"><span class="av">א</span><div><b>אמיר</b><span>עין שריד</span></div></figcaption>
       </figure>
       <figure class="tst-card reveal">
         <div class="stars">★★★★★</div>
-        <blockquote>״צילמתי סרטון של שתי דקות וחסכתי לעצמי שבוע של טיילת קבלנים בבית. הם הגיעו רק כשהחוזה, המפרט והמחיר כבר היו סגורים.״</blockquote>
+        <blockquote data-i18n="tst.q3">״צילמתי סרטון של שתי דקות וחסכתי לעצמי שבוע של טיילת קבלנים בבית. הם הגיעו רק כשהחוזה, המפרט והמחיר כבר היו סגורים.״</blockquote>
         <figcaption class="who"><span class="av">כ</span><div><b>כרמל</b><span>חירות</span></div></figcaption>
       </figure>
       <figure class="tst-card reveal">
         <div class="stars">★★★★★</div>
-        <blockquote>״תמיד פחדתי ששיפוץ מתחיל במחיר אחד ונגמר כפול. הפעם הכל היה כתוב מראש. הרגיש שמישהו שומר עליי.״</blockquote>
+        <blockquote data-i18n="tst.q4">״תמיד פחדתי ששיפוץ מתחיל במחיר אחד ונגמר כפול. הפעם הכל היה כתוב מראש. הרגיש שמישהו שומר עליי.״</blockquote>
         <figcaption class="who"><span class="av">ל</span><div><b>ליאור</b><span>הוד השרון</span></div></figcaption>
       </figure>
     </div>
@@ -350,11 +362,11 @@
 <!-- ============ ABOUT ============ -->
 <section class="section about">
   <div class="wrap about__inner reveal">
-    <span class="eyebrow"><span class="dot"></span>מי אנחנו</span>
-    <h2 class="h2" style="margin-top:18px">הקמנו את FixTok<br>כי גם אנחנו שנאנו לשפץ.</h2>
-    <p>הבנו שהבעיה בענף היא לא העבודה בשטח, אלא בעיקר <b>הבלגן שלפני העבודה:</b> חוסר הוודאות, חוסר האמון, הזמן שנמרח במשך שבועות וחודשים בניסיון להשיג קבלנים, וכאב הראש בניסיון להשוות הצעות שלא קשורות אחת לשנייה.</p>
-    <p>אז שברנו את השיטה והפכנו את <b>הפיקוח ההנדסי לסטנדרט.</b> ב-FixTok, כל פרויקט יוצא למכרז קבלנים רק אחרי שיש לו מפרט סגור שמגן עליכם.</p>
-    <p>אנחנו מתרגמים את הרצון שלכם למפרט מקצועי, דואגים שהקבלן הנכון יגיע מוכן, ושאתם תישארו <b>בשליטה מלאה</b> מתחילת הדרך ועד סופה.</p>
+    <span class="eyebrow"><span class="dot"></span><span data-i18n="about.eyebrow">מי אנחנו</span></span>
+    <h2 class="h2" style="margin-top:18px" data-i18n-html="about.title">הקמנו את FixTok<br>כי גם אנחנו שנאנו לשפץ.</h2>
+    <p data-i18n-html="about.p1">הבנו שהבעיה בענף היא לא העבודה בשטח, אלא בעיקר <b>הבלגן שלפני העבודה:</b> חוסר הוודאות, חוסר האמון, הזמן שנמרח במשך שבועות וחודשים בניסיון להשיג קבלנים, וכאב הראש בניסיון להשוות הצעות שלא קשורות אחת לשנייה.</p>
+    <p data-i18n-html="about.p2">אז שברנו את השיטה והפכנו את <b>הפיקוח ההנדסי לסטנדרט.</b> ב-FixTok, כל פרויקט יוצא למכרז קבלנים רק אחרי שיש לו מפרט סגור שמגן עליכם.</p>
+    <p data-i18n-html="about.p3">אנחנו מתרגמים את הרצון שלכם למפרט מקצועי, דואגים שהקבלן הנכון יגיע מוכן, ושאתם תישארו <b>בשליטה מלאה</b> מתחילת הדרך ועד סופה.</p>
   </div>
 </section>
 
@@ -362,29 +374,29 @@
 <section class="section" id="faq">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="eyebrow"><span class="dot"></span>שאלות נפוצות</span>
-      <h2 class="h2" style="margin-top:18px">כל מה שרציתם לדעת.</h2>
+      <span class="eyebrow"><span class="dot"></span><span data-i18n="faq.eyebrow">שאלות נפוצות</span></span>
+      <h2 class="h2" style="margin-top:18px" data-i18n="faq.title">כל מה שרציתם לדעת.</h2>
     </div>
     <div class="faq reveal">
       <div class="faq-item open">
-        <button class="faq-q">מה זה FixTok?<span class="pm"></span></button>
-        <div class="faq-a"><div class="faq-a__in"><p>הפלטפורמה שהופכת סרטון פשוט למכרז קבלנים מדויק. אתם מצלמים, המערכת מפיקה מפרט, ומקבלים הצעות זהות להשוואה מקבלנים מאומתים.</p></div></div>
+        <button class="faq-q"><span data-i18n="faq.q1">מה זה FixTok?</span><span class="pm"></span></button>
+        <div class="faq-a"><div class="faq-a__in"><p data-i18n="faq.a1">הפלטפורמה שהופכת סרטון פשוט למכרז קבלנים מדויק. אתם מצלמים, המערכת מפיקה מפרט, ומקבלים הצעות זהות להשוואה מקבלנים מאומתים.</p></div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q">כמה זה עולה?<span class="pm"></span></button>
-        <div class="faq-a"><div class="faq-a__in"><p>הפקת המפרט והשימוש במערכת - ללא עלות. המודל מבוסס על הצלחת הפרויקט מול נבחרת הקבלנים.</p></div></div>
+        <button class="faq-q"><span data-i18n="faq.q2">כמה זה עולה?</span><span class="pm"></span></button>
+        <div class="faq-a"><div class="faq-a__in"><p data-i18n="faq.a2">הפקת המפרט והשימוש במערכת - ללא עלות. המודל מבוסס על הצלחת הפרויקט מול נבחרת הקבלנים.</p></div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q">לא מבין בשיפוצים?<span class="pm"></span></button>
-        <div class="faq-a"><div class="faq-a__in"><p>זה היתרון. צלמו והסבירו במילים שלכם - המערכת תתרגם למפרט עבודה מקצועי.</p></div></div>
+        <button class="faq-q"><span data-i18n="faq.q3">לא מבין בשיפוצים?</span><span class="pm"></span></button>
+        <div class="faq-a"><div class="faq-a__in"><p data-i18n="faq.a3">זה היתרון. צלמו והסבירו במילים שלכם - המערכת תתרגם למפרט עבודה מקצועי.</p></div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q">מחליף בדיקה בשטח?<span class="pm"></span></button>
-        <div class="faq-a"><div class="faq-a__in"><p>לא - הופך אותה לסופית. הקבלן הנבחר מאמת מידות לפני ביצוע, כשהכל כבר סגור.</p></div></div>
+        <button class="faq-q"><span data-i18n="faq.q4">מחליף בדיקה בשטח?</span><span class="pm"></span></button>
+        <div class="faq-a"><div class="faq-a__in"><p data-i18n="faq.a4">לא - הופך אותה לסופית. הקבלן הנבחר מאמת מידות לפני ביצוע, כשהכל כבר סגור.</p></div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q">שונה ממחירונים ברשת?<span class="pm"></span></button>
-        <div class="faq-a"><div class="faq-a__in"><p>מחירון = הערכה תיאורטית. FixTok = הצעות אמיתיות ומחייבות לפי החלל שלכם.</p></div></div>
+        <button class="faq-q"><span data-i18n="faq.q5">שונה ממחירונים ברשת?</span><span class="pm"></span></button>
+        <div class="faq-a"><div class="faq-a__in"><p data-i18n="faq.a5">מחירון = הערכה תיאורטית. FixTok = הצעות אמיתיות ומחייבות לפי החלל שלכם.</p></div></div>
       </div>
     </div>
   </div>
@@ -393,10 +405,10 @@
 <!-- ============ FINAL CTA ============ -->
 <section class="section final">
   <div class="wrap final__inner reveal">
-    <h2>הראשון - <span class="hl">עליכם.</span><br>כל השאר - עלינו</h2>
+    <h2 data-i18n-html="final.title">הראשון - <span class="hl">עליכם.</span><br>כל השאר - עלינו</h2>
     <div class="final__cta">
-      <a class="btn btn--primary btn--lg" href="https://app.fix-tok.com">התחילו לצלם פרויקט</a>
-      <a class="btn btn--ghost btn--lg" href="https://app.fix-tok.com/login?role=contractor&next=%2Fcontractor%2Fregister%2Fform">הגשת מועמדות לנבחרת הקבלנים</a>
+      <a class="btn btn--primary btn--lg" href="https://app.fix-tok.com" data-i18n="final.cta.start">התחילו לצלם פרויקט</a>
+      <a class="btn btn--ghost btn--lg" href="https://app.fix-tok.com/login?role=contractor&next=%2Fcontractor%2Fregister%2Fform" data-i18n="final.cta.contractor">הגשת מועמדות לנבחרת הקבלנים</a>
     </div>
     <div class="final__proof handoff-card">
       <div class="handoff-banner">
@@ -404,14 +416,14 @@
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5 9-10" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>
         </span>
         <div class="handoff-banner__copy">
-          <b>התיק נסגר בהצלחה</b>
-          <span>חוזה דיגיטלי נחתם · 19.4.2026 14:02</span>
+          <b data-i18n="final.banner.title">התיק נסגר בהצלחה</b>
+          <span data-i18n="final.banner.sub">חוזה דיגיטלי נחתם · 19.4.2026 14:02</span>
         </div>
       </div>
-      <p class="handoff-step">STEP 06 · סגירת תיק</p>
-      <h3 class="handoff-title">תיק העבודה מוכן</h3>
-      <p class="handoff-sub">כל המסמכים מרוכזים, העבודה מוכנה להתחלה.</p>
-      <p class="handoff-section-title">הקבלן הנבחר</p>
+      <p class="handoff-step" data-i18n="final.step">STEP 06 · סגירת תיק</p>
+      <h3 class="handoff-title" data-i18n="final.card.title">תיק העבודה מוכן</h3>
+      <p class="handoff-sub" data-i18n="final.card.sub">כל המסמכים מרוכזים, העבודה מוכנה להתחלה.</p>
+      <p class="handoff-section-title" data-i18n="final.selected">הקבלן הנבחר</p>
       <div class="handoff-contractor">
         <div class="handoff-contractor__glow" aria-hidden="true"></div>
         <div class="handoff-contractor__inner">
@@ -423,42 +435,42 @@
             </div>
             <div class="handoff-contractor__price">
               <b dir="ltr">₪18,800</b>
-              <span>מחיר כולל</span>
+              <span data-i18n="final.priceTotal">מחיר כולל</span>
             </div>
           </div>
           <dl class="handoff-contractor__meta">
-            <div><dt>לוח תשלומים</dt><dd>100% בגמר הפרויקט</dd></div>
-            <div><dt>אחריות</dt><dd>12 חודשים</dd></div>
-            <div><dt>אבני דרך</dt><dd>גמר, 100% לאחר מסירה ובדיקה</dd></div>
+            <div><dt data-i18n="final.paySchedule">לוח תשלומים</dt><dd data-i18n="final.payValue">100% בגמר הפרויקט</dd></div>
+            <div><dt data-i18n="final.warranty">אחריות</dt><dd>12 חודשים</dd></div>
+            <div><dt data-i18n="final.milestones">אבני דרך</dt><dd data-i18n="final.milestonesValue">גמר, 100% לאחר מסירה ובדיקה</dd></div>
           </dl>
         </div>
       </div>
-      <p class="handoff-section-title">מסמכי התיק</p>
+      <p class="handoff-section-title" data-i18n="final.docs">מסמכי התיק</p>
       <div class="handoff-docs">
         <div class="handoff-doc">
           <span class="handoff-doc__icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="14" height="12" rx="2"></rect><path d="M16 10l6-3v10l-6-3"></path></svg></span>
-          <div class="handoff-doc__body"><b>סרטון / מדיה</b><span>porat-shower.mp4</span></div>
+          <div class="handoff-doc__body"><b data-i18n="final.doc.video">סרטון / מדיה</b><span>porat-shower.mp4</span></div>
           <span class="handoff-doc__check" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5 9-10" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
         </div>
         <div class="handoff-doc">
           <span class="handoff-doc__icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17L17 3l4 4L7 21l-4-4z"></path><path d="M7 17l2-2M11 13l2-2M15 9l2-2"></path></svg></span>
-          <div class="handoff-doc__body"><b>תשובות דיוק</b><span>2.6 × 1.6 × 2.4 מ׳</span></div>
+          <div class="handoff-doc__body"><b data-i18n="final.doc.measurements">תשובות דיוק</b><span>2.6 × 1.6 × 2.4 מ׳</span></div>
           <span class="handoff-doc__check" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5 9-10" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
         </div>
         <div class="handoff-doc">
           <span class="handoff-doc__icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6M9 13h6M9 17h6"></path></svg></span>
-          <div class="handoff-doc__body"><b>מפרט הנדסי</b><span>5566-3, 1205</span></div>
+          <div class="handoff-doc__body"><b data-i18n="final.doc.engineering">מפרט הנדסי</b><span>5566-3, 1205</span></div>
           <span class="handoff-doc__check" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5 9-10" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
         </div>
         <div class="handoff-doc">
           <span class="handoff-doc__icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"></path></svg></span>
-          <div class="handoff-doc__body"><b>כתב כמויות BOQ</b><span>17 סעיפים · גרסה 1.0</span></div>
+          <div class="handoff-doc__body"><b data-i18n="final.doc.boq">כתב כמויות BOQ</b><span>17 סעיפים · גרסה 1.0</span></div>
           <span class="handoff-doc__check" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5 9-10" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
         </div>
         <div class="handoff-doc">
           <span class="handoff-doc__icon handoff-doc__icon--sealed" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l9 4v6c0 5-4 9-9 10-5-1-9-5-9-10V6l9-4z"></path><path d="M9 12l2 2 4-4"></path></svg></span>
-          <div class="handoff-doc__body"><b>מסמכי מכרז</b><span>19.4.2026</span></div>
-          <span class="handoff-doc__sealed">✓ חתום</span>
+          <div class="handoff-doc__body"><b data-i18n="final.doc.tender">מסמכי מכרז</b><span>19.4.2026</span></div>
+          <span class="handoff-doc__sealed" data-i18n="final.doc.signed">✓ חתום</span>
         </div>
       </div>
     </div>
@@ -469,16 +481,16 @@
 <section class="section pros" id="pros">
   <div class="wrap pros__grid">
     <div class="pros__copy reveal">
-      <span class="eyebrow"><span class="dot"></span>לקבלנים</span>
-      <h2>תפסיקו לשרוף זמן בכבישים.<br><span class="hl">תתחילו לסגור פרויקטים מסודרים.</span></h2>
+      <span class="eyebrow"><span class="dot"></span><span data-i18n="pros.eyebrow">לקבלנים</span></span>
+      <h2 data-i18n-html="pros.title">תפסיקו לשרוף זמן בכבישים.<br><span class="hl">תתחילו לסגור פרויקטים מסודרים.</span></h2>
       <ul class="pros__feats">
-        <li><span class="ck">✔</span> וידאו + מפרט סגור ומפורק לסעיפים</li>
-        <li><span class="ck">✔</span> פרויקטים לפי אזור והתמחות</li>
-        <li><span class="ck">✔</span> תמחור מהיר מהנייד</li>
-        <li><span class="ck">✔</span> ללא דמי הקמה או דמי מנוי · עובדים על בסיס הצלחה בלבד</li>
+        <li><span class="ck">✔</span> <span data-i18n="pros.f1">וידאו + מפרט סגור ומפורק לסעיפים</span></li>
+        <li><span class="ck">✔</span> <span data-i18n="pros.f2">פרויקטים לפי אזור והתמחות</span></li>
+        <li><span class="ck">✔</span> <span data-i18n="pros.f3">תמחור מהיר מהנייד</span></li>
+        <li><span class="ck">✔</span> <span data-i18n="pros.f4">ללא דמי הקמה או דמי מנוי · עובדים על בסיס הצלחה בלבד</span></li>
       </ul>
       <div class="pros__cta">
-        <a class="btn btn--primary btn--lg" href="https://app.fix-tok.com/login?role=contractor&next=%2Fcontractor%2Fregister%2Fform">הגשו מועמדות לנבחרת הקבלנים</a>
+        <a class="btn btn--primary btn--lg" href="https://app.fix-tok.com/login?role=contractor&next=%2Fcontractor%2Fregister%2Fform" data-i18n="pros.cta">הגשו מועמדות לנבחרת הקבלנים</a>
       </div>
     </div>
     <div class="pros__visual reveal">
@@ -489,13 +501,13 @@
           <div class="phone__top phone__top--light">
             <div class="statusbar"><span>9:41</span><span class="dots"><span>●●●</span><span class="bar"></span></span></div>
             <div class="appbar appbar--feed">
-              <span class="appbar__page">מכרזים</span>
+              <span class="appbar__page" data-i18n="pros.feed.title">מכרזים</span>
               <span class="alogo" dir="ltr" lang="en">Fix<span class="alogo__tok">Tok</span></span>
             </div>
           </div>
           <div class="feed-banner">
             <span class="live-dot" aria-hidden="true"></span>
-            <span>3 מכרזים חיים עכשיו</span>
+            <span data-i18n="pros.feed.live">3 מכרזים חיים עכשיו</span>
           </div>
           <div class="app-body feed-scroll">
             <article class="feed-card feed-card--rich">
@@ -505,7 +517,7 @@
               <div class="feed-meta"><span>📍 רמת השרון</span><span class="price">₪25K–₪45K</span><span>🕐 10–14 ימים</span><span>📐 3.84 מ״ר</span></div>
               <p class="feed-bids">5 הצעות נמצאות במכרז</p>
               <p class="feed-tags">אינסטלציה · ריצוף וחיפוי · איטום · צביעה</p>
-              <div class="feed-card__cta">צפה במכרז מלא</div>
+              <div class="feed-card__cta" data-i18n="pros.feed.cta">צפה במכרז מלא</div>
             </article>
             <article class="feed-card feed-card--rich">
               <div class="feed-live-line"><span class="live-dot live-dot--sm" aria-hidden="true"></span>LIVE · פעיל עוד 28 שעות</div>
@@ -514,7 +526,7 @@
               <div class="feed-meta"><span>📍 תל אביב צפון</span><span class="price">₪80K–₪120K</span><span>🕐 21–28 ימים</span><span>📐 12 מ״ר + אי</span></div>
               <p class="feed-bids">3 הצעות נמצאות במכרז</p>
               <p class="feed-tags">אינסטלציה · חשמל · ארונות · ריצוף</p>
-              <div class="feed-card__cta">צפה במכרז מלא</div>
+              <div class="feed-card__cta" data-i18n="pros.feed.cta">צפה במכרז מלא</div>
             </article>
           </div>
         </div>
@@ -528,21 +540,23 @@
   <div class="wrap footer__inner">
     <div class="footer__brand">
       <a class="logo" href="/">Fix<b>Tok</b></a>
-      <p>FixTok - לא צריך להיות קבלן בשביל להתחיל שיפוץ מוצלח.</p>
+      <p data-i18n="footer.tagline">FixTok - לא צריך להיות קבלן בשביל להתחיל שיפוץ מוצלח.</p>
     </div>
-    <nav class="footer__nav" aria-label="ניווט תחתון">
-      <a href="/#how">איך זה עובד</a>
-      <a href="/#expert">המומחה שלכם</a>
-      <a href="/#faq">שאלות</a>
-      <a href="/#pros">לקבלנים</a>
-      <a class="footer__contact" href="/contact.html">צור קשר</a>
+    <nav class="footer__nav" data-i18n-attr="aria-label:footer.navAria" aria-label="ניווט תחתון">
+      <a href="/#how" data-i18n="nav.how">איך זה עובד</a>
+      <a href="/#expert" data-i18n="nav.expert">המומחה שלכם</a>
+      <a href="/#faq" data-i18n="nav.faq">שאלות</a>
+      <a href="/#pros" data-i18n="nav.pros">לקבלנים</a>
+      <a class="footer__contact" href="/contact.html" data-i18n="nav.contact">צור קשר</a>
     </nav>
   </div>
   <div class="wrap footer__bottom">
-    <span>© 2026 FixTok. כל הזכויות שמורות.</span>
+    <span data-i18n="footer.copyright">© 2026 FixTok. כל הזכויות שמורות.</span>
   </div>
 </footer>
 
+<script src="/marketing/i18n-en.js"></script>
+<script src="/marketing/locale.js"></script>
 <script src="/marketing/marketing.js"></script>
 <script src="/app.js"></script>
 </body>

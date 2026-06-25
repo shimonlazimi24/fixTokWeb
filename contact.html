@@ -29,6 +29,18 @@
 <link rel="stylesheet" href="/fixtok.css">
 <link rel="icon" href="/assets/images/logo-mark.svg" type="image/svg+xml" sizes="any">
 <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+<script>
+(function () {
+  try {
+    var m = document.cookie.match(/(?:^|; )fixtok_locale=([^;]+)/);
+    var loc = m ? decodeURIComponent(m[1]) : localStorage.getItem('fixtok_locale');
+    if (loc === 'en') {
+      document.documentElement.lang = 'en';
+      document.documentElement.dir = 'ltr';
+    }
+  } catch (e) { /* ignore */ }
+})();
+</script>
 <script src="/marketing/tracking-config.js"></script>
 </head>
 <body class="contact-page">
@@ -37,23 +49,23 @@
   <div class="wrap nav__inner">
     <a class="logo" href="/">Fix<b>Tok</b></a>
     <nav class="nav__links">
-      <a href="/#how">איך זה עובד</a>
-      <a href="/#expert">המומחה שלכם</a>
-      <a href="/#faq">שאלות</a>
+      <a href="/#how" data-i18n="nav.how">איך זה עובד</a>
+      <a href="/#expert" data-i18n="nav.expert">המומחה שלכם</a>
+      <a href="/#faq" data-i18n="nav.faq">שאלות</a>
     </nav>
     <div class="nav__right">
-      <a class="nav__pros" href="/#pros">לקבלנים</a>
-      <a class="btn btn--primary" href="https://app.fix-tok.com">התחילו לצלם פרויקט</a>
-      <button class="nav__burger" aria-label="תפריט"><span></span><span></span><span></span></button>
+      <a class="nav__pros" href="/#pros" data-i18n="nav.pros">לקבלנים</a>
+      <a class="btn btn--primary" href="https://app.fix-tok.com" data-i18n="nav.cta">התחילו לצלם פרויקט</a>
+      <button class="nav__burger" data-i18n-attr="aria-label:nav.menuAria" aria-label="תפריט"><span></span><span></span><span></span></button>
     </div>
   </div>
   <div class="nav__mobile">
     <div class="wrap nav__mobile-inner">
-      <a href="/#how">איך זה עובד</a>
-      <a href="/#expert">המומחה שלכם</a>
-      <a href="/#faq">שאלות</a>
-      <a class="pros" href="/#pros">לקבלנים</a>
-      <a href="/contact.html">צור קשר</a>
+      <a href="/#how" data-i18n="nav.how">איך זה עובד</a>
+      <a href="/#expert" data-i18n="nav.expert">המומחה שלכם</a>
+      <a href="/#faq" data-i18n="nav.faq">שאלות</a>
+      <a class="pros" href="/#pros" data-i18n="nav.pros">לקבלנים</a>
+      <a href="/contact.html" data-i18n="nav.contact">צור קשר</a>
     </div>
   </div>
 </header>
@@ -61,28 +73,28 @@
 <main>
   <section class="contact-hero">
     <div class="wrap contact-wrap">
-      <span class="eyebrow"><span class="dot"></span>כאן בשבילכם</span>
-      <h1 class="h2">צור קשר</h1>
-      <p class="contact-lead">נשמח לעזור בכל שאלה על הפלטפורמה, מכרזים או תמיכה טכנית.</p>
+      <span class="eyebrow"><span class="dot"></span><span data-i18n="contact.eyebrow">כאן בשבילכם</span></span>
+      <h1 class="h2" data-i18n="contact.title">צור קשר</h1>
+      <p class="contact-lead" data-i18n="contact.lead">נשמח לעזור בכל שאלה על הפלטפורמה, מכרזים או תמיכה טכנית.</p>
       <div class="contact-channels">
         <a class="contact-card" href="mailto:info@fix-tok.com">
           <span class="contact-card__emoji" aria-hidden="true">📧</span>
           <span class="contact-card__body">
-            <strong>אימייל</strong>
+            <strong data-i18n="contact.email">אימייל</strong>
             <span class="contact-card__value" dir="ltr">info@fix-tok.com</span>
-            <span class="contact-card__hint">עונים בהקדם האפשרי</span>
+            <span class="contact-card__hint" data-i18n="contact.emailHint">עונים בהקדם האפשרי</span>
           </span>
         </a>
         <a class="contact-card" href="https://wa.me/972527434777" target="_blank" rel="noopener noreferrer">
           <span class="contact-card__emoji" aria-hidden="true">💬</span>
           <span class="contact-card__body">
-            <strong>וואטסאפ</strong>
+            <strong data-i18n="contact.whatsapp">וואטסאפ</strong>
             <span class="contact-card__value" dir="ltr">+972 52-743-4777</span>
-            <span class="contact-card__hint">הכי מהיר - שלחו הודעה</span>
+            <span class="contact-card__hint" data-i18n="contact.whatsappHint">הכי מהיר - שלחו הודעה</span>
           </span>
         </a>
       </div>
-      <p class="contact-back"><a href="/">← חזרה לדף הבית</a></p>
+      <p class="contact-back"><a href="/" data-i18n="contact.back">← חזרה לדף הבית</a></p>
     </div>
   </section>
 </main>
@@ -91,21 +103,23 @@
   <div class="wrap footer__inner">
     <div class="footer__brand">
       <a class="logo" href="/">Fix<b>Tok</b></a>
-      <p>FixTok - לא צריך להיות קבלן בשביל להתחיל שיפוץ מוצלח.</p>
+      <p data-i18n="footer.tagline">FixTok - לא צריך להיות קבלן בשביל להתחיל שיפוץ מוצלח.</p>
     </div>
-    <nav class="footer__nav" aria-label="ניווט תחתון">
-      <a href="/#how">איך זה עובד</a>
-      <a href="/#expert">המומחה שלכם</a>
-      <a href="/#faq">שאלות</a>
-      <a href="/#pros">לקבלנים</a>
-      <a class="footer__contact" href="/contact.html">צור קשר</a>
+    <nav class="footer__nav" data-i18n-attr="aria-label:footer.navAria" aria-label="ניווט תחתון">
+      <a href="/#how" data-i18n="nav.how">איך זה עובד</a>
+      <a href="/#expert" data-i18n="nav.expert">המומחה שלכם</a>
+      <a href="/#faq" data-i18n="nav.faq">שאלות</a>
+      <a href="/#pros" data-i18n="nav.pros">לקבלנים</a>
+      <a class="footer__contact" href="/contact.html" data-i18n="nav.contact">צור קשר</a>
     </nav>
   </div>
   <div class="wrap footer__bottom">
-    <span>© 2026 FixTok. כל הזכויות שמורות.</span>
+    <span data-i18n="footer.copyright">© 2026 FixTok. כל הזכויות שמורות.</span>
   </div>
 </footer>
 
+<script src="/marketing/i18n-en.js"></script>
+<script src="/marketing/locale.js"></script>
 <script src="/marketing/marketing.js"></script>
 <script src="/app.js"></script>
 </body>
