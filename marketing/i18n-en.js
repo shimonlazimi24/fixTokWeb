@@ -15,7 +15,7 @@ window.FIXTOK_I18N_EN = {
   "hero.eyebrow": "FixTok · Renovate with peace of mind",
   "hero.title": "Why should renovating<br>feel like a <span class=\"accent\">punishment?</span>",
   "hero.sub":
-    "With FixTok it's different. Record a short video<br>That's it.<br>From there, we handle everything.",
+    "With FixTok it's different.<br>Record a short video<br>That's it.<br>From there, we handle everything.",
   "hero.cta.start": "Start your project",
   "hero.cta.how": "How it works",
   "hero.phone.step": "Upload video",
