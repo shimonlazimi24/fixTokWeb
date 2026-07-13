@@ -107,7 +107,7 @@ window.FIXTOK_I18N_EN = {
 
   "tst.eyebrow": "Testimonials",
   "tst.title": "Real people. Real renovations.",
-  "tst.videosLead": "On camera, in their own words. No script.",
+  "tst.videosLead": "On camera, in their own words.",
   "pros.videoCaption": "One minute: how FixTok works for contractors",
   "pros.videoSound": "Watch with sound",
   "tst.videoWhoZigdon": "Zigdon Projects, a contractor working with FixTok",
