@@ -107,6 +107,10 @@ window.FIXTOK_I18N_EN = {
 
   "tst.eyebrow": "Testimonials",
   "tst.title": "Real people. Real renovations.",
+  "tst.videosLead": "On camera, in their own words. No script.",
+  "tst.videoWhoZigdon": "Zigdon Projects, a contractor working with FixTok",
+  "tst.videoWhoCarmel": "Renovated with FixTok",
+  "tst.videoWhoLior": "Renovated with FixTok",
   "tst.q1":
     "\"I put off fixing the shower for a whole year because I couldn't face the hassle. I sent them the issue, and within days I had a contractor signed on a full spec, ready to start.\"",
   "tst.q2":
