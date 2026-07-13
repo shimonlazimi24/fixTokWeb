@@ -31,7 +31,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&family=Heebo:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/fixtok.css">
+<link rel="stylesheet" href="/fixtok.css?v=20260713">
 <link rel="icon" href="/assets/images/logo-mark.svg" type="image/svg+xml" sizes="any">
 <link rel="dns-prefetch" href="https://www.googletagmanager.com">
 <script>
@@ -337,21 +337,30 @@
     </div>
     <div class="tst-videos reveal">
       <figure class="tst-video-card">
-        <video preload="none" controls playsinline poster="/videos/zigdon-poster.jpg">
-          <source src="/videos/zigdon.mp4" type="video/mp4">
-        </video>
+        <div class="vwrap">
+          <video preload="none" playsinline poster="/videos/zigdon-poster.jpg">
+            <source src="/videos/zigdon.mp4" type="video/mp4">
+          </video>
+          <button type="button" class="vplay" aria-label="ניגון הסרטון"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg></button>
+        </div>
         <figcaption class="who"><div><b>יצחק זיגדון</b><span data-i18n="tst.videoWhoZigdon">זיגדון פרויקטים, קבלן שעובד עם FixTok</span></div></figcaption>
       </figure>
       <figure class="tst-video-card">
-        <video preload="none" controls playsinline poster="/videos/carmel-herut-poster.jpg">
-          <source src="/videos/carmel-herut.mp4" type="video/mp4">
-        </video>
+        <div class="vwrap">
+          <video preload="none" playsinline poster="/videos/carmel-herut-poster.jpg">
+            <source src="/videos/carmel-herut.mp4" type="video/mp4">
+          </video>
+          <button type="button" class="vplay" aria-label="ניגון הסרטון"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg></button>
+        </div>
         <figcaption class="who"><div><b>כרמל חירות</b><span data-i18n="tst.videoWhoCarmel">שיפצה עם FixTok</span></div></figcaption>
       </figure>
       <figure class="tst-video-card">
-        <video preload="none" controls playsinline poster="/videos/lior-badiri-poster.jpg">
-          <source src="/videos/lior-badiri.mp4" type="video/mp4">
-        </video>
+        <div class="vwrap">
+          <video preload="none" playsinline poster="/videos/lior-badiri-poster.jpg">
+            <source src="/videos/lior-badiri.mp4" type="video/mp4">
+          </video>
+          <button type="button" class="vplay" aria-label="ניגון הסרטון"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg></button>
+        </div>
         <figcaption class="who"><div><b>ליאור בדירי</b><span data-i18n="tst.videoWhoLior">שיפץ עם FixTok</span></div></figcaption>
       </figure>
     </div>
@@ -514,9 +523,12 @@
         <a class="btn btn--primary btn--lg" href="https://app.fix-tok.com/login?role=contractor&next=%2Fcontractor%2Fregister%2Fform" data-i18n="pros.cta">הגשו מועמדות לנבחרת הקבלנים</a>
       </div>
       <figure class="pros-video">
-        <video preload="none" controls playsinline poster="/videos/contractor-explainer-poster.jpg">
-          <source src="/videos/contractor-explainer.mp4" type="video/mp4">
-        </video>
+        <div class="vwrap vwrap--phone">
+          <video preload="none" playsinline poster="/videos/contractor-explainer-poster.jpg">
+            <source src="/videos/contractor-explainer.mp4" type="video/mp4">
+          </video>
+          <button type="button" class="vplay" aria-label="ניגון הסרטון"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg></button>
+        </div>
         <figcaption data-i18n="pros.videoCaption">דקה אחת: איך FixTok עובד לקבלנים</figcaption>
       </figure>
     </div>
@@ -585,6 +597,6 @@
 <script src="/marketing/i18n-en.js"></script>
 <script src="/marketing/locale.js"></script>
 <script src="/marketing/marketing.js"></script>
-<script src="/app.js"></script>
+<script src="/app.js?v=20260713"></script>
 </body>
 </html>

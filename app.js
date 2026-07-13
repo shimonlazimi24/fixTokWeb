@@ -47,6 +47,28 @@
     });
   });
 
+  // video play buttons: poster until click, then native controls + play.
+  // Only one marketing video plays at a time.
+  var vwraps = document.querySelectorAll('.vwrap');
+  vwraps.forEach(function (w) {
+    var video = w.querySelector('video');
+    var btn = w.querySelector('.vplay');
+    if (!video || !btn) return;
+    btn.addEventListener('click', function () {
+      vwraps.forEach(function (other) {
+        var ov = other.querySelector('video');
+        if (ov && ov !== video && !ov.paused) ov.pause();
+      });
+      w.classList.add('vwrap--playing');
+      video.controls = true;
+      video.play();
+    });
+    video.addEventListener('ended', function () {
+      w.classList.remove('vwrap--playing');
+      video.controls = false;
+    });
+  });
+
   // reveal on scroll
   var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (en) {

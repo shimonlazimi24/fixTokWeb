@@ -691,10 +691,34 @@ ul { list-style: none; }
 .tst-videos + .tst { margin-top: 26px; }
 @media (min-width: 860px){ .tst-videos { grid-template-columns: repeat(3, 1fr); gap: 16px; } }
 
-/* --- contractor explainer video (pros section) --- */
-.pros-video { margin: 26px 0 0; max-width: 280px; }
-.pros-video video { display: block; width: 100%; aspect-ratio: 9 / 16; object-fit: cover; border-radius: var(--r-lg); background: #000; box-shadow: var(--sh-lg); }
-.pros-video figcaption { margin-top: 10px; font-size: .88rem; color: var(--on-dark-2); }
+/* --- video wrapper + branded play button (shared) --- */
+.vwrap { position: relative; overflow: hidden; border-radius: calc(var(--r-lg) - 6px); background: #000; }
+.vwrap video { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+.vplay {
+  position: absolute; inset: 0; margin: auto;
+  width: 64px; height: 64px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: var(--orange); color: #fff;
+  box-shadow: var(--sh-orange), 0 0 0 8px rgba(255, 255, 255, .25);
+  transition: transform .18s ease, background .2s ease;
+}
+/* משולש הנגינה מצביע ימינה גם ב-RTL - זו הקונבנציה האוניברסלית של נגנים */
+.vplay svg { transform: translateX(2px); }
+.vplay:hover { background: var(--orange-600); transform: scale(1.07); }
+.vwrap--playing .vplay { display: none; }
+.vwrap::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 62%, rgba(0,0,0,.28));
+  transition: opacity .25s ease;
+}
+.vwrap--playing::after { opacity: 0; }
+@media (prefers-reduced-motion: reduce) { .vplay { transition: none; } }
+
+/* --- contractor explainer video (pros section): phone-style frame --- */
+.pros-video { margin: 30px 0 0; max-width: 264px; }
+.pros-video .vwrap { border-radius: 30px; border: 7px solid #101010; box-shadow: var(--sh-lg); }
+.pros-video .vwrap video { aspect-ratio: 9 / 16; }
+.pros-video figcaption { margin-top: 12px; font-size: .88rem; color: var(--on-dark-2); }
 
 /* ============================================================
    ABOUT
