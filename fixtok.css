@@ -720,6 +720,19 @@ ul { list-style: none; }
 .pros-video .vwrap video { aspect-ratio: 9 / 16; }
 .pros-video figcaption { margin-top: 12px; font-size: .88rem; color: var(--on-dark-2); }
 
+/* הסרטון הוא הבמה המרכזית של סקציית הקבלנים */
+.pros-video--hero { margin: 0; max-width: 384px; width: 100%; }
+.pros-video--hero .vwrap { border-radius: 38px; border-width: 9px; }
+.pros-video--hero .vplay { width: 78px; height: 78px; }
+.pros-video--hero figcaption { text-align: center; font-size: .95rem; }
+
+/* מוקאפ הפיד ירד לליווי קטן מתחת ל-CTA, בדסקטופ בלבד */
+.pros-mock { display: none; }
+@media (min-width: 940px){
+  .pros-mock { display: block; margin: 34px 0 0; }
+  .pros-mock .phone--feed { transform: scale(.72); transform-origin: top right; margin-bottom: -160px; }
+}
+
 /* ============================================================
    ABOUT
    ============================================================ */
