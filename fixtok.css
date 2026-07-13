@@ -723,8 +723,18 @@ ul { list-style: none; }
 /* הסרטון הוא הבמה המרכזית של סקציית הקבלנים */
 .pros-video--hero { margin: 0; max-width: 384px; width: 100%; }
 .pros-video--hero .vwrap { border-radius: 38px; border-width: 9px; }
-.pros-video--hero .vplay { width: 78px; height: 78px; }
 .pros-video--hero figcaption { text-align: center; font-size: .95rem; }
+
+/* מתנגן שקט אוטומטית; הכפתור מזמין קול - גלולה בתחתית במקום עיגול במרכז */
+.vplay--pill {
+  inset: auto 0 18px 0; width: auto; height: auto;
+  margin-inline: auto; max-width: max-content;
+  display: inline-flex; align-items: center; gap: 9px;
+  padding: 11px 20px; border-radius: var(--r-pill);
+  font-family: var(--font-display); font-weight: 600; font-size: .95rem;
+  box-shadow: var(--sh-orange);
+}
+.vplay--pill svg { transform: none; }
 
 /* מוקאפ הפיד ירד לליווי קטן מתחת ל-CTA, בדסקטופ בלבד */
 .pros-mock { display: none; }

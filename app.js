@@ -60,6 +60,12 @@
         if (ov && ov !== video && !ov.paused) ov.pause();
       });
       w.classList.add('vwrap--playing');
+      if (w.dataset.autoplay) {
+        // התנגן שקט ברקע - עכשיו מההתחלה, עם קול
+        video.muted = false;
+        video.loop = false;
+        video.currentTime = 0;
+      }
       video.controls = true;
       video.play();
     });
@@ -68,6 +74,22 @@
       video.controls = false;
     });
   });
+
+  // סרטון הדגל מתנגן שקט (כתוביות צרובות) כשהוא נכנס למסך, נעצר כשיוצא
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var autoWraps = document.querySelectorAll('.vwrap[data-autoplay]');
+  if (!reduceMotion && autoWraps.length && 'IntersectionObserver' in window) {
+    var vio = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        var v = en.target.querySelector('video');
+        if (!v) return;
+        var engaged = en.target.classList.contains('vwrap--playing');
+        if (en.isIntersecting && !engaged) { v.muted = true; v.play().catch(function(){}); }
+        else if (!en.isIntersecting && !engaged) { v.pause(); }
+      });
+    }, { threshold: 0.5 });
+    autoWraps.forEach(function (w) { vio.observe(w); });
+  }
 
   // reveal on scroll
   var io = new IntersectionObserver(function (entries) {
