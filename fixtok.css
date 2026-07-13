@@ -691,6 +691,11 @@ ul { list-style: none; }
 .tst-videos + .tst { margin-top: 26px; }
 @media (min-width: 860px){ .tst-videos { grid-template-columns: repeat(3, 1fr); gap: 16px; } }
 
+/* --- contractor explainer video (pros section) --- */
+.pros-video { margin: 26px 0 0; max-width: 280px; }
+.pros-video video { display: block; width: 100%; aspect-ratio: 9 / 16; object-fit: cover; border-radius: var(--r-lg); background: #000; box-shadow: var(--sh-lg); }
+.pros-video figcaption { margin-top: 10px; font-size: .88rem; color: var(--on-dark-2); }
+
 /* ============================================================
    ABOUT
    ============================================================ */
