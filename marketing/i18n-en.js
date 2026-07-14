@@ -138,7 +138,7 @@ window.FIXTOK_I18N_EN = {
     "The platform that turns a simple video into a precise contractor tender. You record, the system produces a spec, and you get identical offers to compare from verified contractors.",
   "faq.q2": "How much does it cost?",
   "faq.a2":
-    "Spec production and using the system — no cost. The model is based on project success with our contractor network.",
+    "Completely free for homeowners. The contractor pays us only when a job closes.",
   "faq.q3": "Don't know renovations?",
   "faq.a3":
     "That's the advantage. Record and explain in your own words — the system translates it into a professional work spec.",
