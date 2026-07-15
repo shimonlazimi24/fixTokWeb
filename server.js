@@ -12,6 +12,7 @@ const serveOptions = {
   rewrites: [
     { source: "/", destination: "/index.html" },
     { source: "/contact", destination: "/contact.html" },
+    { source: "/shiputz-miklachat", destination: "/shiputz-miklachat.html" },
   ],
 };
 

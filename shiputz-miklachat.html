@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>הצעות מחיר לשיפוץ מקלחת בשרון | FixTok</title>
+<meta name="description" content="מפקח בונה לכם כתב כמויות מקצועי תוך 24 שעות, קבלנים מדורגים מהשרון מגישים הצעות על מפרט אחיד. וכל זה בחינם.">
+<meta name="robots" content="noindex, nofollow"><!-- דף נחיתה ממומן — לא לאינדוקס. להסיר אם רוצים אינדוקס בעתיד -->
+<meta name="theme-color" content="#F97316">
+<meta property="og:title" content="הצעות מחיר לשיפוץ מקלחת — על מפרט אחיד | FixTok">
+<meta property="og:description" content="מפרט מקצועי תוך 24 שעות והצעות מקבלנים מדורגים מהשרון. וכל זה בחינם.">
+<meta property="og:image" content="https://www.fix-tok.com/marketing/og-default.png">
+<meta property="og:locale" content="he_IL">
+
+<!-- TODO(שמעון): GTM container — להדביק כאן. אירועי המרה מסומנים בקוד: lp_lead_submitted, lp_video_submitted, lp_whatsapp_clicked -->
+<!-- GTM container של הסוכנות יתווסף כאן כשיימסר. בינתיים GA4 ישיר: -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-93EEK1DBMT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-93EEK1DBMT");
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --orange:#F97316;      /* צבע המותג הקיים */
+  --orange-deep:#EA580C;
+  --ink:#1C1917;         /* כמעט שחור חם */
+  --ink-soft:#57534E;
+  --paper:#FFFDFB;       /* לבן חם */
+  --sand:#FFF4EC;        /* כתום־חול לרקעי סקשן */
+  --line:#E7E0DA;
+  --ok:#16A34A;
+  --radius:16px;
+  --shadow:0 10px 30px rgba(28,25,23,.08);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}.reveal{transition:none!important;opacity:1!important;transform:none!important}}
+body{
+  font-family:'Heebo',system-ui,sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+img,video{max-width:100%;display:block}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+.eyebrow{display:inline-block;font-size:.8rem;font-weight:700;letter-spacing:.04em;color:var(--orange-deep);background:var(--sand);border:1px solid #FDDCC4;border-radius:999px;padding:4px 14px;margin-bottom:14px}
+h1,h2{font-weight:900;line-height:1.15;letter-spacing:-.01em}
+h1{font-size:clamp(1.9rem,5.5vw,3.1rem)}
+h2{font-size:clamp(1.4rem,3.8vw,2.1rem);margin-bottom:12px}
+.sub{color:var(--ink-soft);font-size:clamp(1rem,2.4vw,1.2rem);max-width:34em}
+section{padding:56px 0}
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* ---------- header (מינימלי, בלי ניווט) ---------- */
+header{padding:18px 0;border-bottom:1px solid var(--line);background:var(--paper);position:sticky;top:0;z-index:50}
+.brand{font-size:1.35rem;font-weight:900}
+.brand b{color:var(--orange)}
+.header-row{display:flex;align-items:center;justify-content:space-between}
+.header-note{font-size:.85rem;color:var(--ink-soft);display:flex;align-items:center;gap:6px}
+.header-note svg{flex:none}
+
+/* ---------- hero ---------- */
+.hero{padding:52px 0 40px;background:
+  radial-gradient(700px 340px at 85% -10%, #FFE8D6 0%, transparent 60%),
+  var(--paper)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center}
+@media(max-width:840px){.hero-grid{grid-template-columns:1fr}}
+.hero h1 span{color:var(--orange)}
+.hero .sub{margin:16px 0 24px}
+.trust-line{display:flex;align-items:center;gap:8px;font-size:.92rem;font-weight:500;color:var(--ink-soft);margin-top:12px}
+.trust-line svg{color:var(--ok)}
+.hero-badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.hero-badges span{font-size:.82rem;font-weight:700;background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 12px;color:var(--ink-soft)}
+
+/* כרטיס לפני/אחרי בהירו — נכס אמיתי מהאתר */
+.hero-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+.hero-card img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.hero-card figcaption{padding:12px 16px;font-size:.85rem;color:var(--ink-soft);display:flex;justify-content:space-between;align-items:center}
+.hero-card figcaption b{color:var(--ink)}
+
+/* ---------- כפתורים ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:inherit;font-weight:700;font-size:1.05rem;border:none;cursor:pointer;border-radius:12px;padding:15px 28px;transition:transform .12s ease,box-shadow .12s ease;text-decoration:none}
+.btn-primary{background:var(--orange);color:#fff;box-shadow:0 8px 22px rgba(249,115,22,.35)}
+.btn-primary:hover{transform:translateY(-1px);background:var(--orange-deep)}
+.btn-block{width:100%}
+.btn-google{background:#fff;color:var(--ink);border:1px solid var(--line)}
+.btn-google:hover{background:#FAFAF9}
+.btn-whatsapp{background:#25D366;color:#fff}
+
+/* ---------- 3 צעדים ---------- */
+.steps{background:var(--sand)}
+.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+@media(max-width:760px){.steps-grid{grid-template-columns:1fr}}
+.step{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px 20px}
+.step .num{width:38px;height:38px;border-radius:10px;background:var(--orange);color:#fff;font-weight:900;display:flex;align-items:center;justify-content:center;font-size:1.1rem;margin-bottom:14px}
+.step h3{font-size:1.1rem;margin-bottom:6px}
+.step p{color:var(--ink-soft);font-size:.95rem}
+.step .tag{display:inline-block;margin-top:12px;font-size:.78rem;font-weight:700;color:var(--orange-deep);background:var(--sand);border-radius:999px;padding:3px 10px}
+
+/* ---------- ההשוואה היא המוצר ---------- */
+.compare-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px}
+@media(max-width:760px){.compare-strip{grid-template-columns:1fr}}
+.quote-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px;position:relative}
+.quote-card.best{border-color:var(--orange);box-shadow:0 0 0 3px rgba(249,115,22,.12)}
+.quote-card .who{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.quote-card .avatar{width:36px;height:36px;border-radius:50%;background:var(--sand);color:var(--orange-deep);font-weight:900;display:flex;align-items:center;justify-content:center}
+.quote-card .who small{color:var(--ink-soft);display:block;font-size:.78rem}
+.quote-card .price{font-size:1.5rem;font-weight:900;margin:6px 0 10px}
+.quote-card ul{list-style:none;font-size:.85rem;color:var(--ink-soft)}
+.quote-card li{display:flex;justify-content:space-between;padding:4px 0;border-top:1px dashed var(--line)}
+.quote-card li b{color:var(--ink)}
+.pill{position:absolute;top:-10px;inset-inline-start:14px;font-size:.72rem;font-weight:800;background:var(--orange);color:#fff;border-radius:999px;padding:3px 10px}
+.compare-note{font-size:.82rem;color:var(--ink-soft);margin-top:12px}
+.same-line{margin-top:16px;font-size:.9rem;background:#fff;border:1px dashed var(--orange);border-radius:12px;padding:10px 16px;display:inline-block}
+.same-line b{color:var(--orange-deep)}
+
+/* ---------- מחיר ---------- */
+.price-band{background:var(--ink);color:#fff;border-radius:var(--radius)}
+.price-band .inner{padding:34px 28px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center}
+@media(max-width:760px){.price-band .inner{grid-template-columns:1fr}}
+.price-band h2{color:#fff}
+.price-band p{color:#D6D3D1;max-width:36em}
+.big-range{font-size:clamp(1.7rem,5vw,2.6rem);font-weight:900;color:var(--orange);white-space:nowrap}
+
+/* ---------- עדויות ---------- */
+.quotes-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:24px}
+@media(max-width:700px){.quotes-grid{grid-template-columns:1fr}}
+.t-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+.t-card .stars{color:var(--orange);letter-spacing:2px;margin-bottom:8px}
+.t-card blockquote{font-size:.98rem;line-height:1.6}
+.t-card .name{margin-top:12px;font-size:.85rem;color:var(--ink-soft)}
+.t-card .name b{color:var(--ink)}
+
+/* ---------- FAQ ---------- */
+details{background:#fff;border:1px solid var(--line);border-radius:12px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:700;padding:16px 18px;list-style:none;display:flex;justify-content:space-between;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:1.3rem;color:var(--orange);font-weight:400}
+details[open] summary::after{content:"–"}
+details p{padding:0 18px 16px;color:var(--ink-soft);font-size:.95rem}
+
+/* ---------- הטופס (Two-Step) ---------- */
+.form-section{background:var(--sand)}
+.form-card{background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);max-width:520px;margin:26px auto 0;padding:28px 24px}
+.form-card h3{font-size:1.25rem;margin-bottom:4px}
+.form-card .hint{font-size:.88rem;color:var(--ink-soft);margin-bottom:18px}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:.85rem;font-weight:700;margin-bottom:6px}
+.field input,.field select{width:100%;font-family:inherit;font-size:1rem;padding:13px 14px;border:1.5px solid var(--line);border-radius:10px;background:#FFFDFB}
+.field input:focus,.field select:focus{outline:2px solid var(--orange);outline-offset:1px;border-color:var(--orange)}
+.divider{display:flex;align-items:center;gap:12px;color:var(--ink-soft);font-size:.8rem;margin:16px 0}
+.divider::before,.divider::after{content:"";flex:1;height:1px;background:var(--line)}
+.micro{font-size:.78rem;color:var(--ink-soft);text-align:center;margin-top:12px;display:flex;align-items:center;justify-content:center;gap:6px}
+.progress{display:flex;gap:6px;margin-bottom:18px}
+.progress i{height:5px;border-radius:99px;flex:1;background:var(--line)}
+.progress i.on{background:var(--orange)}
+.step-b{display:none}
+.step-b.active{display:block}
+.step-a.done,.step-b.done{display:none!important}
+.upload-box{border:2px dashed var(--orange);border-radius:14px;background:var(--sand);padding:26px 18px;text-align:center;cursor:pointer;transition:background .15s}
+.upload-box:hover{background:#FFEBD9}
+.upload-box .ic{font-size:1.8rem}
+.upload-box p{font-size:.92rem;margin-top:6px}
+.upload-box small{color:var(--ink-soft)}
+.success-note{display:flex;gap:10px;align-items:flex-start;background:#F0FDF4;border:1px solid #BBF7D0;border-radius:12px;padding:12px 14px;font-size:.9rem;margin-bottom:18px}
+.err{color:#DC2626;font-size:.8rem;margin-top:4px;display:none}
+
+/* ---------- sticky CTA למובייל ---------- */
+.sticky-cta{position:fixed;bottom:0;inset-inline:0;background:rgba(255,253,251,.95);backdrop-filter:blur(8px);border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom));display:none;z-index:60}
+@media(max-width:760px){.sticky-cta{display:block}}
+
+footer{padding:34px 0 110px;border-top:1px solid var(--line);text-align:center;color:var(--ink-soft);font-size:.85rem}
+@media(min-width:761px){footer{padding-bottom:34px}}
+footer .brand{font-size:1.1rem;margin-bottom:6px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap header-row">
+    <div class="brand">Fix<b>Tok</b></div>
+    <div class="header-note">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.4"><path d="M12 2l7 4v6c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-4z"/></svg>
+      הטלפון שלכם לא מופץ לקבלנים
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">שיפוץ מקלחת · אזור השרון</span>
+      <h1>הצעות מחיר לשיפוץ המקלחת —<br>על <span>מפרט מקצועי אחיד</span></h1>
+      <p class="sub">מפקח בונה לכם כתב כמויות תוך 24 שעות, קבלנים מדורגים מהשרון מגישים הצעות — ואתם משווים בשקט. וכל זה בחינם.</p>
+      <a class="btn btn-primary" href="#form" id="hero-cta">התחילו עכשיו — זה לוקח 2 דקות</a>
+      <div class="trust-line">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>
+        הטלפון שלכם לא מופץ לקבלנים. ההצעות מגיעות אליכם במערכת.
+      </div>
+      <div class="hero-badges">
+        <span>מפרט תוך 24 שעות</span><span>עשרות קבלנים בשרון</span><span>דירוג קבלנים שקוף</span><span>וכל זה בחינם</span>
+      </div>
+    </div>
+    <figure class="hero-card reveal">
+      <!-- נכס אמיתי מהאתר הקיים -->
+      <img src="/img/before-after.jpg" alt="חדר רחצה — לפני ואחרי שיפוץ דרך FixTok" loading="eager" fetchpriority="high">
+      <figcaption><span>חדר רחצה · לפני ואחרי</span><b>פרויקט FixTok</b></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ 3 צעדים ============ -->
+<section class="steps">
+  <div class="wrap">
+    <span class="eyebrow">איך זה עובד</span>
+    <h2>שלושה צעדים. בלי כאב ראש.</h2>
+    <div class="steps-grid">
+      <div class="step reveal">
+        <div class="num">1</div>
+        <h3>משאירים פרטים ומצלמים</h3>
+        <p>נרשמים בקליק עם גוגל, ומצלמים סרטון קצר של המקלחת — במילים שלכם, כמו שהייתם מסבירים לחבר.</p>
+        <span class="tag">2 דקות</span>
+      </div>
+      <div class="step reveal">
+        <div class="num">2</div>
+        <h3>מפקח בונה לכם מפרט</h3>
+        <p>מפקח בנייה שעובד רק בשבילכם הופך את הסרטון לכתב כמויות מקצועי, סעיף־סעיף.</p>
+        <span class="tag">עד 24 שעות</span>
+      </div>
+      <div class="step reveal">
+        <div class="num">3</div>
+        <h3>מקבלים הצעות ומשווים</h3>
+        <p>קבלנים מדורגים מהאזור שלכם מתמחרים בדיוק את אותו מפרט. אתם רואים הכל באזור האישי ובוחרים בשקט.</p>
+        <span class="tag">אתם בשליטה</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ההשוואה היא המוצר ============ -->
+<section>
+  <div class="wrap">
+    <span class="eyebrow">ההשוואה היא המוצר</span>
+    <h2>אותה עבודה בדיוק. אתם רק בוחרים את התנאים.</h2>
+    <p class="sub">כל הקבלנים מתמחרים על אותו כתב כמויות — אז ההבדל היחיד בין ההצעות הוא המחיר והתנאים. ככה נראית השוואה אמיתית:</p>
+    <div class="compare-strip">
+      <div class="quote-card reveal">
+        <div class="who"><div class="avatar">ק</div><div><b>קובי פרויקטים</b><small>8.7 · 89 עבודות</small></div></div>
+        <div class="price">₪29,700</div>
+        <ul>
+          <li>סעיפי עבודה<b>17</b></li>
+          <li>אחריות<b>6 חודשים</b></li>
+          <li>תשלום<b>50% / 50%</b></li>
+          <li>זמינות<b>12 ימים</b></li>
+        </ul>
+      </div>
+      <div class="quote-card reveal">
+        <div class="who"><div class="avatar">א</div><div><b>אחמד שיפוצים</b><small>8.2 · 124 עבודות</small></div></div>
+        <div class="price">₪25,300</div>
+        <ul>
+          <li>סעיפי עבודה<b>17</b></li>
+          <li>אחריות<b>12 חודשים</b></li>
+          <li>תשלום<b>100% בגמר</b></li>
+          <li>זמינות<b>7 ימים</b></li>
+        </ul>
+      </div>
+      <div class="quote-card best reveal">
+        <span class="pill">בחירה מומלצת</span>
+        <div class="who"><div class="avatar">י</div><div><b>יונתן השיפוצניק</b><small>9.2 · 148 עבודות</small></div></div>
+        <div class="price">₪18,800</div>
+        <ul>
+          <li>סעיפי עבודה<b>17</b></li>
+          <li>אחריות<b>12 חודשים</b></li>
+          <li>תשלום<b>100% בגמר</b></li>
+          <li>זמינות<b>14 ימים</b></li>
+        </ul>
+      </div>
+    </div>
+    <p class="same-line">זהה בכל ההצעות: <b>סעיפים · חומרים · כמויות · היקף</b> — משתנה: מחיר · אחריות · תשלום · זמינות</p>
+    <p class="compare-note">תצוגה להמחשה — כך נראית ההשוואה באזור האישי שלכם.</p>
+  </div>
+</section>
+
+<!-- ============ תשובת מחיר ============ -->
+<section>
+  <div class="wrap">
+    <div class="price-band reveal">
+      <div class="inner">
+        <div>
+          <h2>אז כמה עולה שיפוץ מקלחת?</h2>
+          <p>שיפוץ מקלחת יסודי בשרון נע לרוב בין 30 ל־50 אלף ₪ — תלוי בגודל ובמורכבות. בדיוק בשביל זה בונים לכם כתב כמויות: כדי שתדעו מה המחיר <b style="color:#fff">שלכם</b>, סעיף־סעיף, בלי הפתעות באמצע.</p>
+        </div>
+        <div class="big-range">₪30–50 אלף</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ עדויות ============ -->
+<section style="padding-top:20px">
+  <div class="wrap">
+    <span class="eyebrow">אנשים אמיתיים. שיפוצים אמיתיים.</span>
+    <h2>מה אומרים אחרי שהתיק נסגר</h2>
+
+    <!-- סרטון כרמל — שיפצה מקלחת עם FixTok. נכס אמיתי מהאתר -->
+    <figure class="hero-card reveal" style="max-width:560px;margin:24px auto 8px">
+      <video src="/videos/carmel-herut.mp4" controls preload="none" playsinline
+             poster="/videos/carmel-herut-poster.jpg" style="width:100%;aspect-ratio:16/9;object-fit:cover;background:#000"></video>
+      <figcaption><span>כרמל, חירות — מספרת על שיפוץ המקלחת שלה</span><b>▶ דקה אחת</b></figcaption>
+    </figure>
+
+    <div class="quotes-grid">
+      <div class="t-card reveal">
+        <div class="stars">★★★★★</div>
+        <blockquote>״דחיתי את תיקון המקלחת שנה שלמה כי לא היה לי כוח לכאב הראש. זרקתי להם את הבעיה, ותוך כמה ימים היה לי קבלן חתום על מפרט מלא, מוכן להתחיל.״</blockquote>
+        <div class="name"><b>רון</b> · תל מונד</div>
+      </div>
+      <div class="t-card reveal">
+        <div class="stars">★★★★★</div>
+        <blockquote>״פעם ראשונה בחיים שהבנתי בדיוק על מה אני משלם. קיבלתי הצעות על אותו מפרט בדיוק, השוויתי בצורה קרה והגיונית ובחרתי.״</blockquote>
+        <div class="name"><b>אמיר</b> · עין שריד</div>
+      </div>
+      <div class="t-card reveal">
+        <div class="stars">★★★★★</div>
+        <blockquote>״צילמתי סרטון של שתי דקות וחסכתי לעצמי שבוע של טיילת קבלנים בבית. הם הגיעו רק כשהחוזה, המפרט והמחיר כבר היו סגורים.״</blockquote>
+        <div class="name"><b>כרמל</b> · חירות</div>
+      </div>
+      <div class="t-card reveal">
+        <div class="stars">★★★★★</div>
+        <blockquote>״תמיד פחדתי ששיפוץ מתחיל במחיר אחד ונגמר כפול. הפעם הכל היה כתוב מראש. הרגיש שמישהו שומר עליי.״</blockquote>
+        <div class="name"><b>ליאור</b> · הוד השרון</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section style="background:var(--sand)">
+  <div class="wrap" style="max-width:760px">
+    <span class="eyebrow">שאלות נפוצות</span>
+    <h2>מה שכולם שואלים</h2>
+    <details>
+      <summary>למה זה בחינם? מה הקאץ'?</summary>
+      <p>אין קאץ'. הקבלנים משלמים ל-FixTok עמלה רק כשהם זוכים בפרויקט. לכם — המפרט, המכרז וההשוואה לא עולים שקל, ואתם לא מחויבים לכלום.</p>
+    </details>
+    <details>
+      <summary>מי המפקח שבונה את המפרט?</summary>
+      <p>מפקח בנייה מקצועי שעובד עבור FixTok — לא עבור הקבלנים. הוא בונה כתב כמויות מפורט על בסיס הסרטון שלכם, ומוודא שכל הקבלנים מתמחרים בדיוק את אותה עבודה.</p>
+    </details>
+    <details>
+      <summary>מה קורה אחרי שאני משאיר פרטים?</summary>
+      <p>נפתח לכם אזור אישי. אתם מעלים סרטון קצר של המקלחת, תוך 24 שעות המפרט מוכן והמכרז שלכם עולה לאוויר — ואתם מקבלים עדכון על כל הצעה שנכנסת. אף קבלן לא מקבל את הטלפון שלכם.</p>
+    </details>
+    <details>
+      <summary>אני מחויב לסגור עם מישהו?</summary>
+      <p>לא. אתם רואים את ההצעות באזור האישי, משווים בשקט, ובוחרים רק אם ומתי שמתאים לכם.</p>
+    </details>
+  </div>
+</section>
+
+<!-- ============ הטופס — TWO STEP ============ -->
+<section class="form-section" id="form" style="background:var(--paper)">
+  <div class="wrap">
+    <div style="text-align:center">
+      <span class="eyebrow">מתחילים כאן</span>
+      <h2>הצעד הראשון — עליכם. כל השאר — עלינו.</h2>
+    </div>
+
+    <div class="form-card">
+      <div class="progress"><i class="on" id="p1"></i><i id="p2"></i><i id="p3"></i></div>
+
+      <!-- ===== שלב א' — פרטים (הליד נתפס כאן) ===== -->
+      <div class="step-a" id="stepA">
+        <h3>מתחילים בפרטים</h3>
+        <p class="hint">30 שניות — ומיד פותחים לכם אזור אישי.</p>
+
+        <form id="leadForm" novalidate>
+          <div class="field">
+            <label for="fullName">שם מלא</label>
+            <input type="text" id="fullName" name="fullName" autocomplete="name" required>
+            <div class="err" id="errName">איך קוראים לכם?</div>
+          </div>
+          <div class="field">
+            <label for="phone">טלפון נייד</label>
+            <input type="tel" id="phone" name="phone" inputmode="tel" autocomplete="tel" dir="rtl" placeholder="050-0000000" required>
+            <div class="err" id="errPhone">מספר נייד ישראלי תקין (05X-XXXXXXX)</div>
+          </div>
+          <div class="field">
+            <label for="city">יישוב</label>
+            <input type="text" id="city" name="city" list="cities" autocomplete="address-level2" required>
+            <datalist id="cities">
+              <option>רעננה</option><option>כפר סבא</option><option>הוד השרון</option><option>הרצליה</option>
+              <option>רמת השרון</option><option>נתניה</option><option>כפר יונה</option><option>תל מונד</option>
+              <option>אבן יהודה</option><option>קדימה-צורן</option><option>פרדסיה</option><option>כוכב יאיר-צור יגאל</option>
+              <option>צור משה</option><option>עין ורד</option><option>עין שריד</option><option>חרות</option><option>בני דרור</option>
+            </datalist>
+            <div class="err" id="errCity">באיזה יישוב הפרויקט?</div>
+          </div>
+          <!-- TODO(שמעון): שדה חבוי gclid + utm — לקרוא מה-URL ולשלוח עם הליד (קריטי ל-Offline Conversions) -->
+          <input type="hidden" id="gclid" name="gclid">
+          <button type="submit" class="btn btn-primary btn-block">המשך — פתיחת אזור אישי</button>
+        </form>
+        <p class="micro">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.4"><path d="M12 2l7 4v6c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-4z"/></svg>
+          הפרטים שלכם לא נמכרים ולא מופצים לקבלנים.
+        </p>
+      </div>
+
+      <!-- ===== שלב ב' — חיבור חשבון Google (האזור האישי) ===== -->
+      <div class="step-b" id="stepGoogle">
+        <div class="success-note">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>
+          <div><b>הפרטים נקלטו.</b><br>עכשיו מחברים חשבון Google — ככה נפתח האזור האישי שבו תראו את המפרט וכל הצעה שנכנסת.</div>
+        </div>
+        <h3>פותחים אזור אישי</h3>
+        <p class="hint">בקליק אחד, בלי סיסמאות. לשם יגיעו המפרט וההצעות שלכם.</p>
+
+        <!-- TODO(שמעון): לחבר Google OAuth. הליד כבר נשמר בשלב הקודם — כאן רק מקשרים חשבון לליד הקיים (לפי טלפון/lead_id) -->
+        <button type="button" class="btn btn-google btn-block" id="googleBtn">
+          <svg width="18" height="18" viewBox="0 0 48 48"><path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3l5.7-5.7C34.5 6.1 29.5 4 24 4 13 4 4 13 4 24s9 20 20 20 20-9 20-20c0-1.3-.1-2.6-.4-3.9z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.9 1.2 8 3l5.7-5.7C34.5 6.1 29.5 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.1H42V20H24v8h11.3c-.8 2.3-2.3 4.3-4.1 5.6l6.2 5.2C41 35.4 44 30.2 44 24c0-1.3-.1-2.6-.4-3.9z"/></svg>
+          התחברות עם Google
+        </button>
+        <p class="micro">משתמשים בחשבון רק כדי לזהות אתכם באזור האישי. שום דבר לא מתפרסם.</p>
+      </div>
+
+      <!-- ===== שלב ג' — הסרטון ===== -->
+      <div class="step-b" id="stepB">
+        <div class="success-note">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>
+          <div><b>מעולה, האזור האישי שלכם נפתח.</b><br>נשאר רק דבר אחד — הסרטון. בלעדיו המפקח לא יכול לבנות מפרט.</div>
+        </div>
+        <h3>צלמו את המקלחת — 30 שניות מספיקות</h3>
+        <p class="hint">עברו על החלל, וספרו במילים שלכם מה תרצו לשפץ.</p>
+
+        <a class="upload-box" href="https://app.fix-tok.com/login?role=client&next=%2Fclient%2Fnew" id="uploadLink" style="display:block;text-decoration:none;color:inherit">
+          <div class="ic">🎥</div>
+          <p><b>לצילום והעלאת הסרטון באזור האישי</b></p>
+          <small>נפתח בקליק · עד 2 דקות וידאו</small>
+        </a>
+
+        <div class="divider">או אם נוח לכם יותר</div>
+
+        <!-- TODO(שמעון): להחליף במספר הוואטסאפ העסקי. הטקסט המקדים כבר מוכן -->
+        <a class="btn btn-whatsapp btn-block" id="waBtn"
+           href="https://wa.me/972527434777?text=%D7%94%D7%99%D7%99%2C%20%D7%A0%D7%A8%D7%A9%D7%9E%D7%AA%D7%99%20%D7%91%D7%90%D7%AA%D7%A8%20%D7%95%D7%96%D7%94%20%D7%94%D7%A1%D7%A8%D7%98%D7%95%D7%9F%20%D7%A9%D7%9C%20%D7%94%D7%9E%D7%A7%D7%9C%D7%97%D7%AA%20%D7%A9%D7%9C%D7%99"
+           target="_blank" rel="noopener">
+          שלחו את הסרטון בוואטסאפ 📲
+        </a>
+        <p class="micro">שלחתם? המפקח מתחיל לעבוד. המפרט שלכם מוכן עד 24 שעות.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="brand">Fix<b>Tok</b></div>
+  <p>שיפוץ בראש שקט · פועלים בכל אזור השרון</p>
+  <p>© 2026 FixTok. כל הזכויות שמורות. · <a href="https://www.fix-tok.com/privacy" style="color:inherit">מדיניות פרטיות</a></p>
+</footer>
+
+<!-- CTA דביק למובייל -->
+<div class="sticky-cta" id="stickyCta">
+  <a class="btn btn-primary btn-block" href="#form">קבלו הצעות מחיר — בחינם</a>
+</div>
+
+<script>
+/* ===== reveal עדין בגלילה ===== */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+/* ===== gclid מה-URL לשדה חבוי ===== */
+const params=new URLSearchParams(location.search);
+document.getElementById('gclid').value=params.get('gclid')||'';
+
+/* ===== ולידציה + מעבר Two-Step ===== */
+const leadForm=document.getElementById('leadForm');
+const ilPhone=/^0(5\d)[- ]?\d{3}[- ]?\d{4}$/;
+
+function show(id,on){document.getElementById(id).style.display=on?'block':'none'}
+
+leadForm.addEventListener('submit',e=>{
+  e.preventDefault();
+  const name=document.getElementById('fullName').value.trim();
+  const phone=document.getElementById('phone').value.trim();
+  const city=document.getElementById('city').value.trim();
+  let ok=true;
+  show('errName',!name); if(!name)ok=false;
+  const phoneOk=ilPhone.test(phone); show('errPhone',!phoneOk); if(!phoneOk)ok=false;
+  show('errCity',!city); if(!city)ok=false;
+  if(!ok)return;
+
+  /* שמירת הליד בשרת - לפני שלב הסרטון. גם אם השמירה נכשלת ממשיכים (לא חוסמים משתמש). */
+  const utm={};
+  for(const k of ['utm_source','utm_medium','utm_campaign','utm_term','utm_content']){
+    const v=params.get(k); if(v)utm[k]=v;
+  }
+  fetch('https://app.fix-tok.com/api/public/lp-lead',{
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({name,phone,city,gclid:document.getElementById('gclid').value||null,source:'lp-miklachat',...utm})
+  }).catch(()=>{if(typeof dataLayer!=='undefined')dataLayer.push({event:'lp_lead_save_failed'})});
+
+  /* אירוע ההמרה הראשי לגוגל - נורה על קליטת הפרטים */
+  if(typeof gtag==='function'){gtag('event','lp_lead_submitted',{city:city});}
+  if(typeof dataLayer!=='undefined'){dataLayer.push({event:'lp_lead_submitted',city:city});}
+
+  goStep('stepA','stepGoogle','p2');
+});
+
+function appDeepLink(){
+  /* מעבירים את כל פרמטרי המדידה (gclid, utm) - האפליקציה קולטת אותם אוטומטית */
+  const qs=location.search?location.search.replace(/^\?/,'&'):'';
+  return 'https://app.fix-tok.com/login?role=client&next=%2Fclient%2Fnew'+qs;
+}
+document.getElementById('googleBtn').addEventListener('click',()=>{
+  if(typeof dataLayer!=='undefined'){dataLayer.push({event:'lp_google_signin_clicked'});}
+  if(typeof gtag==='function'){gtag('event','lp_google_signin_clicked');}
+  location.href=appDeepLink();
+});
+
+function goStep(fromId,toId,progressId){
+  document.getElementById(fromId).classList.remove('active');
+  document.getElementById(fromId).classList.add('done');
+  document.getElementById(toId).classList.add('active');
+  document.getElementById(progressId).classList.add('on');
+  document.getElementById('form').scrollIntoView({behavior:'smooth'});
+}
+
+document.getElementById('uploadLink').addEventListener('click',()=>{
+  if(typeof dataLayer!=='undefined'){dataLayer.push({event:'lp_video_submitted'});}
+  if(typeof gtag==='function'){gtag('event','lp_video_submitted');}
+  document.getElementById('uploadLink').href=appDeepLink();
+});
+
+document.getElementById('waBtn').addEventListener('click',()=>{
+  if(typeof dataLayer!=='undefined'){dataLayer.push({event:'lp_whatsapp_clicked'});}
+  if(typeof gtag==='function'){gtag('event','lp_whatsapp_clicked');}
+});
+</script>
+</body>
+</html>
