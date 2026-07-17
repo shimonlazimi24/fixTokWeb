@@ -83,7 +83,7 @@ header{padding:18px 0;border-bottom:1px solid var(--line);background:var(--paper
 
 /* כרטיס לפני/אחרי בהירו — נכס אמיתי מהאתר */
 .hero-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
-.hero-card img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.hero-card img,.hero-card video{width:100%;aspect-ratio:4/3;object-fit:cover;background:#000}
 .hero-card figcaption{padding:12px 16px;font-size:.85rem;color:var(--ink-soft);display:flex;justify-content:space-between;align-items:center}
 .hero-card figcaption b{color:var(--ink)}
 
@@ -212,8 +212,8 @@ footer .brand{font-size:1.1rem;margin-bottom:6px}
       </div>
     </div>
     <figure class="hero-card reveal">
-      <!-- נכס אמיתי מהאתר הקיים -->
-      <img src="/img/before-after.jpg" alt="חדר רחצה — לפני ואחרי שיפוץ דרך FixTok" loading="eager" fetchpriority="high">
+      <video src="/videos/lp-hero.mp4" autoplay muted loop playsinline preload="metadata"
+             poster="/videos/lp-hero-poster.jpg" aria-label="חדר רחצה לפני ואחרי שיפוץ דרך FixTok"></video>
       <figcaption><span>חדר רחצה · לפני ואחרי</span><b>פרויקט FixTok</b></figcaption>
     </figure>
   </div>
@@ -474,6 +474,12 @@ footer .brand{font-size:1.1rem;margin-bottom:6px}
 </div>
 
 <script>
+/* כיבוד prefers-reduced-motion: בלי אוטופליי בהירו */
+if(matchMedia('(prefers-reduced-motion: reduce)').matches){
+  const hv=document.querySelector('.hero-card video');
+  if(hv){hv.removeAttribute('autoplay');hv.pause();hv.controls=true;}
+}
+
 /* ===== reveal עדין בגלילה ===== */
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
