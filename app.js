@@ -99,3 +99,10 @@
   }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
   document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
 })();
+
+/* כפתור הוואטסאפ הצף: שחרור פוקוס אחרי לחיצה, שלא תישאר טבעת כשחוזרים לטאב */
+document.querySelectorAll('.wa-float').forEach(function (el) {
+  el.addEventListener('click', function () {
+    setTimeout(function () { el.blur(); }, 0);
+  });
+});

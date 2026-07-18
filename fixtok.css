@@ -1114,5 +1114,10 @@ ul { list-style: none; }
   transition: transform .16s ease, box-shadow .2s ease;
 }
 .wa-float:hover { transform: translateY(-3px) scale(1.05); box-shadow: 0 10px 26px rgba(0,0,0,.28); }
+.wa-float:focus { outline: none; }
+.wa-float:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px #fff, 0 0 0 6px #1faf54, 0 8px 22px rgba(0,0,0,.24);
+}
 @media (max-width: 767px) { .wa-float { width: 54px; height: 54px; bottom: 16px; left: 16px; } }
 @media (prefers-reduced-motion: reduce) { .wa-float { transition: none; } }
