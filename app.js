@@ -106,3 +106,9 @@ document.querySelectorAll('.wa-float').forEach(function (el) {
     setTimeout(function () { el.blur(); }, 0);
   });
 });
+document.addEventListener('visibilitychange', function () {
+  if (!document.hidden && document.activeElement && document.activeElement.classList &&
+      document.activeElement.classList.contains('wa-float')) {
+    document.activeElement.blur();
+  }
+});

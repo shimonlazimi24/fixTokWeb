@@ -1117,7 +1117,7 @@ ul { list-style: none; }
 .wa-float:focus { outline: none; }
 .wa-float:focus-visible {
   outline: none;
-  box-shadow: 0 0 0 3px #fff, 0 0 0 6px #1faf54, 0 8px 22px rgba(0,0,0,.24);
+  box-shadow: 0 0 0 5px rgba(37, 211, 102, .35), 0 8px 22px rgba(0,0,0,.24);
 }
 @media (max-width: 767px) { .wa-float { width: 54px; height: 54px; bottom: 16px; left: 16px; } }
 @media (prefers-reduced-motion: reduce) { .wa-float { transition: none; } }
