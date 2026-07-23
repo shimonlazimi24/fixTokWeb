@@ -53,6 +53,8 @@ window.FIXTOK_I18N_EN = {
   "how.s3.status": "Package closed successfully",
   "how.s3.signed": "Digital contract signed",
   "how.s3.priceLabel": "Fixed price",
+  "how.videoCaption": "The whole flow, in under a minute.",
+  "how.videoPlayAria": "Play: the whole flow in under a minute",
 
   "expert.eyebrow": "The strongest feature",
   "expert.title": "A site supervisor<br>who works only for you.",

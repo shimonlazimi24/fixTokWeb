@@ -714,6 +714,12 @@ ul { list-style: none; }
 .vwrap--playing::after { opacity: 0; }
 @media (prefers-reduced-motion: reduce) { .vplay { transition: none; } }
 
+/* --- client explainer video (how section): centered phone-style frame --- */
+.how-video { margin: 36px auto 0; max-width: 272px; }
+.how-video .vwrap { border-radius: 30px; border: 7px solid #101010; box-shadow: var(--sh-lg); }
+.how-video .vwrap video { aspect-ratio: 9 / 16; }
+.how-video figcaption { margin-top: 12px; text-align: center; font-size: .9rem; color: var(--text-3); }
+
 /* --- contractor explainer video (pros section): phone-style frame --- */
 .pros-video { margin: 30px 0 0; max-width: 264px; }
 .pros-video .vwrap { border-radius: 30px; border: 7px solid #101010; box-shadow: var(--sh-lg); }
