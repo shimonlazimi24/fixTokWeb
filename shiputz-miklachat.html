@@ -409,11 +409,14 @@ footer .brand{font-size:1.1rem;margin-bottom:6px}
           </div>
           <!-- TODO(שמעון): שדה חבוי gclid + utm — לקרוא מה-URL ולשלוח עם הליד (קריטי ל-Offline Conversions) -->
           <input type="hidden" id="gclid" name="gclid">
+          <input type="hidden" id="fbclid" name="fbclid">
           <button type="submit" class="btn btn-primary btn-block">המשך — פתיחת אזור אישי</button>
         </form>
         <p class="micro">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.4"><path d="M12 2l7 4v6c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-4z"/></svg>
           הפרטים שלכם לא נמכרים ולא מופצים לקבלנים.
+          בשליחת הטופס אתם מאשרים שניצור איתכם קשר בטלפון או בוואטסאפ בנוגע לפנייה —
+          <a href="https://app.fix-tok.com/privacy" target="_blank" rel="noopener">מדיניות הפרטיות</a>.
         </p>
       </div>
 
@@ -488,6 +491,7 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 /* ===== gclid מה-URL לשדה חבוי ===== */
 const params=new URLSearchParams(location.search);
 document.getElementById('gclid').value=params.get('gclid')||'';
+document.getElementById('fbclid').value=params.get('fbclid')||'';
 
 /* ===== ולידציה + מעבר Two-Step ===== */
 const leadForm=document.getElementById('leadForm');
@@ -514,7 +518,7 @@ leadForm.addEventListener('submit',e=>{
   fetch('https://app.fix-tok.com/api/public/lp-lead',{
     method:'POST',
     headers:{'Content-Type':'application/json'},
-    body:JSON.stringify({name,phone,city,gclid:document.getElementById('gclid').value||null,source:'lp-miklachat',...utm})
+    body:JSON.stringify({name,phone,city,gclid:document.getElementById('gclid').value||null,fbclid:document.getElementById('fbclid').value||null,source:'lp-miklachat',...utm})
   }).catch(()=>{if(typeof dataLayer!=='undefined')dataLayer.push({event:'lp_lead_save_failed'})});
 
   /* אירוע ההמרה הראשי לגוגל - נורה על קליטת הפרטים */
