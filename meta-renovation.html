@@ -98,6 +98,9 @@ header{padding:18px 0;border-bottom:1px solid var(--line);background:var(--paper
 .hero-card img{width:100%;aspect-ratio:4/3;object-fit:cover}
 .hero-card video{width:100%;aspect-ratio:848/478;object-fit:contain;background:#000;display:block}
 .hero-card figcaption{padding:12px 16px;font-size:.85rem;color:var(--ink-soft);display:flex;justify-content:space-between;align-items:center}
+/* סרטון ההסבר אנכי (9:16) - כרטיס בפרופורציית טלפון, בלי פסים שחורים */
+.hero-card.explainer-card{max-width:300px;margin:24px auto 8px;border-radius:24px}
+.hero-card.explainer-card video{aspect-ratio:9/16;object-fit:cover}
 .hero-card figcaption b{color:var(--ink)}
 
 /* ---------- כפתורים ---------- */
@@ -265,9 +268,9 @@ footer .brand{font-size:1.1rem;margin-bottom:6px}
   <div class="wrap" style="text-align:center">
     <span class="eyebrow">בפחות מדקה</span>
     <h2>ככה זה עובד — צפו</h2>
-    <figure class="hero-card reveal" style="max-width:420px;margin:24px auto 8px">
+    <figure class="hero-card explainer-card reveal">
       <video src="/videos/client-explainer.mp4" controls preload="none" playsinline
-             poster="/videos/client-explainer-poster.jpg" style="width:100%;background:#000"></video>
+             poster="/videos/client-explainer-poster.jpg"></video>
       <figcaption><span>איך FixTok עובד</span><b>▶ 46 שניות</b></figcaption>
     </figure>
   </div>
