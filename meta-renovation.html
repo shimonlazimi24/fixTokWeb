@@ -584,7 +584,8 @@ function appDeepLink(){
 document.getElementById('googleBtn').addEventListener('click',()=>{
   if(typeof dataLayer!=='undefined'){dataLayer.push({event:'lp_google_signin_clicked'});}
   if(typeof gtag==='function'){gtag('event','lp_google_signin_clicked');}
-  location.href=appDeepLink();
+  /* auto=google: האפליקציה מזנקת ישר ל-OAuth במקום להציג עוד כפתור גוגל */
+  location.href=appDeepLink()+'&auto=google';
 });
 
 function goStep(fromId,toId,progressId){
