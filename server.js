@@ -10,6 +10,7 @@ const serveOptions = {
   directoryListing: false,
   headers: [{ source: "**", headers: SECURITY_HEADERS }],
   rewrites: [
+    { source: "/meta-renovation", destination: "/meta-renovation.html" },
     { source: "/", destination: "/index.html" },
     { source: "/contact", destination: "/contact.html" },
     { source: "/shiputz-miklachat", destination: "/shiputz-miklachat.html" },
