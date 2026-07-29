@@ -13,6 +13,10 @@
     {
       "source": "/shiputz-miklachat",
       "destination": "/shiputz-miklachat.html"
+    },
+    {
+      "source": "/meta-renovation",
+      "destination": "/meta-renovation.html"
     }
   ]
 }
