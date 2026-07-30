@@ -573,13 +573,17 @@ leadForm.addEventListener('submit',e=>{
   }).then(r=>{
     /* אירוע מטא נורה רק אחרי שהליד נשמר בהצלחה בשרת */
     if(r.ok){if(typeof fbq==='function'){fbq('trackCustom','lp_details_submitted',{city:city});}}
-  }).catch(()=>{if(typeof dataLayer!=='undefined')dataLayer.push({event:'lp_lead_save_failed'})});
+    else if(typeof dataLayer!=='undefined'){dataLayer.push({event:'lp_lead_save_failed'});}
+  }).catch(()=>{if(typeof dataLayer!=='undefined')dataLayer.push({event:'lp_lead_save_failed'})})
+  .finally(()=>{setTimeout(()=>{location.href=appDeepLink()+'&auto=google';},250);});
 
   /* אירוע ההמרה הראשי לגוגל - נורה על קליטת הפרטים */
   if(typeof gtag==='function'){gtag('event','lp_lead_submitted',{city:city});}
   if(typeof dataLayer!=='undefined'){dataLayer.push({event:'lp_lead_submitted',city:city});}
 
-  goStep('stepA','stepGoogle','p2');
+  /* בלי מסך ביניים: שומרים את הליד וקופצים ישר לחיבור Google באפליקציה */
+  const submitBtn=leadForm.querySelector('button[type="submit"]');
+  if(submitBtn){submitBtn.disabled=true;submitBtn.textContent='רגע... פותחים לכם אזור אישי';}
 });
 
 function appDeepLink(){
