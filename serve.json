@@ -17,6 +17,10 @@
     {
       "source": "/meta-renovation",
       "destination": "/meta-renovation.html"
+    },
+    {
+      "source": "/meta-contractors",
+      "destination": "/meta-contractors.html"
     }
   ]
 }
