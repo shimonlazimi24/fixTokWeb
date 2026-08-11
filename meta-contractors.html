@@ -582,6 +582,14 @@ footer{background:var(--ink);color:var(--steel-light);padding:40px 0;font-size:1
           </div>
         </div>
 
+        <div class="fgroup">
+          <label for="f_refphone1">טלפונים של ממליצים <span class="opt-tag">אופציונלי — מגדיל משמעותית את סיכויי האישור</span></label>
+          <div class="grid2" style="margin-top:6px">
+            <input type="tel" id="f_refphone1" name="reference_phone_1" inputmode="tel" autocomplete="off" placeholder="050-0000000">
+            <input type="tel" id="f_refphone2" name="reference_phone_2" inputmode="tel" autocomplete="off" placeholder="050-0000000">
+          </div>
+        </div>
+
         <div class="grid2">
           <div class="fgroup"><label for="f_email">אימייל <span class="opt-tag">אופציונלי</span></label><input type="email" id="f_email" name="email" autocomplete="email"></div>
           <div class="fgroup"><label for="f_link">אתר / אינסטגרם / פייסבוק / תיק עבודות <span class="opt-tag">אופציונלי</span></label><input type="text" id="f_link" name="portfolio_link" placeholder="https://"></div>
@@ -703,6 +711,7 @@ footer{background:var(--ink);color:var(--steel-light);padding:40px 0;font-size:1
       regions: payload.regions,
       yearsExperience: payload.years_experience,
       referencesCount: payload.references_count,
+      referencesPhones: payload.references_phones,
       source: 'lp-meta-contractors',
       gclid: utms.gclid || undefined,
       fbclid: utms.fbclid || undefined,
@@ -773,6 +782,7 @@ footer{background:var(--ink);color:var(--steel-light);padding:40px 0;font-size:1
       regions_labels: regNames,
       years_experience: document.getElementById('f_experience').value,
       references_count: document.getElementById('f_refs').value,
+      references_phones: ['f_refphone1','f_refphone2'].map(function(id){return document.getElementById(id).value.trim()}).filter(Boolean),
       portfolio_link: document.getElementById('f_link').value.trim() || null,
       consent: true,
       submitted_at: new Date().toISOString(),
