@@ -320,14 +320,18 @@ footer{background:var(--ink);color:var(--steel-light);padding:40px 0;font-size:1
 <!-- 2. VIDEO TESTIMONIAL -->
 <section class="video-sec">
   <div class="wrap video-wrap">
-    <div class="eyebrow rv" style="justify-content:center">רואים איך זה עובד</div>
-    <h2 class="sec-title rv" style="text-align:center;margin:0 auto">דקה אחת ותבין את כל השיטה.</h2>
-    <p class="sec-sub rv" style="text-align:center;margin:12px auto 0">איך FixTok עובד לקבלנים — מהפרויקט ועד התשלום.</p>
+    <div class="eyebrow rv" style="justify-content:center">עדות</div>
+    <h2 class="sec-title rv" style="text-align:center;margin:0 auto">אל תיקח את המילה שלנו.</h2>
+    <p class="sec-sub rv" style="text-align:center;margin:12px auto 0">תשמע מקבלן שכבר עובד עם FixTok.</p>
 
-    <div class="rv" style="display:flex;justify-content:center;margin-top:28px">
-      <video controls playsinline preload="none" poster="/videos/contractor-explainer-poster.jpg" style="width:min(340px,86vw);aspect-ratio:9/16;border-radius:18px;background:#000;box-shadow:0 18px 44px rgba(0,0,0,.3);object-fit:cover">
-        <source src="/videos/contractor-explainer.mp4" type="video/mp4">
+    <div class="video-frame rv" style="overflow:hidden">
+      <video controls playsinline preload="none" poster="/videos/zigdon-poster.jpg" style="width:100%;height:100%;object-fit:cover;display:block">
+        <source src="/videos/zigdon.mp4" type="video/mp4">
       </video>
+    </div>
+    <div class="video-who rv">
+      <span><b>יצחק זיגדון</b></span>
+      <span>זיגדון פרויקטים · קבלן שעובד עם FixTok</span>
     </div>
     <div class="video-cta rv">
       <a href="#apply" class="btn cta-scroll">הגש מועמדות</a>
@@ -474,6 +478,10 @@ footer{background:var(--ink);color:var(--steel-light);padding:40px 0;font-size:1
         </div>
         <div class="grid2">
           <div class="fgroup"><label for="f_biz">שם העסק <span class="req">*</span></label><input type="text" id="f_biz" name="business_name" required=""></div>
+          <div class="fgroup">
+            <label for="f_hp">ח.פ. / עוסק <span class="req">*</span></label>
+            <input type="text" id="f_hp" name="business_id" inputmode="numeric" autocomplete="off" placeholder="מספר עוסק/חברה" required="">
+          </div>
           <div class="fgroup"><label for="f_city">עיר <span class="req">*</span></label><input type="text" id="f_city" name="city" autocomplete="address-level2" required=""></div>
         </div>
 
@@ -484,49 +492,53 @@ footer{background:var(--ink);color:var(--steel-light);padding:40px 0;font-size:1
 
           <div class="cat-block">
             <div class="chips">
-              <button type="button" class="chip chip-lead" data-cat="general" aria-pressed="false">שיפוץ כללי</button>
-              <button type="button" class="chip chip-lead" data-cat="turnkey" aria-pressed="false">בניה חדשה — עד מפתח</button>
-              <button type="button" class="chip chip-lead" data-cat="handyman" aria-pressed="false">הנדימן</button>
+              <button type="button" class="chip chip-lead" data-cat="שיפוץ כללי" aria-pressed="false">שיפוץ כללי</button>
+              <button type="button" class="chip chip-lead" data-cat="בניה חדשה - עד מפתח" aria-pressed="false">בניה חדשה — עד מפתח</button>
+              <button type="button" class="chip chip-lead" data-cat="הנדימן" aria-pressed="false">הנדימן</button>
             </div>
           </div>
           <div class="cat-block">
             <div class="cat-head">רטוב ותשתיות</div>
             <div class="chips">
-              <button type="button" class="chip" data-cat="bathrooms" aria-pressed="false">חדרי רחצה</button>
-              <button type="button" class="chip" data-cat="plumbing" aria-pressed="false">אינסטלציה</button>
-              <button type="button" class="chip" data-cat="electrical" aria-pressed="false">חשמל</button>
-              <button type="button" class="chip" data-cat="waterproofing" aria-pressed="false">איטום</button>
-              <button type="button" class="chip" data-cat="lowvoltage" aria-pressed="false">תקשורת</button>
-            </div>
-          </div>
-          <div class="cat-block">
-            <div class="cat-head">גמר</div>
-            <div class="chips">
-              <button type="button" class="chip" data-cat="tiling" aria-pressed="false">ריצוף</button>
-              <button type="button" class="chip" data-cat="parquet" aria-pressed="false">פרקט</button>
-              <button type="button" class="chip" data-cat="painting" aria-pressed="false">צבע</button>
-              <button type="button" class="chip" data-cat="plaster" aria-pressed="false">טייח</button>
-              <button type="button" class="chip" data-cat="drywall" aria-pressed="false">גבס</button>
-              <button type="button" class="chip" data-cat="stone" aria-pressed="false">שיש</button>
-            </div>
-          </div>
-          <div class="cat-block">
-            <div class="cat-head">נגרות ומטבחים</div>
-            <div class="chips">
-              <button type="button" class="chip" data-cat="kitchens" aria-pressed="false">מטבחים</button>
-              <button type="button" class="chip" data-cat="carpentry" aria-pressed="false">נגרות ועבודות עץ</button>
-              <button type="button" class="chip" data-cat="doors" aria-pressed="false">דלתות</button>
-            </div>
-          </div>
-          <div class="cat-block">
-            <div class="cat-head">מעטפת וחוץ</div>
-            <div class="chips">
-              <button type="button" class="chip" data-cat="aluminum" aria-pressed="false">אלומיניום</button>
-              <button type="button" class="chip" data-cat="metalwork" aria-pressed="false">מסגרות</button>
-              <button type="button" class="chip" data-cat="roofing" aria-pressed="false">גגות ורעפים</button>
-              <button type="button" class="chip" data-cat="lightbuild" aria-pressed="false">בניה קלה</button>
-              <button type="button" class="chip" data-cat="landscaping" aria-pressed="false">פיתוח חוץ</button>
-              <button type="button" class="chip" data-cat="decking" aria-pressed="false">דקים</button>
+              <button type="button" class="chip" data-cat="איטום" aria-pressed="false">איטום</button>
+            <button type="button" class="chip" data-cat="אינסטלציה" aria-pressed="false">אינסטלציה</button>
+            <button type="button" class="chip" data-cat="אלומיניום" aria-pressed="false">אלומיניום</button>
+            <button type="button" class="chip" data-cat="בטון" aria-pressed="false">בטון</button>
+            <button type="button" class="chip" data-cat="בניה קלה" aria-pressed="false">בניה קלה</button>
+            <button type="button" class="chip" data-cat="בריכות שחיה" aria-pressed="false">בריכות שחיה</button>
+            <button type="button" class="chip" data-cat="גבס" aria-pressed="false">גבס</button>
+            <button type="button" class="chip" data-cat="גגות ורעפים" aria-pressed="false">גגות ורעפים</button>
+            <button type="button" class="chip" data-cat="גז" aria-pressed="false">גז</button>
+            <button type="button" class="chip" data-cat="גינון" aria-pressed="false">גינון</button>
+            <button type="button" class="chip" data-cat="דלתות" aria-pressed="false">דלתות</button>
+            <button type="button" class="chip" data-cat="דוד שמש/חשמל" aria-pressed="false">דוד שמש/חשמל</button>
+            <button type="button" class="chip" data-cat="דקים" aria-pressed="false">דקים</button>
+            <button type="button" class="chip" data-cat="זגגות" aria-pressed="false">זגגות</button>
+            <button type="button" class="chip" data-cat="חדרי אמבטיה" aria-pressed="false">חדרי אמבטיה</button>
+            <button type="button" class="chip" data-cat="חידוש מטבחים" aria-pressed="false">חידוש מטבחים</button>
+            <button type="button" class="chip" data-cat="חיפוי קירות" aria-pressed="false">חיפוי קירות</button>
+            <button type="button" class="chip" data-cat="חשמל" aria-pressed="false">חשמל</button>
+            <button type="button" class="chip" data-cat="טייח" aria-pressed="false">טייח</button>
+            <button type="button" class="chip" data-cat="כלים סניטריים" aria-pressed="false">כלים סניטריים</button>
+            <button type="button" class="chip" data-cat="מבנים ניידים" aria-pressed="false">מבנים ניידים</button>
+            <button type="button" class="chip" data-cat="מזגנים" aria-pressed="false">מזגנים</button>
+            <button type="button" class="chip" data-cat="מטבחים" aria-pressed="false">מטבחים</button>
+            <button type="button" class="chip" data-cat="מחיצות זכוכית" aria-pressed="false">מחיצות זכוכית</button>
+            <button type="button" class="chip" data-cat="מסגרות" aria-pressed="false">מסגרות</button>
+            <button type="button" class="chip" data-cat="נגרות" aria-pressed="false">נגרות</button>
+            <button type="button" class="chip" data-cat="ניסור בבטון" aria-pressed="false">ניסור בבטון</button>
+            <button type="button" class="chip" data-cat="עבודות עפר" aria-pressed="false">עבודות עפר</button>
+            <button type="button" class="chip" data-cat="עבודות עץ" aria-pressed="false">עבודות עץ</button>
+            <button type="button" class="chip" data-cat="פיתוח חוץ" aria-pressed="false">פיתוח חוץ</button>
+            <button type="button" class="chip" data-cat="פרקט" aria-pressed="false">פרקט</button>
+            <button type="button" class="chip" data-cat="צבע" aria-pressed="false">צבע</button>
+            <button type="button" class="chip" data-cat="קונסטרוקציות פלדה" aria-pressed="false">קונסטרוקציות פלדה</button>
+            <button type="button" class="chip" data-cat="ריצוף" aria-pressed="false">ריצוף</button>
+            <button type="button" class="chip" data-cat="שיש" aria-pressed="false">שיש</button>
+            <button type="button" class="chip" data-cat="שליכט צבעוני" aria-pressed="false">שליכט צבעוני</button>
+            <button type="button" class="chip" data-cat="תוספת בניה - עד מפתח" aria-pressed="false">תוספת בניה - עד מפתח</button>
+            <button type="button" class="chip" data-cat="תקשורת" aria-pressed="false">תקשורת</button>
+            <button type="button" class="chip" data-cat="תקרות אקוסטיות" aria-pressed="false">תקרות אקוסטיות</button>
             </div>
           </div>
           <p class="err" id="errCat">בחר לפחות תחום אחד.</p>
@@ -541,14 +553,15 @@ footer{background:var(--ink);color:var(--steel-light);padding:40px 0;font-size:1
         <div class="fgroup">
           <span class="flabel">אזורי פעילות <span class="req">*</span></span>
           <div class="chips" style="margin-top:4px">
-            <button type="button" class="chip" data-reg="north" aria-pressed="false">צפון</button>
-            <button type="button" class="chip" data-reg="haifa" aria-pressed="false">חיפה והקריות</button>
-            <button type="button" class="chip" data-reg="sharon" aria-pressed="false">שרון</button>
-            <button type="button" class="chip" data-reg="dan" aria-pressed="false">מרכז וגוש דן</button>
-            <button type="button" class="chip" data-reg="shfela" aria-pressed="false">שפלה</button>
-            <button type="button" class="chip" data-reg="jerusalem" aria-pressed="false">ירושלים והסביבה</button>
+            <button type="button" class="chip" data-reg="tel-aviv-gush-dan" aria-pressed="false">תל אביב וגוש דן</button>
+            <button type="button" class="chip" data-reg="sharon" aria-pressed="false">השרון</button>
+            <button type="button" class="chip" data-reg="shephelah-central" aria-pressed="false">שפלה ומרכז דרומי</button>
+            <button type="button" class="chip" data-reg="jerusalem-area" aria-pressed="false">ירושלים והסביבה</button>
+            <button type="button" class="chip" data-reg="haifa-krayot" aria-pressed="false">חיפה והקריות</button>
+            <button type="button" class="chip" data-reg="north-galilee-valleys" aria-pressed="false">צפון (גליל - עמקים)</button>
+            <button type="button" class="chip" data-reg="far-north-golan" aria-pressed="false">צפון רחוק (גליל עליון-גולן)</button>
             <button type="button" class="chip" data-reg="south" aria-pressed="false">דרום</button>
-            <button type="button" class="chip" data-reg="eilat" aria-pressed="false">אילת והערבה</button>
+            <button type="button" class="chip" data-reg="far-south-negev" aria-pressed="false">דרום רחוק (נגב-ערבה)</button>
           </div>
           <p class="err" id="errReg">בחר לפחות אזור אחד.</p>
         </div>
@@ -556,13 +569,7 @@ footer{background:var(--ink);color:var(--steel-light);padding:40px 0;font-size:1
         <div class="grid2">
           <div class="fgroup">
             <label for="f_experience">שנות ניסיון <span class="req">*</span></label>
-            <select id="f_experience" name="years_experience" required="">
-              <option value="">בחר…</option>
-              <option value="lt2">פחות מ־2</option>
-              <option value="2_5">2–5</option>
-              <option value="5_10">5–10</option>
-              <option value="gt10">יותר מ־10</option>
-            </select>
+            <input type="number" id="f_experience" name="years_experience" min="0" max="60" inputmode="numeric" placeholder="למשל: 8">
           </div>
           <div class="fgroup">
             <label for="f_refs">לקוחות ממליצים מהשנה האחרונה <span class="req">*</span></label>
@@ -704,6 +711,9 @@ footer{background:var(--ink);color:var(--steel-light);padding:40px 0;font-size:1
       regions: payload.regions,
       yearsExperience: payload.years_experience,
       referencesCount: payload.references_count,
+      businessId: payload.business_id,
+      specialties: payload.categories,
+      serviceAreas: payload.regions,
       referencesPhones: payload.references_phones,
       source: 'lp-meta-contractors',
       gclid: utms.gclid || undefined,
@@ -745,7 +755,7 @@ footer{background:var(--ink);color:var(--steel-light);padding:40px 0;font-size:1
 
     if(!cats.length){ document.getElementById('errCat').classList.add('on'); bad = true; }
     if(!regs.length){ document.getElementById('errReg').classList.add('on'); bad = true; }
-    ['f_name','f_phone','f_biz','f_city','f_primary','f_experience','f_refs'].forEach(function(id){
+    ['f_name','f_phone','f_biz','f_hp','f_city','f_primary'].forEach(function(id){
       var el = document.getElementById(id);
       if(!el.value.trim()){ el.style.borderColor = '#EA580C'; bad = true; }
       else { el.style.borderColor = ''; }
@@ -775,6 +785,7 @@ footer{background:var(--ink);color:var(--steel-light);padding:40px 0;font-size:1
       regions_labels: regNames,
       years_experience: document.getElementById('f_experience').value,
       references_count: document.getElementById('f_refs').value,
+      business_id: document.getElementById('f_hp').value.trim(),
       references_phones: ['f_refphone1','f_refphone2'].map(function(id){return document.getElementById(id).value.trim()}).filter(Boolean),
       portfolio_link: document.getElementById('f_link').value.trim() || null,
       consent: true,
