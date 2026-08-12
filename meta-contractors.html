@@ -320,21 +320,14 @@ footer{background:var(--ink);color:var(--steel-light);padding:40px 0;font-size:1
 <!-- 2. VIDEO TESTIMONIAL -->
 <section class="video-sec">
   <div class="wrap video-wrap">
-    <div class="eyebrow rv" style="justify-content:center">עדות</div>
-    <h2 class="sec-title rv" style="text-align:center;margin:0 auto">אל תיקח את המילה שלנו.</h2>
-    <p class="sec-sub rv" style="text-align:center;margin:12px auto 0">תשמע מקבלן שכבר עובד עם FixTok.</p>
+    <div class="eyebrow rv" style="justify-content:center">רואים איך זה עובד</div>
+    <h2 class="sec-title rv" style="text-align:center;margin:0 auto">דקה אחת ותבין את כל השיטה.</h2>
+    <p class="sec-sub rv" style="text-align:center;margin:12px auto 0">איך FixTok עובד לקבלנים — מהפרויקט ועד התשלום.</p>
 
-    <div class="video-frame rv">
-      <!-- TODO: replace with the real testimonial video (file or embed URL), keep aspect-ratio:16/9 -->
-      <div class="video-ph">
-        <div class="play"><svg width="24" height="24" viewBox="0 0 16 16" fill="none"><path d="M5 3.5v9l8-4.5-8-4.5z" fill="#fff"></path></svg></div>
-        <span class="cap">PLACEHOLDER — סרטון עדות של קבלן</span>
-      </div>
-    </div>
-    <div class="video-who rv">
-      <span><b>שם הקבלן:</b> — TODO —</span>
-      <span><b>תחום:</b> — TODO —</span>
-      <span><b>אזור פעילות:</b> — TODO —</span>
+    <div class="rv" style="display:flex;justify-content:center;margin-top:28px">
+      <video controls playsinline preload="none" poster="/videos/contractor-explainer-poster.jpg" style="width:min(340px,86vw);aspect-ratio:9/16;border-radius:18px;background:#000;box-shadow:0 18px 44px rgba(0,0,0,.3);object-fit:cover">
+        <source src="/videos/contractor-explainer.mp4" type="video/mp4">
+      </video>
     </div>
     <div class="video-cta rv">
       <a href="#apply" class="btn cta-scroll">הגש מועמדות</a>
@@ -597,7 +590,7 @@ footer{background:var(--ink);color:var(--steel-light);padding:40px 0;font-size:1
 
         <label class="consent">
           <input type="checkbox" id="f_consent" required="">
-          <span>אני מאשר קבלת שיחה, הודעת WhatsApp ועדכונים מ־FixTok בנוגע למועמדות ולפרויקטים רלוונטיים.</span>
+          <span>אני מאשר קבלת שיחה, הודעת WhatsApp ועדכונים מ־FixTok בנוגע למועמדות ולפרויקטים רלוונטיים. <a href="https://app.fix-tok.com/privacy" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">מדיניות פרטיות</a></span>
         </label>
 
         <p class="err" id="errGen">יש שדות חובה שלא מולאו. עבור על הטופס ונסה שוב.</p>
