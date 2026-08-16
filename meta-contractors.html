@@ -632,6 +632,7 @@ footer{background:var(--ink);color:var(--steel-light);padding:40px 0;font-size:1
       <div class="thanks-mark"><svg width="28" height="28" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3.2 3.2L13 5" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
       <h2>תודה שנרשמת.</h2>
       <p>קיבלנו את הפרטים שלך. נבדוק אותם וניצור איתך קשר בהקדם להמשך תהליך ההצטרפות.</p>
+      <p id="thanksRedirectNote" style="display:none;margin-top:10px;font-weight:600">עוד רגע פותחים לך חשבון ב-FixTok עם Google — כדי שלא תצטרך למלא את הפרטים שוב…</p>
       <div class="recap">
         <p style="margin-bottom:14px"><b>מה כדאי להכין</b><br>שמות וטלפונים של לקוחות ממליצים מהשנה האחרונה.</p>
         <p><b>כמה זה עולה</b><br>ללא דמי הצטרפות, ללא מנוי חודשי. עמלה של 8% רק אם זכית בעבודה ונחתמה עסקה.</p>
@@ -834,11 +835,13 @@ footer{background:var(--ink);color:var(--steel-light);padding:40px 0;font-size:1
         window.scrollTo({top: document.getElementById('apply').offsetTop - 70, behavior:'smooth'});
         if(res.leadId){
           submitBtn.textContent = 'רגע, פותחים לך חשבון…';
+          var note = document.getElementById('thanksRedirectNote');
+          if(note) note.style.display = 'block';
           var next = encodeURIComponent('/contractor/register/form?lead=' + res.leadId);
           var qs = location.search ? location.search.replace(/^\?/, '&') : '';
           setTimeout(function(){
             location.href = 'https://app.fix-tok.com/login?role=contractor&next=' + next + qs + '&auto=google';
-          }, 600);
+          }, 2500); // זמן לקרוא את התודה + לפיקסל/CAPI להישלח לפני המעבר
         }
       } else {
         errGen.textContent = 'לא הצלחנו לשמור את הפרטים. נסה שוב או פנה בווטסאפ.';
