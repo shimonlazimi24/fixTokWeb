@@ -305,14 +305,14 @@ footer{background:var(--ink);color:var(--steel-light);padding:40px 0;font-size:1
 <!-- 1. HERO -->
 <header class="hero" id="top">
   <div class="wrap hero-in">
-    <h1>קבלן, כמה פעמים נסעת לתת הצעת מחיר ובסוף לא יצא מזה כלום?</h1>
-    <p class="hero-lead">פחות נסיעות סרק. פחות לידים לא רלוונטיים. יותר עבודות שאתה באמת רוצה.</p>
-    <p class="hero-sub">ב-FixTok אתה רואה את הפרויקט, הסרטון והמפרט לפני שאתה מחליט אם בכלל להגיש הצעה.</p>
-    <a href="#apply" class="btn cta-scroll">הגש מועמדות</a>
+    <h1>כמה פעמים נסעת לפגישה ובסוף לא יצא ממנה כלום?</h1>
+    <p class="hero-lead">קבל סרטון של הפרויקט ומפרט עבודה מסודר — לפני שאתה מחליט אם בכלל שווה להגיש הצעת מחיר.</p>
+    <p class="hero-sub">בלי לנסוע. בלי למדוד. ובלי לגלות אחרי שעתיים שהלקוח בכלל לא בכיוון.</p>
+    <a href="#apply" class="btn cta-scroll">הצטרפות חינם</a>
     <div class="ticks">
       <span class="tick"><svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3.2 3.2L13 5" stroke="#4ADE80" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg>ללא דמי הצטרפות</span>
       <span class="tick"><svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3.2 3.2L13 5" stroke="#4ADE80" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg>ללא מנוי חודשי</span>
-      <span class="tick"><svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3.2 3.2L13 5" stroke="#4ADE80" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg>תשלום רק על בסיס הצלחה</span>
+      <span class="tick"><svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3.2 3.2L13 5" stroke="#4ADE80" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg>עמלת הצלחה רק על עבודה שנסגרה דרכנו</span>
     </div>
   </div>
 </header>
@@ -445,8 +445,16 @@ footer{background:var(--ink);color:var(--steel-light);padding:40px 0;font-size:1
         <p>אין דמי הצטרפות ואין מנוי חודשי. FixTok גובה עמלת הצלחה של 8% רק על עבודה שנסגרה דרך המערכת.</p>
       </details>
       <details>
-        <summary>מי קובע את המחיר?</summary>
-        <p>הקבלן. FixTok לא מתמחרת במקומך. אתה מקבל מפרט מסודר ומחליט מה המחיר שלך לביצוע העבודה.</p>
+        <summary>אתם קובעים לי את המחיר?</summary>
+        <p>לא. FixTok מכינה את מפרט העבודה. הקבלנים מגישים בעצמם את הצעות המחיר — אתה מחליט מה המחיר שלך.</p>
+      </details>
+      <details>
+        <summary>אני חייב להגיש הצעה לכל פרויקט?</summary>
+        <p>לא. אתה בוחר אילו פרויקטים מעניינים אותך ומגיש הצעה רק להם.</p>
+      </details>
+      <details>
+        <summary>מה אני מקבל לפני שאני מחליט?</summary>
+        <p>מידע על הפרויקט, סרטון של הנכס ומפרט עבודה מסודר בהתאם לפרויקט — עוד לפני שאתה מחליט אם להגיש הצעה.</p>
       </details>
       <details>
         <summary>אני עדיין צריך לצאת לשטח?</summary>
@@ -483,6 +491,18 @@ footer{background:var(--ink);color:var(--steel-light);padding:40px 0;font-size:1
             <input type="text" id="f_hp" name="business_id" inputmode="numeric" autocomplete="off" placeholder="מספר עוסק/חברה" required="">
           </div>
           <div class="fgroup"><label for="f_city">עיר <span class="req">*</span></label><input type="text" id="f_city" name="city" autocomplete="address-level2" required=""></div>
+        </div>
+        <div class="grid2">
+          <div class="fgroup">
+            <label for="f_biztype">סוג העסק <span class="req">*</span></label>
+            <select id="f_biztype" name="business_type" required="">
+              <option value="">בחר…</option>
+              <option value="ltd">חברה בע"מ</option>
+              <option value="licensed">עוסק מורשה</option>
+              <option value="exempt">עוסק פטור</option>
+              <option value="other">אחר</option>
+            </select>
+          </div>
         </div>
 
         <!-- categories -->
@@ -602,7 +622,7 @@ footer{background:var(--ink);color:var(--steel-light);padding:40px 0;font-size:1
         </label>
 
         <p class="err" id="errGen">יש שדות חובה שלא מולאו. עבור על הטופס ונסה שוב.</p>
-        <button type="submit" class="btn submit">הגש מועמדות</button>
+        <button type="submit" class="btn submit">הצטרפות חינם</button>
         <p class="form-foot">ללא דמי הצטרפות · ללא מנוי חודשי · 8% עמלה רק על עבודה שנסגרה</p>
       </form>
     </div>
@@ -610,8 +630,8 @@ footer{background:var(--ink);color:var(--steel-light);padding:40px 0;font-size:1
     <!-- 10. THANK YOU -->
     <div class="thanks" id="thanksView">
       <div class="thanks-mark"><svg width="28" height="28" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3.2 3.2L13 5" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
-      <h2>המועמדות שלך התקבלה.</h2>
-      <p>תודה, הפרטים שלך התקבלו. נעבור על המועמדות ונחזור אליך תוך יום עסקים לשיחת היכרות ואימות. קבלנים שעומדים בתנאי הסף יקבלו גישה לפרויקטים ב-FixTok.</p>
+      <h2>תודה שנרשמת.</h2>
+      <p>קיבלנו את הפרטים שלך. נבדוק אותם וניצור איתך קשר בהקדם להמשך תהליך ההצטרפות.</p>
       <div class="recap">
         <p style="margin-bottom:14px"><b>מה כדאי להכין</b><br>שמות וטלפונים של לקוחות ממליצים מהשנה האחרונה.</p>
         <p><b>כמה זה עולה</b><br>ללא דמי הצטרפות, ללא מנוי חודשי. עמלה של 8% רק אם זכית בעבודה ונחתמה עסקה.</p>
@@ -712,7 +732,11 @@ footer{background:var(--ink);color:var(--steel-light);padding:40px 0;font-size:1
       regions: payload.regions,
       yearsExperience: payload.years_experience,
       referencesCount: payload.references_count,
+      businessType: payload.business_type,
       businessId: payload.business_id,
+      // event_id משותף לפיקסל (fbq eventID) ול-CAPI מהשרת - מטא מאחדת את הכפילות
+      eventId: payload.event_id,
+      sourceUrl: location.href,
       specialties: payload.categories,
       serviceAreas: payload.regions,
       referencesPhones: payload.references_phones,
@@ -736,7 +760,7 @@ footer{background:var(--ink);color:var(--steel-light);padding:40px 0;font-size:1
   // installed on the page — does not create a duplicate tracking setup.
   function fireConversionEvent(payload){
     if(typeof window.fbq === 'function'){
-      window.fbq('track', 'Lead', {content_name: 'contractor_application'});
+      window.fbq('track', 'Lead', {content_name: 'contractor_application'}, {eventID: payload.event_id});
       window.fbq('trackCustom', 'contractor_lead_submitted', {city: payload.city, primary_category: payload.primary_category});
     }
     if(typeof window.gtag === 'function'){
@@ -756,7 +780,7 @@ footer{background:var(--ink);color:var(--steel-light);padding:40px 0;font-size:1
 
     if(!cats.length){ document.getElementById('errCat').classList.add('on'); bad = true; }
     if(!regs.length){ document.getElementById('errReg').classList.add('on'); bad = true; }
-    ['f_name','f_phone','f_biz','f_hp','f_city','f_primary'].forEach(function(id){
+    ['f_name','f_phone','f_biz','f_hp','f_city','f_biztype','f_refs','f_primary'].forEach(function(id){
       var el = document.getElementById(id);
       if(!el.value.trim()){ el.style.borderColor = '#EA580C'; bad = true; }
       else { el.style.borderColor = ''; }
@@ -786,10 +810,12 @@ footer{background:var(--ink);color:var(--steel-light);padding:40px 0;font-size:1
       regions_labels: regNames,
       years_experience: document.getElementById('f_experience').value,
       references_count: document.getElementById('f_refs').value,
+      business_type: document.getElementById('f_biztype').value,
       business_id: document.getElementById('f_hp').value.trim(),
       references_phones: ['f_refphone1','f_refphone2'].map(function(id){return document.getElementById(id).value.trim()}).filter(Boolean),
       portfolio_link: document.getElementById('f_link').value.trim() || null,
       consent: true,
+      event_id: 'contractor-lead-' + Date.now() + '-' + Math.random().toString(36).slice(2, 10),
       submitted_at: new Date().toISOString(),
       utm: utms
     };
