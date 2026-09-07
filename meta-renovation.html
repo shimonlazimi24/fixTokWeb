@@ -616,7 +616,7 @@ leadForm.addEventListener('submit',e=>{
     if(r.ok){if(typeof fbq==='function'){fbq('trackCustom','lp_details_submitted',{city:city,renovation_type:rType});}}
     else if(typeof dataLayer!=='undefined'){dataLayer.push({event:'lp_lead_save_failed'});}
   }).catch(()=>{if(typeof dataLayer!=='undefined')dataLayer.push({event:'lp_lead_save_failed'})})
-  .finally(()=>{setTimeout(()=>{location.href=appDeepLink()+'&auto=google';},250);});
+  .finally(()=>{setTimeout(()=>{location.href=appDeepLink()+phoneAuth(phone);},250);});
 
   /* אירוע ההמרה הראשי לגוגל - נורה על קליטת הפרטים */
   if(typeof gtag==='function'){gtag('event','lp_lead_submitted',{city:city});}
@@ -627,6 +627,15 @@ leadForm.addEventListener('submit',e=>{
   if(submitBtn){submitBtn.disabled=true;submitBtn.textContent='רגע... פותחים לכם אזור אישי';}
 });
 
+/* Meta's in-app browser (Instagram / Facebook) blocks Google OAuth, and that is where most ad
+   traffic lands. Hand off with the phone the visitor just typed: the app sends a WhatsApp/SMS
+   code right away and only falls back to Google when phone login is unavailable. */
+function phoneAuth(raw){
+  var ph=String(raw||'').replace(/\D/g,'');
+  if(ph.length===10&&ph.charAt(0)==='0')ph='972'+ph.slice(1);
+  return ph.length===12?'&auto=phone&phone='+encodeURIComponent('+'+ph):'&auto=google';
+}
+function isInAppBrowser(){return /FBAN|FBAV|FB_IAB|Instagram|Messenger|; wv\)/i.test(navigator.userAgent);}
 function appDeepLink(){
   /* מעבירים את כל פרמטרי המדידה (gclid, utm) - האפליקציה קולטת אותם אוטומטית */
   const qs=location.search?location.search.replace(/^\?/,'&'):'';
@@ -635,8 +644,9 @@ function appDeepLink(){
 document.getElementById('googleBtn').addEventListener('click',()=>{
   if(typeof dataLayer!=='undefined'){dataLayer.push({event:'lp_google_signin_clicked'});}
   if(typeof gtag==='function'){gtag('event','lp_google_signin_clicked');}
-  /* auto=google: האפליקציה מזנקת ישר ל-OAuth במקום להציג עוד כפתור גוגל */
-  location.href=appDeepLink()+'&auto=google';
+  /* auto=google: the app jumps straight to OAuth instead of showing another Google button.
+     Inside the Instagram/Facebook browser that would dead-end, so let the app show phone login. */
+  location.href=appDeepLink()+(isInAppBrowser()?'':'&auto=google');
 });
 
 function goStep(fromId,toId,progressId){
