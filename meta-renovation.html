@@ -617,13 +617,15 @@ leadForm.addEventListener('submit',e=>{
   for(const k of ['utm_source','utm_medium','utm_campaign','utm_term','utm_content']){
     const v=params.get(k); if(v)utm[k]=v;
   }
+  /* One id for the browser pixel and the server copy (Conversions API), so Meta counts it once */
+  const leadEventId='lpd-'+Date.now().toString(36)+'-'+Math.random().toString(36).slice(2,10);
   fetch('https://app.fix-tok.com/api/public/lp-lead',{
     method:'POST',
     headers:{'Content-Type':'application/json'},
-    body:JSON.stringify({name,phone,city,renovationType:rType,gclid:document.getElementById('gclid').value||null,fbclid:document.getElementById('fbclid').value||null,fbc:metaCookie('_fbc'),fbp:metaCookie('_fbp'),source:'lp-meta-renovation',...utm})
+    body:JSON.stringify({name,phone,city,renovationType:rType,gclid:document.getElementById('gclid').value||null,fbclid:document.getElementById('fbclid').value||null,fbc:metaCookie('_fbc'),fbp:metaCookie('_fbp'),source:'lp-meta-renovation',eventId:leadEventId,...utm})
   }).then(r=>{
     /* אירוע מטא נורה רק אחרי שהליד נשמר בהצלחה בשרת */
-    if(r.ok){if(typeof fbq==='function'){fbq('trackCustom','lp_details_submitted',{city:city,renovation_type:rType});}}
+    if(r.ok){if(typeof fbq==='function'){fbq('trackCustom','lp_details_submitted',{city:city,renovation_type:rType},{eventID:leadEventId});}}
     else if(typeof dataLayer!=='undefined'){dataLayer.push({event:'lp_lead_save_failed'});}
   }).catch(()=>{if(typeof dataLayer!=='undefined')dataLayer.push({event:'lp_lead_save_failed'})})
   .finally(()=>{setTimeout(()=>{location.href=appDeepLink()+phoneAuth(phone);},250);});
